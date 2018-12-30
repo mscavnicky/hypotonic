@@ -1,11 +1,15 @@
 import re
 import time
+import logging
+import textwrap
 
 import requests
 from lxml import html
 from cssselect import GenericTranslator, SelectorError
 
 from utils import flatmap
+
+logger = logging.getLogger(__name__)
 
 
 class Document:
@@ -67,8 +71,10 @@ class Commands:
     yield context, data
 
   @staticmethod
-  def debug(context, data):
-    print(context, data)
+  def log(context, data):
+    logger.debug((
+      textwrap.shorten(html.tostring(context).decode('utf-8'), width=72),
+      textwrap.shorten(str(data), width=72)))
     yield context, data
 
 
@@ -81,7 +87,7 @@ class Hypotonic:
   def data(self):
     """Return all the currently scraped data as a list of dicts."""
     for command, args in self.commands:
-      print(command, args)
+      logger.debug((command, args))
       func = getattr(Commands, command)
       self.queue = list(flatmap(lambda item: func(*item, *args), self.queue))
     return (data for _, data in self.queue)
