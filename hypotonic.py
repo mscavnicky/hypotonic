@@ -1,3 +1,6 @@
+import re
+import time
+
 import requests
 from lxml import html
 from cssselect import GenericTranslator, SelectorError
@@ -47,6 +50,21 @@ class Commands:
     for result in context.xpath(Document.to_xpath(selector)):
       response = requests.get(result)
       yield Document.parse(result, response.text), data
+
+  @staticmethod
+  def filter(context, data, selector):
+    if len(context.xpath(Document.to_xpath(selector))) > 0:
+      yield context, data
+
+  @staticmethod
+  def match(context, data, regex):
+    if re.match(regex, context.text):
+      yield context, data
+
+  @staticmethod
+  def delay(context, data, secs):
+    time.sleep(secs)
+    yield context, data
 
   @staticmethod
   def debug(context, data):
