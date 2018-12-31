@@ -12,7 +12,7 @@ from utils import flatmap
 logger = logging.getLogger(__name__)
 
 
-class Document:
+class Html:
   @staticmethod
   def parse(url, html_string):
     doc = html.fromstring(html_string)
@@ -32,11 +32,11 @@ class Document:
 class Commands:
   @staticmethod
   def get(_, data, url):
-    yield Document.parse(url, requests.get(url).text), data
+    yield Html.parse(url, requests.get(url).text), data
 
   @staticmethod
   def find(context, data, selector):
-    for result in context.xpath(Document.to_xpath(selector)):
+    for result in context.xpath(Html.to_xpath(selector)):
       yield result, data
 
   @staticmethod
@@ -45,19 +45,19 @@ class Commands:
       data = {**data, descriptor: context.text}
     else:
       for key, selector in descriptor.items():
-        results = context.xpath(Document.to_xpath(selector))
+        results = context.xpath(Html.to_xpath(selector))
         data = {**data, key: results[0].text}
     yield context, data
 
   @staticmethod
   def follow(context, data, selector):
-    for result in context.xpath(Document.to_xpath(selector)):
+    for result in context.xpath(Html.to_xpath(selector)):
       response = requests.get(result)
-      yield Document.parse(result, response.text), data
+      yield Html.parse(result, response.text), data
 
   @staticmethod
   def filter(context, data, selector):
-    if len(context.xpath(Document.to_xpath(selector))) > 0:
+    if len(context.xpath(Html.to_xpath(selector))) > 0:
       yield context, data
 
   @staticmethod
