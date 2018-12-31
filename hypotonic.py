@@ -14,6 +14,13 @@ logger = logging.getLogger(__name__)
 
 class Html:
   @staticmethod
+  def fetch(url):
+    r = requests.get(url)
+    # Encoding guessed using chardet is accurate than the on from headers.
+    r.encoding = r.apparent_encoding
+    return r.text
+
+  @staticmethod
   def parse(url, html_string):
     doc = html.fromstring(html_string)
     # Making links absolute is required to allow following.
@@ -32,7 +39,7 @@ class Html:
 class Commands:
   @staticmethod
   def get(_, data, url):
-    yield Html.parse(url, requests.get(url).text), data
+    yield Html.parse(url, Html.fetch(url)), data
 
   @staticmethod
   def find(context, data, selector):
@@ -52,8 +59,7 @@ class Commands:
   @staticmethod
   def follow(context, data, selector):
     for result in context.xpath(Html.to_xpath(selector)):
-      response = requests.get(result)
-      yield Html.parse(result, response.text), data
+      yield Html.parse(result, Html.fetch(result)), data
 
   @staticmethod
   def filter(context, data, selector):
