@@ -42,11 +42,11 @@ class Commands:
   @staticmethod
   def set(context, data, descriptor):
     if isinstance(descriptor, str):
-      data = {**data, descriptor: context.text}
+      data = {**data, descriptor: context.text.strip()}
     else:
       for key, selector in descriptor.items():
         results = context.xpath(Html.to_xpath(selector))
-        data = {**data, key: results[0].text}
+        data = {**data, key: results[0].text.strip()}
     yield context, data
 
   @staticmethod
