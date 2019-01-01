@@ -68,7 +68,7 @@ class Commands:
 
   @staticmethod
   def match(context, data, regex):
-    if re.match(regex, context.text_content()):
+    if re.search(regex, context.text_content()):
       yield context, data
 
   @staticmethod
