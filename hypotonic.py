@@ -49,11 +49,11 @@ class Commands:
   @staticmethod
   def set(context, data, descriptor):
     if isinstance(descriptor, str):
-      data = {**data, descriptor: context.text.strip()}
+      data = {**data, descriptor: context.text_content().strip()}
     else:
       for key, selector in descriptor.items():
         results = context.xpath(Html.to_xpath(selector))
-        data = {**data, key: results[0].text.strip()}
+        data = {**data, key: results[0].text_content().strip()}
     yield context, data
 
   @staticmethod
@@ -68,7 +68,7 @@ class Commands:
 
   @staticmethod
   def match(context, data, regex):
-    if re.match(regex, context.text):
+    if re.match(regex, context.text_content()):
       yield context, data
 
   @staticmethod
