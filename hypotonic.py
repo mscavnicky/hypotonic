@@ -62,6 +62,18 @@ class Commands:
       yield Html.parse(result, Html.fetch(result)), data
 
   @staticmethod
+  def paginate(context, data, selector, limit):
+    selector = Html.to_xpath(selector)
+    while True:
+      yield context, data
+      limit -= 1
+      results = context.xpath(selector)
+      if limit <= 0 or len(results) == 0:
+        break
+      url = results[0].attrib['href']
+      context = Html.parse(url, Html.fetch(url))
+
+  @staticmethod
   def filter(context, data, selector):
     if len(context.xpath(Html.to_xpath(selector))) > 0:
       yield context, data

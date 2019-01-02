@@ -68,6 +68,19 @@ class TestHypotonic(unittest.TestCase):
     self.assertEqual(20, len(data))
     self.assertIn({'title': 'Sharp Objects'}, data)
 
+  def test_paginate(self):
+    data = list(
+      self.hypotonic
+        .paginate('.next a', 3)
+        .find('li article')
+        .set({'title': 'h3 a'})
+        .data())
+
+    self.assertEqual(60, len(data))
+    self.assertIn({'title': 'Sharp Objects'}, data)
+    self.assertIn({'title': 'In Her Wake'}, data)
+    self.assertIn({'title': 'Thirst'}, data)
+
   def test_filter(self):
     data = list(
       self.hypotonic
