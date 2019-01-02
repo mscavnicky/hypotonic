@@ -42,6 +42,17 @@ class TestHypotonic(unittest.TestCase):
 
     self.assertEqual([{'title': 'Books to Scrape'}], data)
 
+  def test_set_with_array(self):
+    data = list(
+      self.hypotonic
+        .set({'title': '.h1 a',
+              'categories': ['.nav-list ul a']})
+        .data())
+
+    self.assertEqual(1, len(data))
+    self.assertEqual(50, len(data[0]['categories']))
+    self.assertIn('Romance', data[0]['categories'])
+
   def test_set_with_dict(self):
     data = list(
       self.hypotonic

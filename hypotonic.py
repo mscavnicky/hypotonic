@@ -52,8 +52,13 @@ class Commands:
       data = {**data, descriptor: context.text_content().strip()}
     else:
       for key, selector in descriptor.items():
-        results = context.xpath(Html.to_xpath(selector))
-        data = {**data, key: results[0].text_content().strip()}
+        if isinstance(selector, str):
+          results = context.xpath(Html.to_xpath(selector))
+          data = {**data, key: results[0].text_content().strip()}
+        elif isinstance(selector, list):
+          results = context.xpath(Html.to_xpath(selector[0]))
+          values = [result.text_content().strip() for result in results]
+          data = {**data, key: values}
     yield context, data
 
   @staticmethod
