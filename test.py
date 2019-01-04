@@ -12,6 +12,17 @@ class TestHypotonic(unittest.TestCase):
     self.hypotonic = Hypotonic()
     self.hypotonic.get('http://books.toscrape.com/')
 
+  def test_post(self):
+    data = list(
+      self.hypotonic
+        .post('http://quotes.toscrape.com/login',
+              {'username': 'admin', 'password': 'admin'})
+        .find('.header-box .col-md-4 a')
+        .set('label')
+        .data())
+
+    self.assertEqual([{'label': 'Logout'}], data)
+
   def test_find_with_xpath(self):
     data = list(
       self.hypotonic

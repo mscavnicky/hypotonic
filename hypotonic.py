@@ -14,8 +14,15 @@ logger = logging.getLogger(__name__)
 
 class Html:
   @staticmethod
-  def fetch(url):
+  def get(url):
     r = requests.get(url)
+    # Encoding guessed using chardet is accurate than the on from headers.
+    r.encoding = r.apparent_encoding
+    return r.text
+
+  @staticmethod
+  def post(url, payload):
+    r = requests.post(url, data=payload)
     # Encoding guessed using chardet is accurate than the on from headers.
     r.encoding = r.apparent_encoding
     return r.text
@@ -39,7 +46,11 @@ class Html:
 class Commands:
   @staticmethod
   def get(_, data, url):
-    yield Html.parse(url, Html.fetch(url)), data
+    yield Html.parse(url, Html.get(url)), data
+
+  @staticmethod
+  def post(_, data, url, payload):
+    yield Html.parse(url, Html.post(url, payload)), data
 
   @staticmethod
   def find(context, data, selector):
@@ -64,7 +75,7 @@ class Commands:
   @staticmethod
   def follow(context, data, selector):
     for result in context.xpath(Html.to_xpath(selector)):
-      yield Html.parse(result, Html.fetch(result)), data
+      yield Html.parse(result, Html.get(result)), data
 
   @staticmethod
   def paginate(context, data, selector, limit):
@@ -76,7 +87,7 @@ class Commands:
       if limit <= 0 or len(results) == 0:
         break
       url = results[0].attrib['href']
-      context = Html.parse(url, Html.fetch(url))
+      context = Html.parse(url, Html.get(url))
 
   @staticmethod
   def filter(context, data, selector):
