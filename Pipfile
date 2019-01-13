@@ -6,9 +6,9 @@ verify_ssl = true
 [dev-packages]
 
 [packages]
-requests = "*"
 lxml = "*"
 cssselect = "*"
+aiohttp = "*"
 
 [requires]
 python_version = "3.7"

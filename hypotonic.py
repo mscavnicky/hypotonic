@@ -2,30 +2,27 @@ import re
 import time
 import logging
 import textwrap
+import itertools
 
-import requests
+import asyncio
+import aiohttp
+
 from lxml import html
 from cssselect import GenericTranslator, SelectorError
-
-from utils import flatmap
 
 logger = logging.getLogger(__name__)
 
 
 class Html:
   @staticmethod
-  def get(url):
-    r = requests.get(url)
-    # Encoding guessed using chardet is accurate than the on from headers.
-    r.encoding = r.apparent_encoding
-    return r.text
+  async def get(session, url):
+    async with session.get(url) as response:
+      return await response.text()
 
   @staticmethod
-  def post(url, payload):
-    r = requests.post(url, data=payload)
-    # Encoding guessed using chardet is accurate than the on from headers.
-    r.encoding = r.apparent_encoding
-    return r.text
+  async def post(session, url, payload):
+    async with session.post(url, data=payload) as response:
+      return await response.text()
 
   @staticmethod
   def parse(url, html_string):
@@ -45,20 +42,22 @@ class Html:
 
 class Commands:
   @staticmethod
-  def get(_, data, url):
-    yield Html.parse(url, Html.get(url)), data
+  async def get(session, _, data, url):
+    response = await Html.get(session, url)
+    yield Html.parse(url, response), data
 
   @staticmethod
-  def post(_, data, url, payload):
-    yield Html.parse(url, Html.post(url, payload)), data
+  async def post(session, _, data, url, payload):
+    response = await Html.post(session, url, payload)
+    yield Html.parse(url, response), data
 
   @staticmethod
-  def find(context, data, selector):
+  async def find(_, context, data, selector):
     for result in context.xpath(Html.to_xpath(selector)):
       yield result, data
 
   @staticmethod
-  def set(context, data, descriptor):
+  async def set(_, context, data, descriptor):
     if isinstance(descriptor, str):
       data = {**data, descriptor: context.text_content().strip()}
     else:
@@ -73,12 +72,13 @@ class Commands:
     yield context, data
 
   @staticmethod
-  def follow(context, data, selector):
+  async def follow(session, context, data, selector):
     for result in context.xpath(Html.to_xpath(selector)):
-      yield Html.parse(result, Html.get(result)), data
+      response = await Html.get(session, result)
+      yield Html.parse(result, response), data
 
   @staticmethod
-  def paginate(context, data, selector, limit):
+  async def paginate(session, context, data, selector, limit):
     selector = Html.to_xpath(selector)
     while True:
       yield context, data
@@ -87,25 +87,26 @@ class Commands:
       if limit <= 0 or len(results) == 0:
         break
       url = results[0].attrib['href']
-      context = Html.parse(url, Html.get(url))
+      response = await Html.get(session, url)
+      context = Html.parse(url, response)
 
   @staticmethod
-  def filter(context, data, selector):
+  async def filter(_, context, data, selector):
     if len(context.xpath(Html.to_xpath(selector))) > 0:
       yield context, data
 
   @staticmethod
-  def match(context, data, regex):
+  async def match(_, context, data, regex):
     if re.search(regex, context.text_content()):
       yield context, data
 
   @staticmethod
-  def delay(context, data, secs):
+  async def delay(_, context, data, secs):
     time.sleep(secs)
     yield context, data
 
   @staticmethod
-  def log(context, data):
+  async def log(_, context, data):
     logger.debug((
       textwrap.shorten(html.tostring(context).decode('utf-8'), width=72),
       textwrap.shorten(str(data), width=72)))
@@ -115,16 +116,47 @@ class Commands:
 class Hypotonic:
   def __init__(self):
     self.commands = []
-    # List of (context, data) tuples.
-    self.queue = [(None, {})]
+    self.results = []
+
+  async def worker(self, i, session, queue):
+    logger.debug(f"Worker {i} starting.")
+    while True:
+      commands, context, data = await queue.get()
+
+      try:
+        command, args = next(commands)
+        logger.debug(("Start", i, command, args))
+
+        func = getattr(Commands, command)
+        async for result in func(session, context, data, *args):
+          _, commands_copy = itertools.tee(commands)
+          queue.put_nowait((commands_copy, *result))
+
+        logger.debug(("Stop", i, command, args))
+      except StopIteration:
+        self.results.append(data)
+
+      queue.task_done()
+
+  async def run(self):
+    session = aiohttp.ClientSession()
+    queue = asyncio.Queue()
+
+    tasks = []
+    for i in range(4):
+      tasks.append(asyncio.create_task(self.worker(i, session, queue)))
+
+    queue.put_nowait((iter(self.commands), None, {}))
+    await queue.join()
+
+    for task in tasks:
+      task.cancel()
+    await session.close()
 
   def data(self):
-    """Return all the currently scraped data as a list of dicts."""
-    for command, args in self.commands:
-      logger.debug((command, args))
-      func = getattr(Commands, command)
-      self.queue = list(flatmap(lambda item: func(*item, *args), self.queue))
-    return (data for _, data in self.queue)
+    """Return all the scraped data as a list of dicts."""
+    asyncio.run(self.run())
+    return self.results
 
   def __getattr__(self, attr):
     def apply(*args):

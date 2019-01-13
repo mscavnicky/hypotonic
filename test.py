@@ -87,42 +87,46 @@ class TestHypotonic(unittest.TestCase):
         .set('title')
         .data())
 
+    self.assertFalse(errors)
     self.assertEqual(20, len(data))
     self.assertIn({'title': 'Sharp Objects'}, data)
 
   def test_paginate(self):
-    data = list(
+    data, errors = list(
       self.hypotonic
         .paginate('.next a', 3)
         .find('li article')
         .set({'title': 'h3 a'})
         .data())
 
+    self.assertFalse(errors)
     self.assertEqual(60, len(data))
     self.assertIn({'title': 'Sharp Objects'}, data)
     self.assertIn({'title': 'In Her Wake'}, data)
     self.assertIn({'title': 'Thirst'}, data)
 
   def test_filter(self):
-    data = list(
+    data, errors = list(
       self.hypotonic
         .find('li article')
         .filter('.Five')
         .set({'title': 'h3 a'})
         .data())
 
+    self.assertFalse(errors)
     self.assertEqual(4, len(data))
     self.assertIn({'title': 'Set Me Free'}, data)
     self.assertNotIn({'title': 'Sharp Objects'}, data)
 
   def test_match(self):
-    data = list(
+    data, errors = list(
       self.hypotonic
         .find('.product_pod h3 a')
         .match('[tT]he')
         .set('title')
         .data())
 
+    self.assertFalse(errors)
     self.assertEqual(9, len(data))
     self.assertIn({'title': 'Tipping the Velvet'}, data)
     self.assertNotIn({'title': 'Sharp Objects'}, data)
