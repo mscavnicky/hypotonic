@@ -1,4 +1,5 @@
 import re
+import sys
 import time
 import logging
 import textwrap
@@ -117,6 +118,7 @@ class Hypotonic:
   def __init__(self):
     self.commands = []
     self.results = []
+    self.errors = []
 
   async def worker(self, i, session, queue):
     logger.debug(f"Worker {i} starting.")
@@ -135,8 +137,11 @@ class Hypotonic:
         logger.debug(("Stop", i, command, args))
       except StopIteration:
         self.results.append(data)
-
-      queue.task_done()
+      except:
+        self.errors.append(sys.exc_info())
+        logger.debug(f"Unexpected exception {sys.exc_info()}.")
+      finally:
+        queue.task_done()
 
   async def run(self):
     session = aiohttp.ClientSession()
@@ -151,12 +156,14 @@ class Hypotonic:
 
     for task in tasks:
       task.cancel()
+    await asyncio.gather(*tasks, return_exceptions=True)
+
     await session.close()
 
   def data(self):
     """Return all the scraped data as a list of dicts."""
     asyncio.run(self.run())
-    return self.results
+    return self.results, self.errors
 
   def __getattr__(self, attr):
     def apply(*args):
