@@ -30,6 +30,9 @@ class Html:
     doc = html.fromstring(html_string)
     # Making links absolute is required to allow following.
     doc.make_links_absolute(url)
+    # Replacing <br> tags with \n, prevents text contatenating.
+    for br in doc.xpath('*//br'):
+      br.tail = '\n' + br.tail if br.tail else '\n'
     return doc
 
   @staticmethod
