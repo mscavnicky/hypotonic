@@ -7,6 +7,8 @@ verify_ssl = true
 twine = "*"
 # Version 2.0.1 has a bug around awaiting aiohttp in tests.
 vcrpy = {editable = true,git = "https://github.com/kevin1024/vcrpy.git"}
+# Version below 4.2b1 has a security vulnerability.
+pyyaml = ">=4.2b1"
 
 [packages]
 lxml = "*"
@@ -15,3 +17,6 @@ aiohttp = "*"
 
 [requires]
 python_version = "3.7"
+
+[pipenv]
+allow_prereleases = true
