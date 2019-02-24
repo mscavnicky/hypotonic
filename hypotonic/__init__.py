@@ -144,7 +144,7 @@ class Hypotonic:
       except StopIteration:
         self.results.append(data)
       except:
-        self.errors.append(sys.exc_info())
+        self.errors.append(((command, args, context), sys.exc_info()))
         logger.debug(f"Unexpected exception {sys.exc_info()}.")
       finally:
         queue.task_done()
