@@ -1,11 +1,13 @@
 import unittest
 import logging
+from vcr import VCR
 from hypotonic import Hypotonic
 
 logger = logging.getLogger('hypotonic')
 logger.setLevel(logging.INFO)
 logger.addHandler(logging.StreamHandler())
 
+vcr = VCR(cassette_library_dir='./cassettes')
 
 
 class TestHypotonic(unittest.TestCase):
@@ -134,6 +136,7 @@ class TestHypotonic(unittest.TestCase):
     self.assertIn({'title': 'Tipping the Velvet'}, data)
     self.assertNotIn({'title': 'Sharp Objects'}, data)
 
+  @vcr.use_cassette()
   def test_br_tags_become_newlines(self):
     data, errors = (
       Hypotonic('https://www.justetf.com/en/etf-profile.html?tab=listing&isin=IE00B44CND37')
