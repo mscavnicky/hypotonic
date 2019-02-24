@@ -4,7 +4,7 @@ Fast asynchronous web scraper with minimalist API inspired by awesome [node-osmo
 
 Hypotonic provides SQLAlchemy-like command chaining DSL to define HTML scrapers. Everything is executed asynchronously via `asyncio` and is ultra-fast thanks to `lxml` parser. Supports querying by XPath or CSS selectors.
 
-Hypotonic does not natively execute JavaScript on websites and it is recommended to use [prerender](https:://prerender.com).
+Hypotonic does not natively execute JavaScript on websites and it is recommended to use [prerender](https://prerender.com).
 
 ## Installing
 
