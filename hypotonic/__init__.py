@@ -118,10 +118,13 @@ class Commands:
 
 
 class Hypotonic:
-  def __init__(self):
+  def __init__(self, url=None):
     self.commands = []
     self.results = []
     self.errors = []
+
+    if url:
+      self.commands.append(('get', (url,)))
 
   async def worker(self, i, session, queue):
     logger.debug(f"Worker {i} starting.")

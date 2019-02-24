@@ -7,14 +7,11 @@ logger.setLevel(logging.INFO)
 logger.addHandler(logging.StreamHandler())
 
 
-class TestHypotonic(unittest.TestCase):
-  def setUp(self):
-    self.hypotonic = Hypotonic()
-    self.hypotonic.get('http://books.toscrape.com/')
 
+class TestHypotonic(unittest.TestCase):
   def test_post(self):
     data, errors = (
-      self.hypotonic
+      Hypotonic()
         .post('http://quotes.toscrape.com/login',
               {'username': 'admin', 'password': 'admin'})
         .find('.header-box .col-md-4 a')
@@ -26,7 +23,7 @@ class TestHypotonic(unittest.TestCase):
 
   def test_find_with_xpath(self):
     data, errors = (
-      self.hypotonic
+      Hypotonic('http://books.toscrape.com/')
         .find(
         '//*[contains(concat( " ", @class, " " ), concat( " ", "nav-list", " " ))]//ul//a')
         .set('category')
@@ -38,7 +35,7 @@ class TestHypotonic(unittest.TestCase):
 
   def test_find_with_css(self):
     data, errors = (
-      self.hypotonic
+      Hypotonic('http://books.toscrape.com/')
         .find('.nav-list ul a')
         .set('category')
         .data())
@@ -49,7 +46,7 @@ class TestHypotonic(unittest.TestCase):
 
   def test_set_with_str(self):
     data, errors = (
-      self.hypotonic
+      Hypotonic('http://books.toscrape.com/')
         .find('.h1 a')
         .set('title')
         .data())
@@ -59,7 +56,7 @@ class TestHypotonic(unittest.TestCase):
 
   def test_set_with_array(self):
     data, errors = (
-      self.hypotonic
+      Hypotonic('http://books.toscrape.com/')
         .set({'title': '.h1 a',
               'categories': ['.nav-list ul a']})
         .data())
@@ -71,7 +68,7 @@ class TestHypotonic(unittest.TestCase):
 
   def test_set_with_dict(self):
     data, errors = (
-      self.hypotonic
+      Hypotonic('http://books.toscrape.com/')
         .find('li article')
         .set({'title': 'h3 a',
               'price': '.price_color',
@@ -86,7 +83,7 @@ class TestHypotonic(unittest.TestCase):
 
   def test_follow(self):
     data, errors = (
-      self.hypotonic
+      Hypotonic('http://books.toscrape.com/')
         .find('.product_pod h3 a')
         .follow('@href')
         .find('h1')
@@ -99,7 +96,7 @@ class TestHypotonic(unittest.TestCase):
 
   def test_paginate(self):
     data, errors = (
-      self.hypotonic
+      Hypotonic('http://books.toscrape.com/')
         .paginate('.next a', 3)
         .find('li article')
         .set({'title': 'h3 a'})
@@ -113,7 +110,7 @@ class TestHypotonic(unittest.TestCase):
 
   def test_filter(self):
     data, errors = (
-      self.hypotonic
+      Hypotonic('http://books.toscrape.com/')
         .find('li article')
         .filter('.Five')
         .set({'title': 'h3 a'})
@@ -126,7 +123,7 @@ class TestHypotonic(unittest.TestCase):
 
   def test_match(self):
     data, errors = (
-      self.hypotonic
+      Hypotonic('http://books.toscrape.com/')
         .find('.product_pod h3 a')
         .match('[tT]he')
         .set('title')
@@ -139,8 +136,7 @@ class TestHypotonic(unittest.TestCase):
 
   def test_br_tags_become_newlines(self):
     data, errors = (
-      self.hypotonic
-        .get('https://www.justetf.com/en/etf-profile.html?tab=listing&isin=IE00B44CND37')
+      Hypotonic('https://www.justetf.com/en/etf-profile.html?tab=listing&isin=IE00B44CND37')
         .find('.tab-container .container tbody tr')
         .set({'ticker': 'td:nth-child(5)'})
         .data()
