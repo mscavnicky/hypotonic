@@ -15,7 +15,7 @@ setup(name='hypotonic',
       author='Martin Scavnicky',
       author_email='martin.scavnicky@gmail.com',
       license='MIT',
-      packages=find_packages(exclude=['cassettes', 'tests', 'tests.*']),
+      packages=find_packages(exclude=['.semaphore', 'cassettes', 'tests', 'tests.*']),
       install_requires=['aiohttp', 'lxml', 'cssselect'],
       include_package_data=True,
       zip_safe=False)

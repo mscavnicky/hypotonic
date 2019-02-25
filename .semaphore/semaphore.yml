@@ -1,0 +1,20 @@
+version: v1.0
+name: hypotonic
+agent:
+  machine:
+    type: e1-standard-8
+    os_image: ubuntu1804
+
+blocks:
+  - name: tests
+    task:
+      prologue:
+        commands:
+          - checkout
+      jobs:
+        - name: run
+          commands:
+            - sem-version python 3.7
+            - pip3 install pipenv
+            - pipenv install --dev
+            - pipenv run python tests.py
