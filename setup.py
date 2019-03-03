@@ -1,8 +1,9 @@
 from setuptools import setup, find_packages
 
 setup(name='hypotonic',
-      version='0.0.2',
+      version='0.0.3',
       description='Fast asynchronous web scraper with minimalist API.',
+      long_description='Fast asynchronous web scraper with minimalist API.',
       classifiers=[
         'Development Status :: 2 - Pre-Alpha',
         'Operating System :: OS Independent',
