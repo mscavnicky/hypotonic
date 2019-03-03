@@ -150,6 +150,19 @@ class TestHypotonic(unittest.TestCase):
     self.assertNotIn({'ticker': 'TSYE.PAINSYBTE.ivOQ'}, data)
     self.assertIn({'ticker': 'TRSY.MI\nINSYBTE.ivOQ'}, data)
 
+  @vcr.use_cassette()
+  def test_utf_8_is_canonicalized(self):
+    data, errors = (
+      Hypotonic('https://dennikn.sk/kontakt/')
+        .find('main article div p:nth-child(2)')
+        .set('text')
+        .data()
+    )
+
+    self.assertFalse(errors)
+    self.assertEqual(1, len(data))
+    self.assertEqual(data[0]['text'], 'Ak nájdete chybu v článkoch, budeme vďační, ak nám napíšete na editori@dennikn.sk.')
+
 
 if __name__ == '__main__':
   unittest.main()

@@ -4,6 +4,7 @@ import time
 import logging
 import textwrap
 import itertools
+import unicodedata
 
 import asyncio
 import aiohttp
@@ -36,6 +37,12 @@ class Html:
     return doc
 
   @staticmethod
+  def text_content(element):
+    """Convenience method to extract text from HTML element tree. Performs
+    stripping and canonicalization of UTF-8 characters (e.g. '/xa0' to ' ')."""
+    return unicodedata.normalize('NFKC', element.text_content().strip())
+
+  @staticmethod
   def to_xpath(selector):
     """Attempt to convert CSS selector to XPath."""
     try:
@@ -63,15 +70,15 @@ class Commands:
   @staticmethod
   async def set(_, context, data, descriptor):
     if isinstance(descriptor, str):
-      data = {**data, descriptor: context.text_content().strip()}
+      data = {**data, descriptor: Html.text_content(context)}
     else:
       for key, selector in descriptor.items():
         if isinstance(selector, str):
           results = context.xpath(Html.to_xpath(selector))
-          data = {**data, key: results[0].text_content().strip()}
+          data = {**data, key: Html.text_content(results[0])}
         elif isinstance(selector, list):
           results = context.xpath(Html.to_xpath(selector[0]))
-          values = [result.text_content().strip() for result in results]
+          values = [Html.text_content(result) for result in results]
           data = {**data, key: values}
     yield context, data
 

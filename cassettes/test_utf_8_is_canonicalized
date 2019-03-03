@@ -1,0 +1,461 @@
+interactions:
+- request:
+    body: null
+    headers: {}
+    method: GET
+    uri: https://dennikn.sk/kontakt/
+  response:
+    body:
+      string: "<!DOCTYPE html><html lang=\"sk-SK\"><head><meta charset=\"utf-8\"><link
+        rel=\"manifest\" href=\"/manifest.json\"><meta name=\"viewport\" content=\"width=device-width,
+        viewport-fit=cover\"><meta name=\"mobile-web-app-capable\" content=\"yes\"><meta
+        property=\"article:publisher\" content=\"https://www.facebook.com/projektn.sk\"><meta
+        property=\"article:published_time\" content=\"2014-11-11T16:41:38+00:00\"><meta
+        property=\"article:modified_time\" content=\"2017-06-30T13:43:32+00:00\"><meta
+        property=\"og:updated_time\" content=\"2017-06-30T13:43:32+00:00\"><meta name=\"description\"
+        content=\"M\xE1te z\xE1ujem o&nbsp;predplatn\xE9?\_\u010Eakujeme! Na\u0161u
+        ponuku n\xE1jdete na tejto str\xE1nke. Inform\xE1cie alebo rady o&nbsp;predplatnom
+        z\xEDskate aj na \u010D\xEDsle 02 / 212 044 00\_(v pracovnej dobe) alebo e-mailom
+        na info@dennikn.sk. Ak n\xE1jdete chybu v&nbsp;\u010Dl\xE1nkoch, budeme v\u010Fa\u010Dn\xED,
+        ak n\xE1m nap\xED\u0161ete na editori@dennikn.sk. Ak ste na\u0161li chybu
+        na str\xE1nke, alebo v\xE1m niektor\xE1 funkcia nefunguje...\"><meta property=\"og:description\"
+        content=\"M\xE1te z\xE1ujem o&nbsp;predplatn\xE9?\_\u010Eakujeme! Na\u0161u
+        ponuku n\xE1jdete na tejto str\xE1nke. Inform\xE1cie alebo rady o&nbsp;predplatnom
+        z\xEDskate aj na \u010D\xEDsle 02 / 212 044 00\_(v pracovnej dobe) alebo e-mailom
+        na info@dennikn.sk. Ak n\xE1jdete chybu v&nbsp;\u010Dl\xE1nkoch, budeme v\u010Fa\u010Dn\xED,
+        ak n\xE1m nap\xED\u0161ete na editori@dennikn.sk. Ak ste na\u0161li chybu
+        na str\xE1nke, alebo v\xE1m niektor\xE1 funkcia nefunguje...\"><meta name=\"twitter:description\"
+        content=\"M\xE1te z\xE1ujem o&nbsp;predplatn\xE9?\_\u010Eakujeme! Na\u0161u
+        ponuku n\xE1jdete na tejto str\xE1nke. Inform\xE1cie alebo rady o&nbsp;predplatnom
+        z\xEDskate aj na \u010D\xEDsle 02 / 212 044 00\_(v pracovnej dobe) alebo e-mailom
+        na info@dennikn.sk. Ak n\xE1jdete chybu v&nbsp;\u010Dl\xE1nkoch, budeme v\u010Fa\u010Dn\xED,
+        ak n\xE1m nap\xED\u0161ete na editori@dennikn.sk. Ak ste na\u0161li chybu
+        na str\xE1nke, alebo v\xE1m niektor\xE1 funkcia nefunguje...\"><meta property=\"fb:app_id\"
+        content=\"1078070992224692\"><meta name=\"twitter:card\" content=\"summary_large_image\"><meta
+        name=\"twitter:site\" content=\"@dennikN\"><meta name=\"twitter:creator\"
+        content=\"@dennikN\"><title>Kontakt &#8211; Denn\xEDk N</title><meta property=\"og:title\"
+        content=\"Kontakt\"><meta name=\"twitter:title\" content=\"Kontakt\"><meta
+        property=\"og:locale\" content=\"sk_SK\"><meta property=\"og:site_name\" content=\"Denn\xEDk
+        N\"><meta property=\"og:image\" content=\"https://a-static.projektn.sk/2018/04/screenshot.png\"><meta
+        name=\"twitter:image\" content=\"https://a-static.projektn.sk/2018/04/screenshot.png\"><meta
+        property=\"og:type\" content=\"article\"><link rel=\"canonical\" href=\"https://dennikn.sk/kontakt/\"><meta
+        property=\"og:url\" content=\"https://dennikn.sk/kontakt/\"><meta name=\"og:image:width\"
+        content=\"640\"><meta name=\"og:image:height\" content=\"320\"><script id=\"dnru\"
+        type=\"application/json\">{}</script><script>(function(){var rfs=[\"dnra\",\"dnru\"];for(var
+        i=rfs.length-1;i>=0;i--){var rf=rfs[i],re=document.getElementById(rf);if(re){try{window[rf]=JSON.parse(document.getElementById(rf).innerHTML);}catch(e){}}}})();</script><script>function
+        rc(e){for(var e=e+\"=\",t=document.cookie.split(\";\"),n=0;n<t.length;n++)if(t.hasOwnProperty(n)){for(var
+        r=t[n];\" \"==r.charAt(0);)r=r.substring(1,r.length);if(0==r.indexOf(e))return
+        decodeURIComponent(r.substring(e.length,r.length))}return null}function su(){var
+        e={},t=(new Date).getTime();if(!dnru||!dnru.basic)return null;for(var n in
+        dnru)if(dnru.hasOwnProperty(n)){var r=dnru[n];if(\"basic\"==n&&r.id&&r.email)e.id=r.id,e.email=r.email,r.first_name&&r.last_name&&(e.name=[r.first_name,r.last_name]);else
+        if(\"mail\"==n&&n.length)e.newsletters=r.map(function(e,t){return e.code});else
+        if(\"subscriptions\"==n&&n.length){e.tags=[],e.subscriptions=[],e.active=0;for(var
+        i in r)if(r.hasOwnProperty(i)){var a=1e3*r[i].start_time,s=1e3*r[i].end_time;e.subscriptions.push([a,s]),t<s&&(e.active=Math.max(s,e.active)),t>a&&t<s&&(r[i].types&&(e.tags=e.tags.concat(r[i].types)),e.recurrent=r[i].is_recurrent)}e.active&&(e.active=Math.ceil((e.active-t)/864e5))}}return
+        e}var Token=rc(\"n_token\"),User=su();</script><script>( function ( i, s,
+        o, g, r, a, m ) { i[\"GoogleAnalyticsObject\"] = r; i[r] = i[r] || function()
+        { ( i[r].q = i[r].q || [] ).push( arguments ) }, i[r].l = 1 * new Date();
+        a = s.createElement( o ), m = s.getElementsByTagName( o )[0]; a.async = 1;
+        a.src = g; m.parentNode.insertBefore( a, m ) } )( window, document, \"script\",
+        \"//www.google-analytics.com/analytics.js\", \"ga\" );ga( \"create\", \"UA-55921068-1\",
+        \"auto\" ); if ( User && User.active ) { ga( \"set\", \"dimension1\", 2 );
+        } else if ( User ) { ga( \"set\", \"dimension1\", 1 ); } else { ga ( \"set\",
+        \"dimension1\", 0 ) } ga( \"set\", \"dimension5\", ( User && User.tags &&
+        User.tags.indexOf ( \"club\" ) != -1 ) ? 1 : 0 ); if ( User && User.id ) {
+        ga( \"set\", \"userId\", User.id ); }  ga( \"send\", \"pageview\" );</script><link
+        rel='dns-prefetch' href='//s.w.org' />\n<link rel=\"alternate\" type=\"application/rss+xml\"
+        title=\"RSS kan\xE1l: Denn\xEDk N &raquo;\" href=\"https://dennikn.sk/feed/\"
+        />\n<link rel=\"alternate\" type=\"application/rss+xml\" title=\"RSS kan\xE1l
+        koment\xE1rov webu Denn\xEDk N &raquo; ku \u010Dl\xE1nku Kontakt\" href=\"https://dennikn.sk/kontakt/feed/\"
+        />\n<link rel='stylesheet' id='dn_2_sk_style-css'  href='https://dennikn.sk/wp-content/themes/dn-2-sk/style.1551346930807.css'
+        type='text/css' media='all' />\n<script type='text/javascript' src='https://dennikn.sk/wp-content/plugins/dn-remp-cabrio/dn-remp-cabrio.js?ver=4.9.8'></script>\n<link
+        rel='shortlink' href='https://dennikn.sk/?p=2608' />\n<script src=\"https://cdn.onesignal.com/sdks/OneSignalSDK.js\"
+        async></script><script>var Setup={\"ajax\":\"https://dennikn.sk/wp-admin/admin-ajax.php\",\"ajax_error\":\"Chyba
+        komunik\xE1cie zo serverom. Sk\xFAste znova.\",\"home\":\"https://dennikn.sk/\",\"cookie\":\".dennikn.sk\",\"terms\":\"https://dennikn.sk/vseobecne-obchodne-podmienky/\",\"mail\":\"info@dennikn.sk\",\"store\":\"https://ustore.dennikn.sk/api/v1/article?source=dennikn\",\"wall\":\"https://predplatne.dennikn.sk/\",\"wall_unlock\":\"api/v1/content/share-url\",\"wall_more\":\"viac/\",\"wall_profile\":\"subscriptions/subscriptions/my/\",\"wall_signin\":\"sign/in/\",\"wall_login\":\"api/v1/users/login/\",\"wall_locked_head\":\"sales-funnel/sales-funnel/funnel-newpayment-popup?referer=\",\"os_minute_appid\":\"153b15a7-c86f-4684-a45f-fc446d1e3d54\",\"os_minute_safariwebid\":\"web.onesignal.auto.3f550615-46c0-4fa5-9ee8-42953ece3d19\",\"os_minute_prompt\":10};</script><link
+        rel=\"shortcut icon\" type=\"image/x-icon\" href=\"https://dennikn.sk/wp-content/themes/dn-2/dennikn-favicon.ico\"><link
+        rel=\"icon\" type=\"image/png\" href=\"https://dennikn.sk/wp-content/themes/dn-2/dennikn-favicon.png\"><link
+        rel=\"mask-icon\" href=\"https://dennikn.sk/wp-content/themes/dn-2/dennikn-maskicon.svg\"
+        color=\"#b00c28\"><meta name=\"msapplication-TileImage\" content=\"https://dennikn.sk/wp-content/themes/dn-2/dennikn-144x144.png\"><meta
+        name=\"msapplication-TileColor\" content=\"#b00c28\"><meta name=\"theme-color\"
+        content=\"#b00c28\"><link rel=\"apple-touch-icon\" sizes=\"114x114\" href=\"https://dennikn.sk/wp-content/themes/dn-2/dennikn-114x114.png\"><link
+        rel=\"icon\" sizes=\"114x114\" href=\"https://dennikn.sk/wp-content/themes/dn-2/dennikn-114x114.png\"><link
+        rel=\"apple-touch-icon\" sizes=\"144x144\" href=\"https://dennikn.sk/wp-content/themes/dn-2/dennikn-144x144.png\"><link
+        rel=\"icon\" sizes=\"144x144\" href=\"https://dennikn.sk/wp-content/themes/dn-2/dennikn-144x144.png\"><link
+        rel=\"apple-touch-icon\" sizes=\"192x192\" href=\"https://dennikn.sk/wp-content/themes/dn-2/dennikn-192x192.png\"><link
+        rel=\"icon\" sizes=\"192x192\" href=\"https://dennikn.sk/wp-content/themes/dn-2/dennikn-192x192.png\"><script>var
+        _sf_async_config = _sf_async_config || {}; _sf_async_config.useCanonical =
+        true; _sf_async_config.uid = 59251; _sf_async_config.domain = \"dennikn.sk\";
+        var _sf_startpt = ( new Date() ).getTime(); </script><script async src=\"//static.chartbeat.com/js/chartbeat_mab.js\"></script>\t\t<script>\n\t\tvar
+        googletag = window.googletag || {};\n\t\tgoogletag.cmd = googletag.cmd ||
+        [];\n\n\t\t(function (y, i, e, l, d, b, I, R, D) {\n\t\t\td.ybck = (i.cookie
+        || '').indexOf('ybjng') > -1;\n\n\t\t\tif (!d.ybck) {\n\t\t\t\tl.cmd.push(function
+        () {l.pubads().disableInitialLoad();});\n\t\t\t\tb = i.createElement('script');
+        b.async = true;\n\t\t\t\tb.src = (e === 'https:' ? 'https:' : 'http:') + '//jscdn.yieldbird.com/'
+        + y + '/yb.v2.js';\n\t\t\t\tI = i.getElementsByTagName('script')[0];\n\t\t\t\t(I.parentNode
+        || i.head).insertBefore(b, I);\n\t\t\t} else {\n\t\t\t\tl.cmd.push(function
+        () {l.pubads().setTargeting('ybjs', '0');});\n\t\t\t}\n\t\t})('a0c9b24a-2602-4c5c-bb13-b404531bde10',
+        document, document.location.protocol, googletag, window);\n\t\t</script>\n\t\t<script
+        async src=\"https://www.googletagservices.com/tag/js/gpt.js\"></script>\n\t\t<script>var
+        googletag=googletag||{};googletag.cmd=googletag.cmd||[];</script>\n\t\t</head><body
+        id=\"s_s\" class=\"__theme_dn2sk\"><header id=\"s_h\" class=\"s_h s_h_mnu__hidden
+        s_h_fin__hidden s_h_usr__hidden\" data-header data-ref=\"menu\"><div class=\"s_h_row\"><p
+        class=\"s_h_tit\"><a title=\"Denn\xEDk N\" href=\"https://dennikn.sk/\"><img
+        src=\"https://dennikn.sk/wp-content/themes/dn-2-sk/logo.svg\" alt=\"Denn\xEDk
+        N\"></a></p><button class=\"s_h_toggle\" title=\"Rubriky\"></button><nav class=\"s_h_mnu\"><ul
+        id=\"menu-hlavicka-2\" class=\"s_h_mnu_top\"><li id=\"menu-item-1233448\"
+        class=\"s_h_mnu_itm s_h_mnu_itm__0 __1233448\"><a href=\"https://dennikn.sk/slovensko/\">Slovensko</a></li><li
+        id=\"menu-item-1233449\" class=\"s_h_mnu_itm s_h_mnu_itm__0 __1233449\"><a
+        href=\"https://dennikn.sk/komentare/\">Koment\xE1re</a></li><li id=\"menu-item-1233447\"
+        class=\"s_h_mnu_itm s_h_mnu_itm__0 __1233447\"><a href=\"https://dennikn.sk/svet/\">Svet</a></li><li
+        id=\"menu-item-1233450\" class=\"s_h_mnu_itm s_h_mnu_itm__0 __1233450\"><a
+        href=\"https://dennikn.sk/blog/\">Blog</a></li><li id=\"menu-item-1233452\"
+        class=\"s_h_mnu_itm s_h_mnu_itm__0 __1233452 s_h_mnu_itm__more s_h_mnu_itm__parent\"><a
+        href=\"#\">\u010Eal\u0161ie a&nbsp;ulo\u017Een\xE9</a><ul class=\"sub-menu\"><li
+        id=\"menu-item-1233456\" class=\"s_h_mnu_itm s_h_mnu_itm__1 __1233456\"><a
+        href=\"https://dennikn.sk/komentare/shooty/\">Shooty</a></li><li id=\"menu-item-1233461\"
+        class=\"s_h_mnu_itm s_h_mnu_itm__1 __1233461\"><a href=\"https://dennikn.sk/tema/newsfilter/\">Newsfilter</a></li><li
+        id=\"menu-item-1233455\" class=\"s_h_mnu_itm s_h_mnu_itm__1 __1233455\"><a
+        href=\"https://dennikn.sk/ekonomika/\">Ekonomika</a></li><li id=\"menu-item-1233460\"
+        class=\"s_h_mnu_itm s_h_mnu_itm__1 __1233460\"><a href=\"https://dennikn.sk/veda/\">Veda</a></li><li
+        id=\"menu-item-1233458\" class=\"s_h_mnu_itm s_h_mnu_itm__1 __1233458\"><a
+        href=\"https://dennikn.sk/rodina-a-vztahy/\">Rodina a&nbsp;vz\u0165ahy</a></li><li
+        id=\"menu-item-1372710\" class=\"s_h_mnu_itm s_h_mnu_itm__1 __1372710\"><a
+        href=\"https://dennikn.sk/tema/rozhovory/\">Rozhovory</a></li><li id=\"menu-item-1233457\"
+        class=\"s_h_mnu_itm s_h_mnu_itm__1 __1233457\"><a href=\"https://dennikn.sk/kultura/\">Kult\xFAra</a></li><li
+        id=\"menu-item-1233459\" class=\"s_h_mnu_itm s_h_mnu_itm__1 __1233459\"><a
+        href=\"https://dennikn.sk/sport/\">\u0160port</a></li><li id=\"menu-item-1233463\"
+        class=\"s_h_mnu_itm s_h_mnu_itm__1 __1233463\"><a href=\"https://dennikn.sk/tema/podcast/\">Podcast</a></li><li
+        id=\"menu-item-1254785\" class=\"s_h_mnu_itm s_h_mnu_itm__1 __1254785\"><a
+        target=\"_blank\" href=\"http://dennikn.sk/minuta/?ref=menu\">MNT.sk</a></li><li
+        id=\"menu-item-1233469\" class=\"s_h_mnu_itm s_h_mnu_itm__1 __1233469\"><a
+        href=\"https://dennikn.sk/najnovsie/\">Najnov\u0161ie a\_naj\u010D\xEDtanej\u0161ie</a></li><li
+        id=\"menu-item-1233467\" class=\"s_h_mnu_itm s_h_mnu_itm__1 __1233467 s_h_mnu_itm__save\"><a
+        href=\"https://dennikn.sk/citat-neskor/\"><span>\u010C\xEDta\u0165 nesk\xF4r</span>
+        <span></span></a></li></ul></li></ul></nav><nav class=\"s_h_usr\"><ul id=\"menu-uzivatel-2\"
+        class=\"s_h_usr_top\"><li id=\"menu-item-1235411\" class=\"s_h_usr_itm s_h_usr_itm__0
+        __1235411 s_h_usr_itm__buy\"><a href=\"https://predplatne.dennikn.sk/sales-funnel/sales-funnel/funnel-newpayment-popup\"><span>K\xFApi\u0165</span>
+        <span>predplatn\xE9</span></a></li><li id=\"menu-item-1233482\" class=\"s_h_usr_itm
+        s_h_usr_itm__0 __1233482 s_h_usr_itm__rebuy\"><a href=\"https://predplatne.dennikn.sk/sales-funnel/sales-funnel/funnel-newpayment-popup\"><span>Pred\u013A\u017Ei\u0165</span>
+        <span>predplatn\xE9</span></a></li><li id=\"menu-item-1233484\" class=\"s_h_usr_itm
+        s_h_usr_itm__0 __1233484 s_h_usr_itm__options s_h_usr_itm__parent\"><a href=\"#\">Moje
+        konto</a><ul class=\"sub-menu\"><li class=\"s_h_usr_itm\" data-login><div
+        class=\"s_h_usr_profile\"><div class=\"s_h_usr_tit\">Prihl\xE1sen\xFD ako<a
+        class=\"s_h_usr_logout\" href=\"https://predplatne.dennikn.sk/users/sign/out/\">Odhl\xE1si\u0165</a></div><strong
+        class=\"s_h_usr_email\"></strong><a class=\"e_button e_button__blue e_button__arr\"
+        href=\"https://predplatne.dennikn.sk/subscriptions/subscriptions/my/\">Moje
+        konto</a></div><form class=\"s_h_usr_login\"><div class=\"s_h_usr_tit\">Prihl\xE1ste
+        sa<a class=\"s_h_usr_forgot\" href=\"https://predplatne.dennikn.sk/users/users/request-password/\">Zabudli
+        ste heslo?</a></div><input class=\"s_h_usr_inp\" type=\"email\" placeholder=\"Va\u0161a
+        e-mailov\xE1 adresa\" required><input class=\"s_h_usr_inp\" type=\"password\"
+        placeholder=\"Va\u0161e heslo\" required><button class=\"e_button e_button__blue
+        e_button__arr\">Prihl\xE1si\u0165 sa</button></form></li><li id=\"menu-item-1233488\"
+        class=\"s_h_usr_itm s_h_usr_itm__1 __1233488 s_h_usr_itm__emails s_h_usr_itm__top\"><a
+        href=\"https://predplatne.dennikn.sk/email-settings\">Nastavenie newslettrov</a></li><li
+        id=\"menu-item-1245969\" class=\"s_h_usr_itm s_h_usr_itm__1 __1245969 s_h_usr_itm__follow
+        s_h_usr_itm__bot\"><a href=\"https://predplatne.dennikn.sk/follow/settings\">Odber
+        autorov a&nbsp;t\xE9m e-mailom</a></li><li id=\"menu-item-1233493\" class=\"s_h_usr_itm
+        s_h_usr_itm__1 __1233493\"><a href=\"https://predplatne.dennikn.sk/\">K\xFApi\u0165
+        predplatn\xE9</a></li><li id=\"menu-item-1243586\" class=\"s_h_usr_itm s_h_usr_itm__1
+        __1243586\"><a href=\"https://itunes.apple.com/us/developer/n-press-s.r.o./id963123524\">Aplik\xE1cie
+        iOs</a></li><li id=\"menu-item-1242370\" class=\"s_h_usr_itm s_h_usr_itm__1
+        __1242370\"><a href=\"https://play.google.com/store/apps/developer?id=N+Press&#038;hl=en\">Aplik\xE1cie
+        Android</a></li><li id=\"menu-item-1233495\" class=\"s_h_usr_itm s_h_usr_itm__1
+        __1233495\"><a href=\"https://dennikn.sk/klub/\">Klub N</a></li><li id=\"menu-item-1233500\"
+        class=\"s_h_usr_itm s_h_usr_itm__1 __1233500\"><a href=\"https://obchod.dennikn.sk/\">Knihy</a></li><li
+        id=\"menu-item-1233502\" class=\"s_h_usr_itm s_h_usr_itm__1 __1233502\"><a
+        href=\"https://noviny.dennikn.sk/\">Noviny</a></li></ul></li></ul></nav><form
+        class=\"s_h_fin\" action=\"https://dennikn.sk/\"><button class=\"s_h_fin_cls\"
+        type=\"reset\" title=\"Zatvori\u0165 vyh\u013Ead\xE1vanie\"></button><input
+        class=\"s_h_fin_inp\" type=\"text\" name=\"s\" placeholder=\"Zadajte vyh\u013Ead\xE1van\xFD
+        v\xFDraz\" required><button class=\"s_h_fin_sbt\" type=\"submit\" title=\"H\u013Eadaj\"></button></form></div></header><div
+        class=\"s_place s_place__head_below\"><div class=\"remp-banner banner-placeholder\"
+        id=\"remp-banner-under-header\"></div></div><div class=\"s_a s_a__lead\"></div><main
+        id=\"s_b\" class=\"s_b s_b__tiny\">\n\t<div class=\"b_place b_place__body_above\"><div
+        class=\"remp-banner banner-placeholder\" id=\"remp-banner-above-content\"></div></div>\t<article
+        class=\"b_single b_single__default\">\n\t\t<header class=\"b_single_h\">\n\t\t\t<h1
+        class=\"e_title e_title__serif\">Kontakt</h1>\t\t</header>\n\t\t<div class=\"__2608
+        a_single a_single__page a_single__default\" data-single><p><strong>M\xE1te
+        z\xE1ujem o&nbsp;predplatn\xE9?</strong>\_\u010Eakujeme! Na\u0161u ponuku
+        <a data-link=\"ext\" href=\"https://predplatne.dennikn.sk/\">n\xE1jdete na
+        tejto str\xE1nke</a>. Inform\xE1cie alebo rady o&nbsp;predplatnom z\xEDskate
+        aj na \u010D\xEDsle <strong>02 / 212 044 00</strong>\_(v pracovnej dobe) alebo
+        e-mailom na <a data-link=\"ext\" href=\"mailto:info@dennikn.sk\"><strong>info@dennikn.sk</strong></a>.</p>\n<p><strong>Ak
+        n\xE1jdete chybu v&nbsp;\u010Dl\xE1nkoch</strong>, budeme v\u010Fa\u010Dn\xED,
+        ak n\xE1m nap\xED\u0161ete na <strong><a data-link=\"ext\" href=\"mailto:editori@dennikn.sk\">editori@dennikn.sk</a></strong>.</p>\n<p><strong>Ak
+        ste na\u0161li chybu na str\xE1nke</strong>, alebo v\xE1m niektor\xE1 funkcia
+        nefunguje spr\xE1vne, nap\xED\u0161te n\xE1m pros\xEDm na <a data-link=\"ext\"
+        href=\"mailto:web@dennikn.sk\"><strong>web@dennikn.sk</strong></a>. Aby ste
+        n\xE1m umo\u017Enili probl\xE9my vyrie\u0161i\u0165, dopl\u0148te pros\xEDm
+        do spr\xE1vy aj zariadenie, opera\u010Dn\xFD syst\xE9m, n\xE1zov a&nbsp;verziu
+        prehliada\u010Da. Napr\xEDklad iPad 3, iOS7, Chrome 43.</p>\n<p><em>Denn\xEDk
+        N vyu\u017E\xEDva spravodajstvo \u010CTK, ktor\xE9ho obsah je chr\xE1nen\xFD
+        autorsk\xFDm z\xE1konom. Prepis, \u0161\xEDrenie \u010Di \u010Fal\u0161ie
+        spr\xEDstup\u0148ovanie tohto obsahu \u010Di jeho \u010Dast\xED verejnosti,
+        a&nbsp;to ak\xFDmko\u013Evek sp\xF4sobom, je bez prech\xE1dzaj\xFAceho s\xFAhlasu
+        \u010CTK vyslovene zak\xE1zan\xE9.</em></p>\n<p><em>Copyright (2015) The Associated
+        Press (AP) &#8211; v\u0161etky pr\xE1va vyhraden\xE9. Materi\xE1ly agent\xFAry
+        AP nesm\xFA by\u0165 \u010Falej publikovan\xE9, vysielan\xE9, prepisovan\xE9
+        alebo redistribuovan\xE9.</em></p>\n<p>Denn\xEDk\_N prev\xE1dzkuje spolo\u010Dnos\u0165
+        <strong>N Press, s.r.o., Jaro\u0161ova 1, 831 03 Bratislava.</strong></p>\n<p>Denn\xEDk
+        N spolupracuje so spolo\u010Dnos\u0165ou Slovakia Online, s.r.o., Riazansk\xE1
+        57, Bratislava, I\u010CO: 31 402 445.</p>\n</div>\t</article>\n\t<div class=\"b_place
+        b_place__body_below\"><div class=\"remp-banner banner-placeholder\" id=\"remp-banner-under-content\"></div></div></main>\n<div
+        class=\"s_place s_place__foot_above\"><div class=\"remp-banner banner-placeholder\"
+        id=\"remp-banner-above-footer\"></div></div><footer id=\"s_f\" class=\"s_f\"><div
+        class=\"s_f_row\"><nav class=\"s_f_mnu\"><ul id=\"menu-paticka-2\" class=\"menu\"><li
+        id=\"menu-item-1233433\" class=\"s_f_mnu_itm s_f_mnu_itm__0 __1233433\"><a
+        href=\"https://dennikn.sk/redakcia/\">Redakcia</a></li><li id=\"menu-item-1253933\"
+        class=\"s_f_mnu_itm s_f_mnu_itm__0 __1253933\"><a href=\"https://obchod.dennikn.sk\">Kni\u017En\xFD
+        obchod</a></li><li id=\"menu-item-1233432\" class=\"s_f_mnu_itm s_f_mnu_itm__0
+        __1233432\"><a href=\"https://dennikn.sk/inzercia/\">Inzercia</a></li><li
+        id=\"menu-item-1233440\" class=\"s_f_mnu_itm s_f_mnu_itm__0 __1233440\"><a
+        href=\"https://dennikn.sk/tema/dennikn-hospodarenie-financovanie/\">Financovanie</a></li><li
+        id=\"menu-item-1233434\" class=\"s_f_mnu_itm s_f_mnu_itm__0 __1233434\"><a
+        href=\"https://dennikn.sk/vseobecne-obchodne-podmienky/\">VOP</a></li><li
+        id=\"menu-item-1233435\" class=\"s_f_mnu_itm s_f_mnu_itm__0 __1233435 s_f_mnu_itm__active\"><a
+        href=\"https://dennikn.sk/kontakt/\">Kontakt</a></li></ul></nav><nav class=\"s_f_soc\"><ul
+        id=\"menu-socialne-2\" class=\"menu\"><li id=\"menu-item-1233386\" class=\"s_f_soc_itm
+        s_f_soc_itm__0 __1233386 s_f_soc_itm__email\"><a href=\"mailto:info@dennikn.sk\">info@dennikn.sk</a></li><li
+        id=\"menu-item-1233412\" class=\"s_f_soc_itm s_f_soc_itm__0 __1233412 s_f_soc_itm__facebook\"><a
+        href=\"https://www.facebook.com/projektn.sk/\">Facebook</a></li><li id=\"menu-item-1233418\"
+        class=\"s_f_soc_itm s_f_soc_itm__0 __1233418 s_f_soc_itm__messenger\"><a href=\"https://m.me/projektn.sk\">Messenger</a></li><li
+        id=\"menu-item-1233420\" class=\"s_f_soc_itm s_f_soc_itm__0 __1233420 s_f_soc_itm__twitter\"><a
+        href=\"https://twitter.com/dennikN/\">Twitter</a></li><li id=\"menu-item-1233422\"
+        class=\"s_f_soc_itm s_f_soc_itm__0 __1233422 s_f_soc_itm__youtube\"><a href=\"https://www.youtube.com/channel/UCe_VgLz1y99hUF1q5ppQesA/\">Youtube</a></li><li
+        id=\"menu-item-1233423\" class=\"s_f_soc_itm s_f_soc_itm__0 __1233423 s_f_soc_itm__instagram\"><a
+        href=\"https://instagram.com/dennikn/\">Instagram</a></li><li id=\"menu-item-1233424\"
+        class=\"s_f_soc_itm s_f_soc_itm__0 __1233424 s_f_soc_itm__rss\"><a href=\"https://dennikn.sk/rss-odber/\">RSS</a></li></ul></nav></div><div
+        class=\"s_f_row\"><nav class=\"s_f_par\"><ul id=\"menu-partneri-2\" class=\"menu\"><li
+        id=\"menu-item-1233337\" class=\"s_f_par_itm s_f_par_itm__0 __1233337\"><a
+        href=\"http://cynickaobluda.dennikn.sk/\">Cynick\xE1 obluda</a></li><li id=\"menu-item-1233338\"
+        class=\"s_f_par_itm s_f_par_itm__0 __1233338\"><a href=\"http://techbox.dennikn.sk/\">Techbox</a></li><li
+        id=\"menu-item-1233339\" class=\"s_f_par_itm s_f_par_itm__0 __1233339\"><a
+        href=\"http://historyweb.dennikn.sk/\">Historyweb</a></li><li id=\"menu-item-1233341\"
+        class=\"s_f_par_itm s_f_par_itm__0 __1233341\"><a href=\"http://varme.dennikn.sk/\">Varme</a></li><li
+        id=\"menu-item-1233343\" class=\"s_f_par_itm s_f_par_itm__0 __1233343\"><a
+        href=\"http://science.dennikn.sk/\">Science</a></li><li id=\"menu-item-1233345\"
+        class=\"s_f_par_itm s_f_par_itm__0 __1233345\"><a href=\"https://medziknihami.dennikn.sk/\">Medzi
+        knihami</a></li><li id=\"menu-item-1233346\" class=\"s_f_par_itm s_f_par_itm__0
+        __1233346\"><a href=\"https://kinecko.dennikn.sk/\">Kine\u010Dko</a></li></ul></nav><div
+        class=\"s_f_codex\" title=\"Re\u0161pektujeme etick\xFD k\xF3dex novin\xE1ra\"></div><a
+        class=\"s_f_top\" href=\"#s_s\" title=\"Sp\xE4\u0165 nahor\"></a></div><p
+        class=\"s_f_legal\">Copyright &copy; N Press s.r.o.</p></footer><div class=\"s_place
+        s_place__foot_below\"><div class=\"remp-banner banner-placeholder\" id=\"remp-banner-under-footer\"></div></div><script
+        type='text/javascript' src='https://dennikn.sk/wp-content/themes/dn-2-sk/script.1551346930807.js'></script>\n<script>
+        var _sf_async_config = _sf_async_config || {}; _sf_async_config.sections =
+        \"none\"; _sf_async_config.authors = \"none\"; var _cbq = window._cbq = (
+        window._cbq || [] ); _cbq.push( [ \"_acct\", User ? ( User.active ? \"paid\"
+        : \"lgdin\" ) : \"anon\" ] ); ( function() { function loadChartbeat() { window._sf_endpt
+        = ( new Date() ).getTime(); var e = document.createElement( \"script\" );
+        e.setAttribute( \"language\", \"javascript\" ); e.setAttribute( \"type\",
+        \"text/javascript\" ); e.setAttribute( \"src\", \"//static.chartbeat.com/js/chartbeat.js\"
+        ); document.body.appendChild( e ); } var oldonload = window.onload; window.onload
+        = ( typeof window.onload != \"function\" ) ? loadChartbeat: function() { oldonload();
+        loadChartbeat(); }; } )(); </script>\t\t<script>\n            jQuery(function()
+        {\n                ( function( win, doc ) {\n                    function
+        mock( fn ) {\n                        return function() {\n                            this._.push(
+        [fn, arguments] )\n                        }\n                    }\n\n                    function
+        load( url ) {\n                        var script = doc.createElement( \"script\"
+        );\n                        script.type = \"text/javascript\";\n                        script.async
+        = true;\n                        script.src = url;\n                        doc.getElementsByTagName(
+        \"head\" )[0].appendChild( script );\n                    }\n\n                    win.remplib
+        = win.remplib || {};\n                    var mockFuncs = {\n                        \"campaign\":
+        \"init\",\n                        \"tracker\": \"init trackEvent trackPageview
+        trackCommerce trackTimespent\",\n                        \"iota\": \"init\"\n
+        \                   };\n\n                    Object.keys( mockFuncs ).forEach(
+        function( key ) {\n                        if ( !win.remplib[key] ) {\n                            var
+        fn, i, funcs = mockFuncs[key].split( \" \" );\n                            win.remplib[key]
+        = {_: []};\n\n                            for ( i = 0; i < funcs.length; i++
+        ) {\n                                fn = funcs[i];\n                                win.remplib[key][fn]
+        = mock( fn );\n                            }\n                        }\n
+        \                   });\n\n                    load( \"https://beam.remp2020.com/assets/lib/js/remplib.js?v201901272146\"
+        );\n                    load( \"https://campaign.remp2020.com/assets/lib/js/remplib.js?v201901272146\"
+        );\n                } )( window, document );\n\n                var rempConfig
+        = {\n                    token: \"1a8feb16-3e30-4f9b-bf74-20037ea8505a\",\n
+        \                   cookieDomain: \".dennikn.sk\",\n                    tracker:
+        {\n                        url: \"https://tracker.beam.remp2020.com\",\n                        timeSpentEnabled:
+        true\n                    },\n                    campaign: {\n                        url:
+        \"https://campaign.remp2020.com\",\n                        showtimeExperiment:
+        true,\n                        variables: {}\n                    }\n                };\n\n
+        \               var rempCampaignQuotes=[{text:\"R\xE1d podporujem kvalitn\xFA
+        \u017Eurnalistiku. Sledujem politick\xE9 t\xE9my, ako aj blogy Filipa Struh\xE1rika
+        na t\xE9my social media. P\xE1\u010Di sa mi, ako Denn\xEDk N pristupuje k
+        t\xE9mam extr\xE9mizmu z h\u013Eadiska vzdel\xE1vania mlad\xFDch.\",name:\"Juraj
+        Kosn\xE1\u010D, PR manager\",class:\"quotes-banner-text-long\"},{text:\"M\xE1
+        v\xFDborn\xFA kult\xFArnu rubriku.\",name:\"Peter Marek, fotograf\",class:\"\"},{text:\"Pova\u017Eujem
+        nez\xE1visl\xE9 m\xE9di\xE1 za k\u013E\xFA\u010Dov\xE9 pre slobodn\xFA spolo\u010Dnos\u0165.
+        Poskytuj\xFA v\xFDborn\xE9 longform \u010Dl\xE1nky, ktor\xE9 nek\u013A\u017Eu
+        len po povrchu.\",name:\"Metod Ryb\xE1r, IT konzultant\",class:\"\"},{text:\"Nemus\xEDm
+        s\xFAhlasi\u0165 so v\u0161etk\xFDm. D\xF4le\u017Eitej\u0161ie je, \u017Ee
+        to m\xE1 hlavu a p\xE4tu. A v neposlednom rade, v\u017Edy je dobr\xE9 vedie\u0165,
+        \u010Do si mysl\xED konkurencia. \",name:\"Martin Pilnik, bloger, \u010Dlen
+        t\xFDmu SaS pre zdravotn\xEDctvo\",class:\"\"},{text:\"M\xE1m r\xE1d inov\xE1cie
+        a svie\u017Ei vietor.\",name:\"Petiar, pesni\u010Dk\xE1r a stand-up komik\",class:\"\"},{text:\"Nez\xE1visl\xE9
+        modern\xE9 m\xE9dium, ide s technologick\xFDmi trendami, prin\xE1\u0161a zauj\xEDmav\xE9
+        t\xE9my a dobre sa \u010D\xEDta.\",name:\"T\xE1\u0148a Freylichov\xE1, Bratislava\",class:\"\"},{text:\"Denn\xEDk
+        N - profesion\xE1lna pr\xE1ca, nez\xE1visl\xE9 m\xE9dium, r\xF4znorod\xED
+        novin\xE1ri, ve\u013Emi dobr\xE9 \u010D\xEDtanie a zdroj inform\xE1ci\xED.\",name:\"Michal
+        Behun, podnikate\u013E\",class:\"\"},{text:\"P\xE1\u010Dia sa mi longformy
+        - ako pr\xEDklad spomeniem report\xE1\u017Ee Tom\xE1\u0161a Bellu z Talianska,
+        \u010C\xEDny a Japonska \u010Di ned\xE1vne \u010Dl\xE1nky Andreja B\xE1na
+        z v\xFDchodu Slovenska.\",name:\"Jakub G\xE1bor, \u0161tudent, FSEV UK Bratislava\",class:\"\"},{text:\"Lebo
+        m\xE1m pocit, \u017Ee pr\xE1ve Denn\xEDk N m\xF4\u017Ee prispie\u0165 k dlho
+        potrebnej spolo\u010Denskej zmene.\",name:\"Jakub G\xE1bor, \u0161tudent,
+        FSEV UK Bratislava\",class:\"\"},{text:\"Lebo si v\xE1\u017Eim kvalitn\xFA
+        pr\xE1cu redaktoriek a redaktorov a ich prec\xEDznu pr\xE1cu s faktami. Predplatn\xE9
+        vn\xEDmam ako prejav mojej v\u010Faky a podpory.\",name:\"Jakub G\xE1bor,
+        \u0161tudent, FSEV UK Bratislava\",class:\"\"},{text:\"Preto\u017Ee Denn\xEDk
+        N je nosite\u013Eom naj\u010Derstvej\u0161\xEDch a neskreslen\xFDch inform\xE1ci\xED
+        o dian\xED v krajine i vo svete.\",name:\"Rastislav A\u010D, \u0161pecialista
+        predaja\",class:\"\"},{text:\"Lebo tu n\xE1jdem inform\xE1cie, ktor\xFDm sa
+        d\xE1 veri\u0165, \u010Dl\xE1nky ktor\xE9 sa daj\xFA \u010D\xEDta\u0165, fakty
+        a nie bulv\xE1rne dr\xEDsty. Ozaj poriadne a dobr\xE9 \u010D\xEDtanie.\",name:\"Laco
+        Mra\u017E\xEDk\",class:\"\"},{text:\"Unik\xE1tny a r\xFDchly zdroj potrebn\xFDch
+        inform\xE1ci\xED v\u010Faka \u201EMin\xFAta po min\xFAte\u201C.\",name:\"Pavol
+        Jur\u010Do, IT analytik\",class:\"\"},{text:\"Pozn\xE1m osobne viacer\xFDch
+        \u013Eud\xED, \u010Do za Denn\xEDkom N stoja. Ver\xEDm im, \u017Ee id\xFA
+        skuto\u010Dne do h\u013Abky. Z\xE1rove\u0148 mi Denn\xEDk N serv\xEDruje inform\xE1cie
+        o dian\xED na Slovensku sp\xF4sobom, ktor\xFD je inovat\xEDvny a funk\u010Dn\xFD.
+        To som potrebovala.\",name:\"Petra Jankovi\u010Dov\xE1, riadite\u013Eka reklamnej
+        agent\xFAry Triad Advertising v Prahe\",class:\"quotes-banner-text-long\"},{text:\"Chcem
+        podpori\u0165 nez\xE1visl\xE9 m\xE9di\xE1 a Nku d\xF4verujem zo v\u0161etk\xFDch
+        najviac. \",name:\"Martin Eichler, projektov\xFD mana\u017E\xE9r\",class:\"\"},{text:\"Kvalitn\xE1
+        \u017Eurnalistika, koment\xE1re. Som spokojn\xFD, ako sa Denn\xEDk N chytil
+        svojej pr\xEDle\u017Eitosti a nedfl\xE1kli to.\",name:\"Mat\xFA\u0161 Z\xE1vodn\xFD,
+        podnikate\u013E\",class:\"\"},{text:\"Preto\u017Ee zverej\u0148uje aj pre
+        'kaviare\u0148' nepohodln\xE9 spr\xE1vy a uverej\u0148uje popri liber\xE1lnych
+        koment\xE1roch aj tie konzervat\xEDvne. \",name:\"Filip K\u0161enzul\xE1k,
+        u\u010Dite\u013E\",class:\"\"},{text:\"Najlep\u0161ia autorsk\xE1 \u017Eurnalistika
+        na Slovensku, ktor\xE1 je zalo\u017Een\xE1 na overite\u013En\xFDch faktoch.\",name:\"Adam
+        Novosad, \u0161tudent\",class:\"\"},{text:\"Predplatite\u013Eom N som u\u017E
+        od jeho vzniku, preto\u017Ee si mysl\xEDm, \u017Ee kvalitn\xE1 a nez\xE1visl\xE1
+        \u017Eurnalistika je pre Slovensko ve\u013Emi potrebn\xE1. Nach\xE1dzam v
+        \u0148om inform\xE1cie v\u017Edy zasaden\xE9 do \u0161ir\u0161ieho kontextu.\",name:\"Martin
+        Ko\u017E\xE1r, poistn\xFD matematik\",class:\"quotes-banner-text-long\"},{text:\"Kvalitn\xE9
+        \u010D\xEDtanie, inform\xE1cie o kult\xFAre, rozhovory na v\xFDbornej \xFArovni,
+        spolupr\xE1ca s ilustr\xE1tormi, d\xF4sledn\xE9 venovanie sa t\xE9mam, \u017Eiaden
+        bulv\xE1r. Takto si predstavujem bud\xFAcnos\u0165 novin\xE1rskej pr\xE1ce.\",name:\"Zuzana
+        Gavorov\xE1, advok\xE1t\",class:\"quotes-banner-text-long\"},{text:\"Je to
+        najlep\u0161\xED sp\xF4sob boja za slu\u0161n\xE9 Slovensko.\",name:\"Ladislav
+        Kaveck\xFD, kreat\xEDvne \u0161t\xFAdio Takto.sk\",class:\"\"},{text:\"Denn\xEDk
+        N pon\xFAka kvalitn\xFA \u017Eurnalistiku, zauj\xEDmav\xE9 rozhovory, koment\xE1re
+        a v neposlednom rade podcast, ktor\xFD sumarizuje inform\xE1cie z cel\xE9ho
+        d\u0148a. Ocen\xEDm to v\u017Edy, ke\u010F nem\xE1m cez de\u0148 \u010Das
+        sledova\u0165, \u010Do sa deje.\",name:\"Hana \u0160ipo\u0161ov\xE1, N\xF3rsko\",class:\"quotes-banner-text-long\"},{text:\"Novin\xE1ri
+        s\xFA t\xED, ktor\xED sa maj\xFA politikov p\xFDta\u0165 za n\xE1s, a v N-ku
+        to robia dobre.\",name:\"Val\xE9ria Z\xE1vadsk\xE1, knihovn\xED\u010Dka\",class:\"\"},{text:\"Najrad\u0161ej
+        m\xE1m texty pani T\xF3dovej, ale tie\u017E p\xE1nov \u010Cikovsk\xE9ho, \u0160ime\u010Dku,
+        Morvaya, G\xE1lisa. Pote\u0161\xEDm sa ka\u017Ed\xE9mu pr\xEDspevku od p\xE1na
+        G\xE1la alebo report\xE1\u017Ei Karola Sudora. Sledujem min\xFAtu po min\xFAte.
+        Proste je to fajn.\",name:\"Zlatica Ko\u0161\u0165anov\xE1, d\xF4chodky\u0148a\",class:\"quotes-banner-text-long\"},{text:\"Denn\xEDku
+        N d\xF4verujem spomedzi v\u0161etk\xFDch slovensk\xFDch m\xE9di\xED najviac.\",name:\"Nikola
+        Anu\u0161ev, podnikate\u013E\",class:\"\"},{text:\"Je to kombin\xE1cia pr\xEDbehu
+        vzniku, h\u013Eadania cesty k vy\u0161\u0161ej kvalite \u017Eurnalistiky a
+        inovat\xEDvny pr\xEDstup k digit\xE1lnym rie\u0161eniam. A m\xE1te Shootyho.
+        \",name:\"Marcel Straka, manager\",class:\"\"},{text:\"Denn\xEDk N \u010D\xEDtam
+        od prv\xE9ho vydania kv\xF4li kvalitn\xFDm \u010Dl\xE1nkom a skvel\xFDm vytrval\xFDm
+        novin\xE1rom.\",name:\"Lenka Hol\u010D\xEDkov\xE1, prev\xE1dzkarka\",class:\"\"},{text:\"T\xFDm,
+        \u017Ee som predplatite\u013Eom Denn\xEDka N, m\xF4\u017Eem aj ja svojou tro\u0161kou
+        podpori\u0165 nez\xE1visl\xFA \u017Eurnalistiku, ktor\xE1 je jedn\xFDm zo
+        z\xE1kladov demokracie - a to nie je kli\u0161\xE9.\",name:\"Mira Sok\xE1\u010Dov\xE1,
+        ekon\xF3mka\",class:\"\"},{text:\"Moje d\xF4vody? Novin\xE1ri ako Karol Sudor,
+        Monika T\xF3dova, Kon\u0161tant\xEDn \u010Cikovsk\xFD at\u010F.\",name:\"Mari\xE1n
+        Gergely, predava\u010D\",class:\"\"},{text:\"Denn\xEDk N \u0161\xEDri mne
+        bl\xEDzke hodnoty, prin\xE1\u0161a vyv\xE1\u017Een\xE9 inform\xE1cie a kvalitn\xE9
+        koment\xE1re. Nemus\xEDm s nimi na 100% s\xFAhlasi\u0165, ale don\xFAtia ma
+        k zamysleniu.\",name:\"Allan Weber, programov\xFD mana\u017E\xE9r\",class:\"\"},{text:\"Nko
+        je oknom do slovenskej du\u0161e. \",name:\"Jakub Kastler, Bratislava\",class:\"\"},{text:\"Denn\xEDk
+        N odv\xE1dza dlhodobo super robotu, hlavne pokia\u013E ide o dom\xE1ce spravodajstvo.
+        Rada si pre\u010D\xEDtam aj in\xE9 rubriky. M\xE1m rada Moniku T\xF3dov\xFA.\",name:\"Zuzana
+        Lehock\xE1, grafick\xE1 dizajn\xE9rka\",class:\"\"},{text:\"Denn\xEDk N si
+        svoje miesto na medi\xE1lnom trhu obh\xE1ji poctiv\xFDmi report\xE1\u017Eami,
+        rozhovormi, v\xFDbornou kult\xFArnou rubrikou, ale aj prevzat\xFDmi \u010Dl\xE1nkami
+        z Washington Post. A tie\u017E je tu Shooty.\",name:\"Branislav \u0160t\u011Bp\xE1nek,
+        kur\xE1tor\",class:\"quotes-banner-text-long\"},{text:\"Je to prv\xE1 appka,
+        ktor\xFA si r\xE1no pozriem. Viem, \u017Ee tu n\xE1jdem d\xF4veryhodn\xE9
+        inform\xE1cie a spr\xE1vy z domova aj zahrani\u010Dia. Odkedy som si ho predplatil,
+        nepozer\xE1m ani spr\xE1vy v telev\xEDzii.\",name:\"Radoslav Regiec, architekt\",class:\"quotes-banner-text-long\"},{text:\"\u010C\xEDtam
+        Denn\xEDk N, lebo ako gymnazistka pova\u017Eujem za d\xF4le\u017Eit\xE9 ma\u0165
+        zdroj inform\xE1ci\xED, na ktor\xFD sa viem spo\u013Eahn\xFA\u0165. Nie je
+        ni\u010D hor\u0161ie ako mlad\xFD \u010Dlovek, ktor\xFD zdie\u013Ea \u010Di
+        rozpr\xE1va (o) fake news.\",name:\"Laura Valachov\xE1, \u0161tudentka\",class:\"quotes-banner-text-long\"},{text:\"Lebo
+        \u017Eiaden \u010Dlovek nedok\xE1\u017Ee da\u0165 to\u013Eko pozornosti spupn\xFDm
+        oligarchom a skorumpovan\xFDm politikom, ako len nez\xE1visl\xFD investigat\xEDvny
+        novin\xE1r dok\xE1\u017Ee da\u0165 tak\xFDm existenci\xE1m.\",name:\"Martin
+        Tk\xE1\u010D, nespokojn\xFD ob\u010Dan Slovenska\",class:\"quotes-banner-text-long\"},{text:\"Preto\u017Ee
+        Denn\xEDku N m\xF4\u017Eem veri\u0165.\",name:\"Krist\xEDna Marcinkov\xE1,
+        \u0161tudentka \u017Eurnalistiky\",class:\"\"},{text:\"V\u017Edy aktu\xE1lny
+        a triezvy zdroj inform\xE1ci\xED, bez bulv\xE1ru a kon\u0161pira\u010Dn\xFDch
+        nezmyslov. \",name:\"Pavol Mat\xFA\u0161, kon\u0161trukt\xE9r a aplika\u010Dn\xFD
+        in\u017Einier\",class:\"\"},{text:\"Som predplatite\u013Eom u\u017E dlh\u0161ie,
+        ale ak by som nebol, udalosti posledn\xE9ho mesiaca a pr\xEDstup Nka k nim
+        by ma bezpochyby presved\u010Dili.\",name:\"Martin Bak, pr\xE1vnik\",class:\"\"},{text:\"Noviny
+        podporujem od vznik a nesklamali ma; dnes oce\u0148ujem najm\xE4 aktu\xE1lnos\u0165
+        (min\xFAta po min\xFAte) a kvalitn\xE9 spravodajstvo.\",name:\"Marcel Uhrin,
+        vysoko\u0161kolsk\xFD u\u010Dite\u013E, biol\xF3g\",class:\"\"},{text:\"Chcel
+        som podpori\u0165 odv\xE1\u017Enych novin\xE1rov, ktor\xED si v\xE1\u017Eia
+        slobodu a nez\xE1vislos\u0165.\",name:\"Viktor Vranka, d\xF4chodca\",class:\"\"}];\n
+        \               var rempCampaignQuote = rempCampaignQuotes[Math.floor( Math.random()
+        * rempCampaignQuotes.length )];\n\n                if ( User ) {\n                    rempConfig.userId
+        = User.id.toString();\n                    rempConfig.userSubscribed = User.active
+        > 0;\n\n                    rempConfig.campaign.variables.remainingDays =
+        {\n                        value: function() {\n                            switch
+        ( User.active ) {\n                                case 1: return \"1 de\u0148\";\n
+        \                               case 2:\n                                case
+        3:\n                                case 4: return User.active + \" dni\";\n
+        \                               default: return User.active + \" dn\xED\";\n
+        \                           }\n                        }\n                    };\n
+        \                   rempConfig.campaign.variables.email = {\n                        value:
+        function() { return User.email; }\n                    };\n                }\n\n
+        \               rempConfig.campaign.variables.quoteName = {\n                    value:
+        function () { return rempCampaignQuote.name; }\n                };\n\n                rempConfig.campaign.variables.quoteText
+        = {\n                    value: function () { return rempCampaignQuote.text;
+        }\n                };\n\n                rempConfig.campaign.variables.quoteClass
+        = {\n                    value: function () { return rempCampaignQuote.class;
+        }\n                };\n\n                if ( typeof( Article ) !== 'undefined'
+        ) {\n                    var articleId = Article.position.toString();\n\n
+        \                   rempConfig.tracker.article = {\n                        id:
+        articleId,\n                        author_id: Article.author.name,\n                        category:
+        'none',\n                        tags: [],\n                        locked:
+        Article.locked,\n                    };\n\n                    if ( window.cabrio
+        ) {\n                        var variants = { title: null, image: null, lock:
+        null };\n\n                        if ( window.cabrio.t && window.cabrio.t.variants
+        && window.cabrio.t.variants[articleId] ) { variants.title = window.cabrio.t.variants[articleId];
+        }\n                        if ( window.cabrio.i && window.cabrio.i.variants
+        && window.cabrio.i.variants[articleId] ) { variants.image = window.cabrio.i.variants[articleId];
+        }\n                        if ( window.cabrio.l && window.cabrio.l.variants
+        && window.cabrio.l.variants[articleId] ) { variants.lock = window.cabrio.l.variants[articleId];
+        }\n\n                        rempConfig.tracker.article.variants = variants\n
+        \                   }\n                }\n\n                remplib.tracker.init(
+        rempConfig );\n                remplib.campaign.init( rempConfig );\n            });\n\t\t</script>\n\t\t</body></html>"
+    headers:
+      ? !!python/object/new:multidict._istr.istr
+      - Accept-Ranges
+      : bytes
+      ? !!python/object/new:multidict._istr.istr
+      - Content-Encoding
+      : gzip
+      ? !!python/object/new:multidict._istr.istr
+      - Content-Type
+      : text/html; charset=UTF-8
+      ? !!python/object/new:multidict._istr.istr
+      - Date
+      : Sun, 03 Mar 2019 15:34:37 GMT
+      ? !!python/object/new:multidict._istr.istr
+      - Link
+      : <https://dennikn.sk/wp-json/>; rel="https://api.w.org/", <https://dennikn.sk/?p=2608>;
+        rel=shortlink
+      ? !!python/object/new:multidict._istr.istr
+      - Transfer-Encoding
+      : chunked
+    status:
+      code: 200
+      message: OK
+    url: !!python/object/new:yarl.URL
+      state: !!python/tuple
+      - !!python/object/new:urllib.parse.SplitResult
+        - https
+        - dennikn.sk
+        - /kontakt/
+        - ''
+        - ''
+version: 1
