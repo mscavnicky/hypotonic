@@ -7,7 +7,7 @@ logger = logging.getLogger('hypotonic')
 logger.setLevel(logging.INFO)
 logger.addHandler(logging.StreamHandler())
 
-vcr = VCR(cassette_library_dir='./cassettes')
+vcr = VCR(cassette_library_dir='./tests/cassettes')
 
 
 class TestHypotonic(unittest.TestCase):

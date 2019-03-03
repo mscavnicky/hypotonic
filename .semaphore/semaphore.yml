@@ -17,4 +17,4 @@ blocks:
             - sem-version python 3.7
             - pip3 install pipenv
             - pipenv install --dev
-            - pipenv run python tests.py
+            - pipenv run python -m unittest
