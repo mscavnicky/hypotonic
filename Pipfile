@@ -4,11 +4,10 @@ url = "https://pypi.org/simple"
 verify_ssl = true
 
 [dev-packages]
+# Used for releasing package to pypi.
 twine = "*"
 # Version 2.0.1 has a bug around awaiting aiohttp in tests.
-vcrpy = {editable = true,git = "https://github.com/kevin1024/vcrpy.git"}
-# Version below 4.2b1 has a security vulnerability.
-pyyaml = ">=4.2b1"
+vcrpy = {editable = true, git = "https://github.com/kevin1024/vcrpy.git"}
 
 [packages]
 lxml = "*"
