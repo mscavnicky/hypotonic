@@ -11,6 +11,22 @@ vcr = VCR(cassette_library_dir='./tests/cassettes')
 
 
 class TestHypotonic(unittest.TestCase):
+  @vcr.use_cassette()
+  def test_get_with_params(self):
+    data, errors = (
+      Hypotonic()
+        .get('https://www.justetf.com/en/etf-profile.html',
+             {'tab': 'listing', 'isin': 'IE00B44CND37'})
+        .find('.tab-container .container tbody tr')
+        .set({'ticker': 'td:nth-child(3)'})
+        .data()
+    )
+
+    self.assertFalse(errors)
+    self.assertEqual(7, len(data))
+    self.assertNotIn({'ticker': 'SPY'}, data)
+    self.assertIn({'ticker': 'TRSY'}, data)
+
   def test_post(self):
     data, errors = (
       Hypotonic()

@@ -1,0 +1,537 @@
+interactions:
+- request:
+    body: null
+    headers: {}
+    method: GET
+    uri: https://www.justetf.com/en/etf-profile.html?tab=listing&isin=IE00B44CND37
+  response:
+    body:
+      string: "<!DOCTYPE html>\n<html prefix=\"og: http://ogp.me/ns#\" xmlns=\"http://www.w3.org/1999/xhtml\"
+        xml:lang=\"en\" lang=\"en\">\n<head>\n    <!-- version 00.62.55 - 10.06.2019
+        -->\n    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\"/>\n    <meta
+        http-equiv=\"Cache-control\" content=\"no-store\"/>\n    <meta http-equiv=\"Pragma\"
+        content=\"no-cache\"/>\n    <meta http-equiv=\"Expires\" content=\"0\"/>\n
+        \   <meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\"/>\n
+        \   <script type=\"text/javascript\">\n\tif (screen.width <= 720) {\n\t    document.write(\"<meta
+        name=\\'viewport\\' content=\\'width=device-width, initial-scale=1, maximum-scale=1\\'\\/>\");\n\t}
+        else {\n\t    document.write(\"<meta name=\\'viewport\\' content=\\'width=device-width,
+        initial-scale=1\\'\\/>\");\n\t}\n    </script>\n    <meta name=\"apple-mobile-web-app-capable\"
+        content=\"yes\"/>\n    <meta name=\"mobile-web-app-capable\" content=\"yes\"/>\n
+        \   \n    <link rel=\"manifest\" href=\"/manifest.json\">\n    <meta name=\"theme-color\"
+        content=\"#fff\">\n    <link rel=\"icon\" href=\"/favicon.ico\" type=\"image/x-icon\"/>\n
+        \   <link rel=\"stylesheet\" type=\"text/css\" href=\"/style/base.min.css?00.62.55\"
+        media=\"screen\"/>\n    <link rel=\"stylesheet\" type=\"text/css\" href=\"/style/main.min.css?00.62.55\"
+        media=\"screen\"/>\n    <link rel=\"stylesheet\" type=\"text/css\" href=\"/style/print.css?00.62.55\"
+        media=\"print\"/>\n    <!--[if lte IE 8]> \n    <link rel=\"stylesheet\" type=\"text/css\"
+        href=\"/style/main_ie.css?00.62.55\" media=\"screen\" /> \n    <script type=\"text/javascript\"
+        src=\"/scripts/bootstrap/respond.min.js\"></script>\n    <script type=\"text/javascript\"
+        src=\"/scripts/ie-fixes.js\"></script>\n    <![endif]-->\n    <script type=\"text/javascript\"
+        src=\"/scripts/jquery/jquery-main.min.js?00.62.55\"></script>\n\n    <meta
+        name=\"robots\" content=\"index, follow\"/>\n    <meta name=\"twitter:card\"
+        content=\"summary_large_image\"/>\n    <meta name=\"twitter:site\" content=\"@justETF\"/>\n
+        \   <meta property=\"og:type\" content=\"article\"/>\n    <meta property=\"og:image\"
+        content=\"https://www.justetf.com/images/layer/og-img-etf-profile.jpg\"/>\n
+        \   <script type=\"text/javascript\" src=\"/scripts/jquery/jquery.ui.datepicker-i18n.js\"></script>\n
+        \   <script type=\"text/javascript\" src=\"/scripts/highcharts/highstock-4.2.6.js\"></script>\n
+        \   <script type=\"text/javascript\" src=\"/scripts/highcharts/heatmap-4.2.6.js\"></script>\n
+        \   <script type=\"text/javascript\" src=\"/scripts/highcharts/exporting-4.2.6.js\"></script>\n\n
+        \   <script type=\"text/javascript\" id=\"com-drinvestmentcontrol-nbk-webapp-pages-etf-profile-EtfProfilePage-0\">\n\t
+        \   $(function () {\n            $(\".nav-tabs li\").not(\":has(a)\").hide();\n\t
+        \   });\n    </script>\n<script type=\"text/javascript\" src=\"/resources/org.apache.wicket.markup.html.WicketEventReference/wicket-event.js\"></script>\n<script
+        type=\"text/javascript\" src=\"/resources/org.apache.wicket.ajax.WicketAjaxReference/wicket-ajax.js\"></script>\n<title>Listing
+        | SPDR Barclays US Treasury Bond UCITS ETF | A1JJTT | IE00B44CND37</title><meta
+        name=\"keywords\" lang=\"de\" content=\"SPDR Barclays US Treasury Bond UCITS
+        ETF, IE00B44CND37\" /><link rel=\"canonical\" href=\"https://www.justetf.com/en/etf-profile.html?isin=IE00B44CND37&tab=listing\"/><meta
+        name=\"description\" lang=\"en\" content=\"Stock exchange listings for SPDR
+        Barclays US Treasury Bond UCITS ETF (SYBT | IE00B44CND37) \u27A4 justETF &ndash;
+        The ETF Screener\" /><meta property=\"og:title\" content=\"Listing | SPDR
+        Barclays US Treasury Bond UCITS ETF | A1JJTT | IE00B44CND37\" /><meta property=\"og:description\"
+        content=\"Stock exchange listings for SPDR Barclays US Treasury Bond UCITS
+        ETF (SYBT | IE00B44CND37) \u27A4 justETF &ndash; The ETF Screener\" /><meta
+        property=\"og:url\" content=\"https://www.justetf.com/en/etf-profile.html?isin=IE00B44CND37&tab=listing\"
+        /><link rel=\"alternate\" hreflang=\"de\" href=\"https://www.justetf.com/de/etf-profile.html?isin=IE00B44CND37&tab=listing\"
+        /><link rel=\"alternate\" hreflang=\"en-ch\" href=\"https://www.justetf.com/ch-en/etf-profile.html?isin=IE00B44CND37&tab=listing\"
+        /><link rel=\"alternate\" hreflang=\"en-de\" href=\"https://www.justetf.com/de-en/etf-profile.html?isin=IE00B44CND37&tab=listing\"
+        /><link rel=\"alternate\" hreflang=\"en\" href=\"https://www.justetf.com/en/etf-profile.html?isin=IE00B44CND37&tab=listing\"
+        /><link rel=\"alternate\" hreflang=\"it\" href=\"https://www.justetf.com/it/etf-profile.html?isin=IE00B44CND37&tab=listing\"
+        /><link rel=\"alternate\" hreflang=\"de-ch\" href=\"https://www.justetf.com/ch/etf-profile.html?isin=IE00B44CND37&tab=listing\"
+        /><link rel=\"alternate\" hreflang=\"en-gb\" href=\"https://www.justetf.com/uk/etf-profile.html?isin=IE00B44CND37&tab=listing\"
+        />\n<script type=\"text/javascript\" id=\"jlang\"><!--/*--><![CDATA[/*><!--*/\n$.jlang
+        = 'en';\n/*-->]]>*/</script>\n\n<script type=\"text/javascript\" id=\"analytics\"><!--/*--><![CDATA[/*><!--*/\n(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create',
+        'UA-26132530-1', 'auto');ga('set', 'dimension1', 'visitor');ga('set', 'dimension2',
+        'en');ga('set', 'dimension3', 'DE');ga('set', 'dimension4', 'PRIVATE');ga('set',
+        'dimension5', 'visitor');ga('set', 'dimension6', 'SPDR ETF');ga('set', 'anonymizeIp',
+        true);ga('send', 'pageview');\n/*-->]]>*/</script>\n\n<style>html{display:none;}</style><script
+        type=\"text/javascript\" id=\"iframeCheck\"><!--/*--><![CDATA[/*><!--*/\nif
+        (inIframe()) {window.top.location.href=window.location.href;} else {document.documentElement.style.display
+        = 'block';}\n/*-->]]>*/</script>\n\n\n\n\n    <script type=\"text/javascript\"
+        id=\"com-drinvestmentcontrol-nbk-webapp-pages-etf-SelectionCartPanel-0\">\n\t
+        \   $(function () {\n\t\t    initCbox();\n\t    });\n    </script>\n\n<script
+        type=\"text/javascript\" ><!--/*--><![CDATA[/*><!--*/\nWicket.Event.add(window,
+        \"domready\", function(event) { setTimeout(\"$('<input>').attr({ type: 'hidden',
+        id: 'dynamic', name: 'dynamic', value: 'dynamic' }).appendTo('#regForm')\",
+        2000);;});\n/*-->]]>*/</script>\n\n\n<script type=\"text/javascript\" id=\"com-drinvestmentcontrol-nbk-webapp-pages-etf-QuickSearchFormWithLayerPanel-0\">\n\t$(function
+        () {\n\t\tinitQuickSearch();\n\t});\n</script>\n<script type=\"text/javascript\"
+        ><!--/*--><![CDATA[/*><!--*/\nWicket.Event.add(window, \"domready\", function(event)
+        { showWhatsapp();;});\n/*-->]]>*/</script>\n\n</head>\n<body class=\"header-fixed
+        header-fixed-space\">\n    \n<div class=\"wrapper\">\n    <div class=\"header-j
+        header-sticky\">\n\t<div class=\"topbar-head\">\n\t    <div class=\"container\">\n\t
+        \   <div class=\"row\">\n\t\t<div class=\"col-sm-8 col-xs-8\" id=\"id1\">
+        \   \n    <div class=\"topbar-toggler\"><img id=\"countryMobileButton\" src=\"/images/flags/de.svg\"
+        alt=\"Select your ETF universe\"/> <span class=\"fa fa-angle-down\"></span></div>\n
+        \   <ul class=\"topbar-list topbar-menu\">\n\t<li class=\"first\"><a id=\"id2\"
+        href=\"#\" onclick=\"_block();var wcall=wicketAjaxGet('/en/?wicket:interface=:0:universeMenuPanel:openPopupLink::IBehaviorListener:0:1',function()
+        { _unblock();}.bind(this),function() { _unblock();}.bind(this), function()
+        {return Wicket.$('id2') != null;}.bind(this));return !wcall;\">\n    <img
+        class=\"univ-icon\" alt=\"justETF\" src=\"/images/flags/de.svg\"/>\n    Germany,
+        Private Investor\n (change)</a></li>\n\t<li class=\"lang-panel\">\n    <a
+        href=\"javascript:void(0);\">English <span class=\"fa fa-angle-down\"></span></a>\n
+        \   <ul class=\"topbar-dropdown\">\n\t<li>\n\t    <span onclick=\"hideUniverseLangLayer();\">English</span>\n\t</li><li>\n\t
+        \   <a onclick=\"changeLang('en', 'de')\">Deutsch</a>\n\t</li>\n    </ul>\n</li>\n
+        \   </ul>\n</div>\n\t\t<div class=\"col-sm-4 col-xs-4 clearfix\">\n\t\t    <ul
+        class=\"topbar-list topbar-right\">\n    <li class=\"service-items\"><a href=\"/en/tutorial/\"><i
+        class=\"fa fa-question-circle fa-lg\"></i><span>Tutorial</span></a></li>\n
+        \   <li class=\"service-items\"><a href=\"/en/contact.html\"><i class=\"fa
+        fa-envelope fa-lg\"></i><span>Contact</span></a></li>\n</ul>\n\t\t</div>\n\t
+        \   </div>\n\t    </div>\n\t</div>\n\t<div class=\"navbar mega-menu\" role=\"navigation\">\n\t
+        \   <div class=\"container\">\n\t\t<div class=\"res-container\">\n\t\t    <button
+        type=\"button\" class=\"navbar-toggle\" data-toggle=\"collapse\" data-target=\".navbar-responsive-collapse\">\n\t\t\t<span
+        class=\"sr-only\">Menu</span>\n\t\t\t<span class=\"icon-bar\"></span>\n\t\t\t<span
+        class=\"icon-bar\"></span>\n\t\t\t<span class=\"icon-bar\"></span>\n\t\t    </button>\n\t\t
+        \   <div class=\"navbar-brand\">\n<a href=\"/en/\"><img src=\"/images/logo/logo.png\"
+        alt=\"justETF\"/></a>\n</div> \n\t\t</div>\t    \n\t\t<div class=\"collapse
+        navbar-collapse navbar-responsive-collapse\">\n    <div class=\"res-container\">\n\t<ul
+        class=\"nav navbar-nav\">\n\t    <li class=\"dropdown\">\n\t\t<a href=\"javascript:void(0)\"
+        id=\"mainOffer\" class=\"dropdown-toggle\" data-toggle=\"dropdown\"><span>Our
+        Offer</span></a>\n\t\t\n<ul class=\"dropdown-menu\">\n    <li><a href=\"/en/our-offer.html\">Offer
+        overview</a></li>\n    <li><a href=\"/en/free.html\">Free version</a></li>\n
+        \   <li><a href=\"/en/premium.html\">Premium version</a></li>\n    <li><a
+        href=\"/en/professional.html\">Professional version</a></li>\n</ul>\n\n\t
+        \   </li><li class=\"dropdown\">\n\t\t<a href=\"/en/etf-strategy-builder.html\"
+        id=\"mainTemplatesWPGOnly\"><span>Strategy Builder</span></a>\n\t\t\n\t    </li><li
+        class=\"dropdown\">\n\t\t<a href=\"javascript:void(0)\" id=\"mainEtfSearch\"
+        class=\"dropdown-toggle\" data-toggle=\"dropdown\"><span>ETF Screener</span></a>\n\t\t\n<ul
+        class=\"dropdown-menu\">\n    <li><a href=\"/en/find-etf.html\">ETF Screener</a></li>\n
+        \   <li><a href=\"/en/etf-lists.html\">List of ETFs by category</a></li>\n
+        \   <li><a href=\"/en/how-to/\">ETF Investment Guides</a></li>\n    <li><a
+        href=\"/en/market-overview/\">Best/Worst ETF performer</a></li>\n    <li><a
+        href=\"/en/market-overview/equity/etf-equity-market-world.html\">Market overview</a></li>\n
+        \   <li><a href=\"/en/etf-provider/\">ETF providers at a glance</a></li>\n</ul>
+        \ \n\n\t    </li><li class=\"dropdown\">\n\t\t<a href=\"javascript:void(0)\"
+        id=\"mainGetEducated\" class=\"dropdown-toggle\" data-toggle=\"dropdown\"><span>Academy</span></a>\n\t\t\n
+        \   <ul class=\"dropdown-menu mega-menu-fullwidth\">\n\t<li><div class=\"mega-menu-content\">\n\t
+        \   <div class=\"container\">\n\t\t<div class=\"row\">\n\t\t    <div class=\"col-md-3\">\n\t\t\t<a
+        class=\"menu-img-icon\" href=\"/en/academy/what-is-an-etf.html\">\n\t\t\t
+        \   <span class=\"h5\">ETF Basics</span>\n\t\t\t    <span class=\"val\">\n\t\t\t\t<i
+        class=\"fa fa-graduation-cap\"></i>\n\t\t\t\t<span>Introduction to ETFs</span>\n\t\t\t
+        \   </span>\n\t\t\t</a>\n\t\t    </div>\n\t\t    <div class=\"col-md-3\">\n\t\t\t<a
+        class=\"menu-img-icon\" href=\"/en/news/\">\n\t\t\t    <span class=\"h5\">ETF
+        Advanced</span>\n\t\t\t    <span class=\"val\">\n\t\t\t\t<i class=\"fa fa-book\"></i>\n\t\t\t\t<span>Advanced
+        knowledge about ETFs</span>\n\t\t\t    </span>\n\t\t\t</a>\n\t\t    </div>\n\t\t
+        \   \t\t    \t\t    <div class=\"col-md-3\">\n\t\t\t<ul class=\"dropdown-link-list\">\n\t\t\t
+        \   <li><div class=\"h5\">Latest articles</div></li>\n\t\t\t    \t\t\t    <li
+        class=\"newsicon\"><a href=\"/en/academy/how-to-get-a-globally-diversified-portfolio-with-just-one-etf.html\">How
+        to get a globally diversified portfolio with just one ETF</a></li>\n\t\t\t
+        \   \t\t\t    <li class=\"newsicon\"><a href=\"/en/news/etf/why-currency-hedged-etfs-are-rising-in-popularity.html\">How
+        currency-hedged ETFs protect you from currency risk</a></li>\n\t\t\t    \t\t\t
+        \   <li class=\"newsicon\"><a href=\"/en/news/etf/the-effect-of-currencies-on-etfs.html\">ETF
+        currency risk: How to handle it</a></li>\n\t\t\t    \t\t\t    <li><a href=\"/en/news/\"
+        class=\"caret-link\"><span>Show more</span></a></li>\n\t\t\t</ul>\n\t\t    </div>\n\t\t
+        \   \t\t    <div class=\"col-md-3\">\n\t\t\t<a class=\"menu-img-icon\" href=\"/en/cost-calculator.html\">\n\t\t\t
+        \   <span class=\"h5\">ETF cost calculator</span>\n\t\t\t    <span class=\"val\">\n\t\t\t\t<i
+        class=\"fa fa-calculator\"></i>\n\t\t\t\t<span>Calculate your investment fees</span>\n\t\t\t
+        \   </span>\n\t\t\t</a>\n\t\t    </div>\n\t\t</div>\n\t    </div>\n\t</div></li>\n
+        \   </ul>\n\n\t    </li>\n\t    \n    <li class=\"dropdown login-drop\">\n\t<a
+        href=\"#\" id=\"loginlink\" class=\"dropdown-toggle\" role=\"button\" data-toggle=\"dropdown\">\n\t
+        \   <span class=\"btn btn-login btn-md\">Login</span></a>\n\t<ul class=\"dropdown-menu
+        dropdown-menu-right\">\n\t    <li class=\"login-drop-box\"><a class=\"btn
+        btn-primary btn-md btn-block\" role=\"button\" href=\"/en/login.html\">Login</a></li>\n\t
+        \   <li class=\"login-teaser\"><a href=\"https://www.justetf.com/en/registration.html\"><span>New
+        at justETF?</span> Sign up free now</a></li>\n\t    <li><a href=\"/investor-area.html\">My
+        portfolios</a></li>\n\t    <li><a href=\"/watchlist.html?listId=first&login=true\">My
+        watchlists</a></li>\n\t    <li><a href=\"/settings.html\">Settings</a></li>\t\t
+        \   \n\t</ul>\n    </li>\n    \t\t\n\n\t</ul>\n    </div>\n</div>\n\t    </div>\n\t</div>\t\t\t\t\n
+        \   </div>    \n    \n    \n\n<script type=\"text/javascript\">var providerButtonBehaviorCallbackUrl
+        = '/en/?wicket:interface=:0::IActivePageBehaviorListener:0:1&wicket:ignoreIfNotActive=true';function
+        onProviderButtonClick() {  wicketAjaxGet(providerButtonBehaviorCallbackUrl,
+        function() { }, function() { });}</script>\n<div>\n<div class=\"form_search_box\">\n
+        \   <div class=\"container\">\n\t<div class=\"form_search_box_in\">\n\t    \n\t
+        \   <div class=\"row\">\n\t\t<div class=\"col-sm-6\">\n<div class=\"qs_panel\">\n
+        \   <form id=\"id3\" method=\"post\" action=\"/en/?wicket:interface=:0:quickSearchPanel:container:formAndLayerPanel:searchForm::IFormSubmitListener::\"><div
+        style=\"width:0px;height:0px;position:absolute;left:-100px;top:-100px;overflow:hidden\"><input
+        type=\"hidden\" name=\"id3_hf_0\" id=\"id3_hf_0\" /></div>\n\t<div class=\"input-group\">\n\t
+        \   <input class=\"qs_input form-control\" autocomplete=\"off\" onfocus=\"_focus(this)\"
+        onblur=\"_blur(this)\" value=\"\" name=\"query\" id=\"id4\" onkeyup=\"var
+        wcall=wicketSubmitFormById('id3', '/en/?wicket:interface=:0:quickSearchPanel:container:formAndLayerPanel:searchForm:query::IActivePageBehaviorListener:0:1&amp;wicket:ignoreIfNotActive=true',
+        null,function() { }.bind(this),function() { }.bind(this), function() {return
+        Wicket.$$(this)&amp;&amp;Wicket.$$('id3')}.bind(this));;\" onkeypress=\"var
+        evt = (evt) ? evt : event;  var cc = (evt.charCode) ? evt.charCode : ((evt.which)
+        ? evt.which : evt.keyCode); if (cc == 13 || cc == 3) { $('#quickSearchButton').click();
+        return false; }\" onmousedown=\"ga('send', 'event', 'QuickSearch', 'Impressions');\"
+        placeholder=\"Find ETFs\"></input>\n\t    <div class=\"input-group-btn\"><a
+        class=\"btn btn-info-outline\" role=\"button\" onmousedown=\"clicked='quickSearchButton'\"
+        name=\"quickSearchButton\" id=\"quickSearchButton\" onclick=\"_block();var
+        wcall=wicketSubmitFormById('id3', '/en/?wicket:interface=:0:quickSearchPanel:container:formAndLayerPanel:searchForm:quickSearchButton::IActivePageBehaviorListener:0:1&amp;wicket:ignoreIfNotActive=true',
+        'quickSearchButton' ,function() { _unblock(); clicked = null;}.bind(this),function()
+        { _unblock(); clicked = null;}.bind(this), function() {return Wicket.$$(this)&amp;&amp;Wicket.$$('id3')}.bind(this));
+        clicked = null;;; return false;\"><i class=\"fa fa-search fa-lg\"></i></a></div>\n\t</div>\t\t\n
+        \   </form>\n    <div id=\"id5\">\n    \n</div>\n\t<div id=\"id6\">\n    \n</div>\n
+        \   <div class=\"qs_layer\">\n\t<div class=\"qs_layer_in\">\n\t    <div onclick=\"hideQuickSearchLayer()\"
+        class=\"close mobile-only\"><i class=\"fa fa-close\"></i></div>\n\t    <div
+        class=\"qs_layer_content\" id=\"id7\">\n\t\t<div>\n        <div class=\"table-responsive\">\n
+        \       <table class=\"table table-hover table-condensed nob mobile-table\">\n
+        \           <tbody>\n\t\t<tr class=\"title\">\n\t\t    <td colspan=\"7\">Most
+        popular ETFs</td>\n\t\t</tr>\n\t    \t\t\t\t<tr class=\"pointer\" onclick=\"location.href='/en/find-etf.html?query=DE0005933931';\">\n\t\t
+        \   <td class=\"col-name\"><a class=\"link v-ellip\" href=\"/en/find-etf.html?query=DE0005933931\"><span>iShares
+        Core DAX UCITS ETF (DE)</span></a></td>\n\t\t    <td class=\"column-priority-4\">DE0005933931</td>\n\t\t
+        \   <td class=\"column-priority-4 ws\">Equity</td>\n\t\t    <td class=\"column-priority-5\">ETF</td>\n\t\t
+        \   <td class=\"column-priority-2\"><a href=\"/en/etf-profile.html?isin=DE0005933931&amp;tab=chart\"><i
+        class=\"fa fa-lg fa-bar-chart\"></i></a></td>\n\t\t    <td class=\"column-priority-3\"><a
+        href=\"/en/etf-profile.html?isin=DE0005933931\" class=\"arr_link\">Profile</a></td>\n\t\t
+        \   <td class=\"column-priority-3\"><a href=\"/en/etf-profile.html?isin=DE0005933931&amp;index=DAX\xAE\"
+        class=\"arr_link\">Index</a></td>\n\t\t</tr>\n\t\t\t    \t\t\t\t<tr class=\"pointer\"
+        onclick=\"location.href='/en/find-etf.html?query=LU0274208692';\">\n\t\t    <td
+        class=\"col-name\"><a class=\"link v-ellip\" href=\"/en/find-etf.html?query=LU0274208692\"><span>Xtrackers
+        MSCI World Index Swap UCITS ETF 1C</span></a></td>\n\t\t    <td class=\"column-priority-4\">LU0274208692</td>\n\t\t
+        \   <td class=\"column-priority-4 ws\">Equity</td>\n\t\t    <td class=\"column-priority-5\">ETF</td>\n\t\t
+        \   <td class=\"column-priority-2\"><a href=\"/en/etf-profile.html?isin=LU0274208692&amp;tab=chart\"><i
+        class=\"fa fa-lg fa-bar-chart\"></i></a></td>\n\t\t    <td class=\"column-priority-3\"><a
+        href=\"/en/etf-profile.html?isin=LU0274208692\" class=\"arr_link\">Profile</a></td>\n\t\t
+        \   <td class=\"column-priority-3\"><a href=\"/en/etf-profile.html?isin=LU0274208692&amp;index=MSCI
+        World\" class=\"arr_link\">Index</a></td>\n\t\t</tr>\n\t\t\t    \t\t\t\t<tr
+        class=\"pointer\" onclick=\"location.href='/en/find-etf.html?query=DE000A0F5UH1';\">\n\t\t
+        \   <td class=\"col-name\"><a class=\"link v-ellip\" href=\"/en/find-etf.html?query=DE000A0F5UH1\"><span>iShares
+        STOXX Global Select Dividend 100 UCITS ETF (DE)</span></a></td>\n\t\t    <td
+        class=\"column-priority-4\">DE000A0F5UH1</td>\n\t\t    <td class=\"column-priority-4
+        ws\">Equity</td>\n\t\t    <td class=\"column-priority-5\">ETF</td>\n\t\t    <td
+        class=\"column-priority-2\"><a href=\"/en/etf-profile.html?isin=DE000A0F5UH1&amp;tab=chart\"><i
+        class=\"fa fa-lg fa-bar-chart\"></i></a></td>\n\t\t    <td class=\"column-priority-3\"><a
+        href=\"/en/etf-profile.html?isin=DE000A0F5UH1\" class=\"arr_link\">Profile</a></td>\n\t\t
+        \   <td class=\"column-priority-3\"><a href=\"/en/etf-profile.html?isin=DE000A0F5UH1&amp;index=STOXX\xAE
+        Global Select Dividend 100\" class=\"arr_link\">Index</a></td>\n\t\t</tr>\n\t\t\t
+        \   \t\t\t\t<tr class=\"pointer\" onclick=\"location.href='/en/find-etf.html?query=IE0032523478';\">\n\t\t
+        \   <td class=\"col-name\"><a class=\"link v-ellip\" href=\"/en/find-etf.html?query=IE0032523478\"><span>iShares
+        Euro Corporate Bond Large Cap UCITS ETF</span></a></td>\n\t\t    <td class=\"column-priority-4\">IE0032523478</td>\n\t\t
+        \   <td class=\"column-priority-4 ws\">Bonds</td>\n\t\t    <td class=\"column-priority-5\">ETF</td>\n\t\t
+        \   <td class=\"column-priority-2\"><a href=\"/en/etf-profile.html?isin=IE0032523478&amp;tab=chart\"><i
+        class=\"fa fa-lg fa-bar-chart\"></i></a></td>\n\t\t    <td class=\"column-priority-3\"><a
+        href=\"/en/etf-profile.html?isin=IE0032523478\" class=\"arr_link\">Profile</a></td>\n\t\t
+        \   <td class=\"column-priority-3\"><a href=\"/en/etf-profile.html?isin=IE0032523478&amp;index=iBoxx\xAE
+        EUR Liquid Corporates Large Cap\" class=\"arr_link\">Index</a></td>\n\t\t</tr>\n\t\t\t
+        \   \t\t\t\t<tr class=\"pointer\" onclick=\"location.href='/en/find-etf.html?query=DE000A0N62G0';\">\n\t\t
+        \   <td class=\"col-name\"><a class=\"link v-ellip\" href=\"/en/find-etf.html?query=DE000A0N62G0\"><span>ETFS
+        Physical Gold</span></a></td>\n\t\t    <td class=\"column-priority-4\">DE000A0N62G0</td>\n\t\t
+        \   <td class=\"column-priority-4 ws\">Precious Metals</td>\n\t\t    <td class=\"column-priority-5\">ETC</td>\n\t\t
+        \   <td class=\"column-priority-2\"><a href=\"/en/etf-profile.html?isin=DE000A0N62G0&amp;tab=chart\"><i
+        class=\"fa fa-lg fa-bar-chart\"></i></a></td>\n\t\t    <td class=\"column-priority-3\"><a
+        href=\"/en/etf-profile.html?isin=DE000A0N62G0\" class=\"arr_link\">Profile</a></td>\n\t\t
+        \   <td class=\"column-priority-3\"><a href=\"/en/etf-profile.html?isin=DE000A0N62G0&amp;index=Gold\"
+        class=\"arr_link\">Index</a></td>\n\t\t</tr>\n\t\t\t                </tbody>\n
+        \       </table>\n    </div>\n    <div class=\"nbk_sep_m\">&nbsp;</div>\n
+        \   <div class=\"table-responsive ps_category\">\n        <table class=\"table
+        table-hover table-condensed nob\">\n            <tbody>\n\t\t<tr class=\"title\">\n\t\t
+        \   <td>Most popular categories</td>\n\t\t</tr>\n\t\t<tr>\n\t\t    <td onclick=\"location.href='/en/find-etf.html?assetClass=class-equity&amp;region=World';\"><a
+        class=\"link\" href=\"/en/find-etf.html?assetClass=class-equity&amp;region=World\"><span>Equity,
+        World</span></a></td>\n\t\t</tr>\n\t\t<tr>\n\t\t    <td onclick=\"location.href='/en/find-etf.html?assetClass=class-equity&amp;equityStrategy=Dividend';\"><a
+        class=\"link\" href=\"/en/find-etf.html?assetClass=class-equity&amp;equityStrategy=Dividend\"><span>Equity,
+        Dividend strategy</span></a></td>\n\t\t</tr>\n\t\t<tr>\n\t\t    <td onclick=\"location.href='/en/find-etf.html?assetClass=class-commodities&amp;cf=Broad%2Bmarket';\"><a
+        class=\"link\" href=\"/en/find-etf.html?assetClass=class-commodities&amp;cf=Broad%2Bmarket\"><span>Commodities,
+        Diversified basket</span></a></td>\n\t\t</tr>\n            </tbody>\n        </table>\n
+        \   </div>\n</div>\n\t\t<div>\n  \n</div>\n\t\t\n\t\t\n\t\t\n\t\t\n\t    </div>\n\t
+        \   <div>\n</div>\n\t    <div onclick=\"hideQuickSearchLayer()\" class=\"close
+        desktop-only\"><i class=\"fa fa-close\"></i></div>\n\t</div>\n    </div>\n</div>\n</div>\n\t\t<div
+        class=\"col-sm-2 col-sm-offset-4 cart_box\" id=\"id8\">\n    <div class=\"c_box\">\n\t
+        \   <div class=\"c_box_button\">\n\t\t    <div class=\"cart disabled\" id=\"id9\">\n\t\t\t<div
+        class=\"title\">Selection</div>\n\t\t\t<div class=\"val\">0</div>\t\n\t\t
+        \   </div>\n\t    </div>\n\t    <div class=\"c_select\">\n\t\t    <div id=\"ida\">\n\t\t\t
+        \   <div>\n\t\t\t\t    <span class=\"c_des\"><strong>Your selection basket
+        is empty.</strong><br />&nbsp;<br />Define a selection of ETFs which you would
+        like to compare.<br />&nbsp;<br />Add an ETF by clicking \"Compare\" on an
+        ETF profile or by checkmarking <i class=\"fa fa-check-square orange\"></i>
+        an ETF in the ETF search.</span>\n\t\t\t    </div>\n\t\t\t    \n\t\t    </div>\n\t\t
+        \   <div onclick=\"hideCboxLayer()\" class=\"mobile-only close\"><i class=\"fa
+        fa-close\"></i></div>\n\t    </div>\n    </div>\n    <div id=\"idb\">\n    \n</div>\n
+        \   \n    <div id=\"idc\">\n    \n</div>\n</div>\n\t    </div>\t\t\n\t</div>\n
+        \   </div>\n</div>\n</div>\n<div id=\"eprofile\">\n    <div>\n</div>\n    <div>\n<div
+        class=\"breadcrumb-in\">\n    <div class=\"container\">\n\t<ol class=\"breadcrumb\">\n\t
+        \   <li itemtype=\"http://data-vocabulary.org/Breadcrumb\" itemscope=\"itemscope\"><a
+        itemprop=\"url\" href=\"/en/\" title=\"Home\"><span itemprop=\"title\">Home</span></a></li>\n\t
+        \   <li itemtype=\"http://data-vocabulary.org/Breadcrumb\" itemscope=\"itemscope\"><a
+        itemprop=\"url\" href=\"/en/find-etf.html\" title=\"ETF Search\"><span itemprop=\"title\">ETF
+        Search</span></a></li>\t\t\n\t    <li itemtype=\"http://data-vocabulary.org/Breadcrumb\"
+        itemscope=\"itemscope\" class=\"active\"><a itemprop=\"url\" href=\"/en/etf-profile.html?isin=IE00B44CND37\"
+        title=\"SPDR Barclays US Treasury Bond UCITS ETF\"><span itemprop=\"title\">SPDR
+        Barclays US Treasury Bond UCITS ETF</span></a></li>\n\t    \n\t    <li itemtype=\"http://data-vocabulary.org/Breadcrumb\"
+        itemscope=\"itemscope\" class=\"active\"><a itemprop=\"url\" href=\"/en/etf-profile.html?tab=listing&amp;isin=IE00B44CND37\"
+        title=\"Listing\"><span itemprop=\"title\">Listing</span></a></li>\n\t    \n\t</ol>\n
+        \   </div>\n</div>\n<div class=\"container\">\n    <div class=\"e_head\">\n\t\t\n\t\t<h2>\n\t\t\t<a
+        class=\"nolink\" href=\"https://www.justetf.com/en/etf-profile.html?isin=IE00B44CND37\"><span
+        class=\"h1\">SPDR Barclays US Treasury Bond UCITS ETF</span></a>\n\t\t\t<span
+        class=\"identfier\">\n\t\t\t\t<span class=\"vallabel\">ISIN</span>\n\t\t\t\t<a
+        class=\"nolink\" href=\"https://www.justetf.com/en/etf-profile.html?isin=IE00B44CND37\"><span
+        class=\"val\">IE00B44CND37,</span></a>\n\t\t\t\t<span class=\"vallabel\">WKN</span>\n\t\t\t\t<a
+        class=\"nolink\" href=\"https://www.justetf.com/en/etf-profile.html?isin=IE00B44CND37\"><span
+        class=\"val\">A1JJTT</span></a>\n        \t</span>\n\t\t</h2>\n    </div>\n
+        \   <div class=\"social-icons\">\n            <ul>\n\t\t<li><a onclick=\"ga('send',
+        'event', 'ETFprofile', 'RecomendETF', 'Email');\" class=\"rounded-x social_mail
+        not-mobile\" data-toggle=\"tooltip\" href=\"mailto:?subject=SPDR Barclays
+        US Treasury Bond UCITS ETF&amp;body=https%3A%2F%2Fwww.justetf.com%2Fen%2Fetf-profile.html%3Fisin%3DIE00B44CND37\"
+        title=\"Recommend ETF\"></a></li>\n\t\t<li class=\"share-whatsapp\" style=\"display:none;\"><a
+        onclick=\"ga('send', 'event', 'ETFprofile', 'RecomendETF', 'WhatsApp');\"
+        class=\"rounded-x social_whatsapp not-mobile\" data-toggle=\"tooltip\" href=\"whatsapp://send?text=SPDR
+        Barclays US Treasury Bond UCITS ETF%20https%3A%2F%2Fwww.justetf.com%2Fen%2Fetf-profile.html%3Fisin%3DIE00B44CND37\"
+        title=\"Recommend ETF\"></a></li>\n\t\t<li><a onclick=\"ga('send', 'event',
+        'ETFprofile', 'RecomendETF', 'Twitter');\" class=\"rounded-x social_twitter
+        not-mobile\" target=\"_blank\" rel=\"noopener\" data-toggle=\"tooltip\" href=\"http://twitter.com/share?url=https%3A%2F%2Fwww.justetf.com%2Fen%2Fetf-profile.html%3Fisin%3DIE00B44CND37&amp;text=SPDR
+        Barclays US Treasury Bond UCITS ETF\" title=\"Recommend ETF\"></a></li>\n\t\t<li><a
+        onclick=\"ga('send', 'event', 'ETFprofile', 'RecomendETF', 'Facebook');\"
+        class=\"rounded-x social_facebook not-mobile\" target=\"_blank\" rel=\"noopener\"
+        data-toggle=\"tooltip\" href=\"http://www.facebook.com/sharer.php?u=https%3A%2F%2Fwww.justetf.com%2Fen%2Fetf-profile.html%3Fisin%3DIE00B44CND37&amp;t=SPDR
+        Barclays US Treasury Bond UCITS ETF\" title=\"Recommend ETF\"></a></li>\n
+        \           </ul>\n    </div>\n</div>\n</div>\n    <div class=\"nbk_sep_m
+        hidden-print\">&nbsp;</div>\n\n    <div class=\"container hidden-print\">\n\t<div
+        class=\"button_panel scrollbox\">\n\t    <span>\n    <a class=\"btn btn-primary
+        btn-md btn-i btn-i-plus\" role=\"button\" id=\"idd\" href=\"#\" onclick=\"$.blockUI({
+        message: null, overlayCSS: {'cursor': 'pointer', 'background-color': 'transparent'
+        }});var wcall=wicketAjaxGet('/en/?wicket:interface=:0:addButtons:addEtf::IBehaviorListener:0:1',function()
+        { $.unblockUI(); if(clicked != null) { var tmp = clicked; clicked = null;
+        $('#' + tmp).click(); } $('#' + Wicket.Focus.lastFocusId).focus();}.bind(this),function()
+        { $.unblockUI(); if(clicked != null) { var tmp = clicked; clicked = null;
+        $('#' + tmp).click(); } $('#' + Wicket.Focus.lastFocusId).focus();}.bind(this),
+        function() {return Wicket.$('idd') != null;}.bind(this));return !wcall;\">Add
+        to portfolio</a>\n    <a class=\"btn btn-primary btn-md btn-i btn-i-star\"
+        role=\"button\" id=\"ide\" href=\"#\" onclick=\"$.blockUI({ message: null,
+        overlayCSS: {'cursor': 'pointer', 'background-color': 'transparent' }});var
+        wcall=wicketAjaxGet('/en/?wicket:interface=:0:addButtons:addToWatchList::IBehaviorListener:0:1',function()
+        { $.unblockUI(); if(clicked != null) { var tmp = clicked; clicked = null;
+        $('#' + tmp).click(); } $('#' + Wicket.Focus.lastFocusId).focus();}.bind(this),function()
+        { $.unblockUI(); if(clicked != null) { var tmp = clicked; clicked = null;
+        $('#' + tmp).click(); } $('#' + Wicket.Focus.lastFocusId).focus();}.bind(this),
+        function() {return Wicket.$('ide') != null;}.bind(this));return !wcall;\">Watch</a>\n
+        \   <span id=\"idf\">\n    \n</span>\n    <span id=\"id10\">\n    \n</span>\n
+        \   <span id=\"id11\">\n    \n</span>\n</span>\n\t    <span id=\"id12\">\n\t\t<a
+        class=\"btn btn-info-outline btn-md btn-i btn-i-compare\" role=\"button\"
+        id=\"id13\" href=\"#\" onclick=\"var wcall=wicketAjaxGet('/en/?wicket:interface=:0:compareContainer:compareButton::IBehaviorListener:0:1',function()
+        { }.bind(this),function() { }.bind(this), function() {return Wicket.$('id13')
+        != null;}.bind(this));return !wcall;\">Compare</a>\n\t    </span>\n\t    \n\t</div>\n\t<div
+        class=\"nbk_sep_s\">&nbsp;</div>\n\n\t\n\n\t\n\t<div class=\"nbk_sep_m\">&nbsp;</div>\n
+        \   </div>\n\n\t<div>\n</div>\n\t<div class=\"nbk_sep_m\">&nbsp;</div>\n\t\n
+        \   <div id=\"id14\">\n<div class=\"ui-tabs not_print\">\n    <ul class=\"nav
+        nav-tabs\">\n\t<li class=\"tab0\">\n\t    <a href=\"/en/etf-profile.html?isin=IE00B44CND37\"
+        onmousedown=\"ga('send', 'event', 'ETFProfile', 'Tab', 'Overview');\">Overview</a>\n\t</li><li
+        class=\"tab1\">\n\t    <a href=\"/en/etf-profile.html?tab=chart&amp;isin=IE00B44CND37\"
+        onmousedown=\"ga('send', 'event', 'ETFProfile', 'Tab', 'Return');\">Chart</a>\n\t</li><li
+        class=\"tab2\">\n\t    <a href=\"/en/etf-profile.html?tab=returns&amp;isin=IE00B44CND37\"
+        onmousedown=\"ga('send', 'event', 'ETFProfile', 'Tab', 'Returns');\">Returns</a>\n\t</li><li
+        class=\"tab3\">\n\t    <a href=\"/en/etf-profile.html?tab=dividends&amp;isin=IE00B44CND37\"
+        onmousedown=\"ga('send', 'event', 'ETFProfile', 'Tab', 'Dividends');\">Dividends</a>\n\t</li><li
+        class=\"tab4 active\">\n\t    <a href=\"/en/etf-profile.html?tab=listing&amp;isin=IE00B44CND37\"
+        onmousedown=\"ga('send', 'event', 'ETFProfile', 'Tab', 'Listing');\">Listing</a>\n\t</li><li
+        class=\"tab5 last\">\n\t    <a href=\"/en/etf-profile.html?tab=volatility&amp;isin=IE00B44CND37\"
+        onmousedown=\"ga('send', 'event', 'ETFProfile', 'Tab', 'RollingVolatility');\">Volatility</a>\n\t</li>\n
+        \   </ul>\n</div>\n<div class=\"tab-container\">\n<div class=\"container\">\n
+        \   <div class=\"nbk_sep_m\">&nbsp;</div>\n    <div class=\"headline\"><h1
+        class=\"h2\"><span class=\"v-ellip\">Listings <span>of SPDR Barclays US Treasury
+        Bond UCITS ETF</span></span></h1></div>\n    <div class=\"table-responsive\">\n\t<table
+        class=\"table mobile-table\">\n\t    <thead>\n\t\t    <tr>\n\t\t\t    <th>\n\t\t\t\t
+        \   <h2 class=\"n bold\">Listing</h2>\n\t\t\t    </th>\n\t\t\t    <th>\n\t\t\t\t
+        \   Trade Currency\n\t\t\t    </th>\n\t\t\t    <th>\n\t\t\t\t    Ticker\n\t\t\t
+        \   </th>\n\t\t\t    <th class=\"column-priority-3\">\n\t\t\t\t    Bloomberg
+        /<br /> iNAV Bloomberg Code\n\t\t\t    </th>\n\t\t\t    <th class=\"column-priority-3\">\n\t\t\t\t
+        \   Reuters RIC /<br /> iNAV Reuters\n\t\t\t    </th>\n\t\t\t    <th class=\"column-priority-2\">\n\t\t\t\t
+        \   Market Maker\n\t\t\t    </th>\n\t\t    </tr>\n\t    </thead>\n\t    <tbody>\n\t\t
+        \   <tr>\n\t\t\t    <td>Borsa Italiana</td>\n\t\t\t    <td>EUR</td>\n\t\t\t
+        \   <td>TRSY</td>\n\t\t\t    <td class=\"column-priority-3\"><span>TRSY IM</span><br/><span>INSYBTE</span></td>\n\t\t\t
+        \   <td class=\"column-priority-3\"><span>TRSY.MI</span><br/><span>INSYBTE.ivOQ</span></td>\n\t\t\t
+        \   <td class=\"column-priority-2\">Bluefin Europe LLP<br />Commerzbank<br
+        />Flow Traders<br />Goldenberg Hehmeyer LLP<br />IMC<br />Jane Street<br />KCG<br
+        />Optiver<br />SIG SUSQUEHANNA<br />UniCredit<br />Virtu Financial</td>\n\t\t
+        \   </tr><tr>\n\t\t\t    <td>Euronext Paris</td>\n\t\t\t    <td>EUR</td>\n\t\t\t
+        \   <td>TSYE</td>\n\t\t\t    <td class=\"column-priority-3\"><span>TSYE FP</span><br/><span>INSYBTE</span></td>\n\t\t\t
+        \   <td class=\"column-priority-3\"><span>TSYE.PA</span><br/><span>INSYBTE.ivOQ</span></td>\n\t\t\t
+        \   <td class=\"column-priority-2\">Bluefin Europe LLP<br />Commerzbank<br
+        />Flow Traders<br />Goldenberg Hehmeyer LLP<br />IMC<br />Jane Street<br />KCG<br
+        />Optiver<br />SIG SUSQUEHANNA<br />UniCredit<br />Virtu Financial</td>\n\t\t
+        \   </tr><tr>\n\t\t\t    <td>London Stock Exchange</td>\n\t\t\t    <td>USD</td>\n\t\t\t
+        \   <td>TRSY</td>\n\t\t\t    <td class=\"column-priority-3\"><span>TRSY LN</span><br/><span>INSYBT</span></td>\n\t\t\t
+        \   <td class=\"column-priority-3\"><span>TRSY.L</span><br/><span>INSYBTE.ivOQ</span></td>\n\t\t\t
+        \   <td class=\"column-priority-2\">Bluefin Europe LLP<br />Commerzbank<br
+        />Flow Traders<br />Goldenberg Hehmeyer LLP<br />IMC<br />Jane Street<br />KCG<br
+        />Optiver<br />SIG SUSQUEHANNA<br />UniCredit<br />Virtu Financial</td>\n\t\t
+        \   </tr><tr>\n\t\t\t    <td>London Stock Exchange</td>\n\t\t\t    <td>GBP</td>\n\t\t\t
+        \   <td>USTY</td>\n\t\t\t    <td class=\"column-priority-3\"><span>USTY LN</span><br/><span>INSYBTP</span></td>\n\t\t\t
+        \   <td class=\"column-priority-3\"><span>USTY.L</span><br/><span>INSYBTE.ivOQ</span></td>\n\t\t\t
+        \   <td class=\"column-priority-2\">Bluefin Europe LLP<br />Commerzbank<br
+        />Flow Traders<br />Goldenberg Hehmeyer LLP<br />IMC<br />Jane Street<br />KCG<br
+        />Optiver<br />SIG SUSQUEHANNA<br />UniCredit<br />Virtu Financial</td>\n\t\t
+        \   </tr><tr>\n\t\t\t    <td>SIX Swiss Exchange</td>\n\t\t\t    <td>CHF</td>\n\t\t\t
+        \   <td>TRSY</td>\n\t\t\t    <td class=\"column-priority-3\"><span>TRSY SW</span><br/><span>INSYBTC</span></td>\n\t\t\t
+        \   <td class=\"column-priority-3\"><span>TRSY.S</span><br/><span>INSYBTE.ivOQ</span></td>\n\t\t\t
+        \   <td class=\"column-priority-2\">Bluefin Europe LLP<br />Commerzbank<br
+        />Flow Traders<br />Goldenberg Hehmeyer LLP<br />IMC<br />Jane Street<br />KCG<br
+        />Optiver<br />SIG SUSQUEHANNA<br />UniCredit<br />Virtu Financial</td>\n\t\t
+        \   </tr><tr>\n\t\t\t    <td>Stuttgart Stock Exchange</td>\n\t\t\t    <td>EUR</td>\n\t\t\t
+        \   <td>SYBT</td>\n\t\t\t    <td class=\"column-priority-3\"><span>-</span><br/><span>-</span></td>\n\t\t\t
+        \   <td class=\"column-priority-3\"><span>-</span><br/><span>-</span></td>\n\t\t\t
+        \   <td class=\"column-priority-2\">-</td>\n\t\t    </tr><tr>\n\t\t\t    <td>XETRA</td>\n\t\t\t
+        \   <td>EUR</td>\n\t\t\t    <td>SYBT</td>\n\t\t\t    <td class=\"column-priority-3\"><span>SYBT
+        GY</span><br/><span>INSYBTE</span></td>\n\t\t\t    <td class=\"column-priority-3\"><span>TSYE.DE</span><br/><span>INSYBTE.ivOQ</span></td>\n\t\t\t
+        \   <td class=\"column-priority-2\">Bluefin Europe LLP<br />Commerzbank<br
+        />Flow Traders<br />Goldenberg Hehmeyer LLP<br />IMC<br />Jane Street<br />KCG<br
+        />Optiver<br />SIG SUSQUEHANNA<br />UniCredit<br />Virtu Financial</td>\n\t\t
+        \   </tr>\n\t    </tbody>\n\t</table>\n    </div>\n    <div class=\"nbk_sep\">&nbsp;</div>\n</div>\n</div>\n</div>\n
+        \   \n\t<div>\n    <!--googleoff: all-->\n<div class=\"providerbar\">\n    <div
+        class=\"container cardbox\">\t\n\t<div class=\"cardtext col2\">\n\t    \t
+        \   \t    <div class=\"h5\">Latest articles</div>\n\t    <div class=\"blog-thumb
+        clearfix\">\n\t       <ul>\n\t\t\t\t<li><a href=\"/en/academy/how-to-get-a-globally-diversified-portfolio-with-just-one-etf.html\"
+        onclick=\"ga('send', 'event', 'ETFProfile', 'Academy', 'How to get a globally
+        diversified portfolio with just one ETF');\">\n\t\t    <span class=\"blog-img\"><img
+        src=\"/images/data_edu/global-portfolio.jpg\" alt=\"How to get a globally
+        diversified portfolio with just one ETF\"/></span>\n\t\t    <span class=\"blog-text\">How
+        to get a globally diversified portfolio with just one ETF</span></a>   \n\t\t</li>\n\t\t\t\t<li><a
+        href=\"/en/news/etf/why-currency-hedged-etfs-are-rising-in-popularity.html\"
+        onclick=\"ga('send', 'event', 'ETFProfile', 'ETF', 'How currency-hedged ETFs
+        protect you from currency risk');\">\n\t\t    <span class=\"blog-img\"><img
+        src=\"/images/news/currency-hedged-etfs.jpg\" alt=\"How currency-hedged ETFs
+        protect you from currency risk\"/></span>\n\t\t    <span class=\"blog-text\">How
+        currency-hedged ETFs protect you from currency risk</span></a>   \n\t\t</li>\n\t\t\t\t<li><a
+        href=\"/en/news/etf/the-effect-of-currencies-on-etfs.html\" onclick=\"ga('send',
+        'event', 'ETFProfile', 'ETF', 'ETF currency risk: How to handle it');\">\n\t\t
+        \   <span class=\"blog-img\"><img src=\"/images/news/waehrungsrisiken.jpg\"
+        alt=\"ETF currency risk: How to handle it\"/></span>\n\t\t    <span class=\"blog-text\">ETF
+        currency risk: How to handle it</span></a>   \n\t\t</li>\n\t\t\t       </ul>\n\t
+        \   </div>\n\t    \t</div>\n\t<div class=\"cardtext nob col2\">\n\t    \t
+        \   \t    <div class=\"h5\">Popular articles</div>\n\t    <div class=\"blog-thumb
+        clearfix\">\n\t       <ul>\n\t\t\t\t<li><a href=\"/en/news/etf/income-investing-with-etfs.html\"
+        onclick=\"ga('send', 'event', 'ETFProfile', 'ETF', 'Income investing with
+        ETFs');\">\n\t\t    <span class=\"blog-img\"><img src=\"/images/news/dividend-yield-xs.jpg\"
+        alt=\"Income investing with ETFs\"/></span>\n\t\t    <span class=\"blog-text\">Income
+        investing with ETFs</span></a>   \n\t\t</li>\n\t\t\t\t<li><a href=\"/en/news/etf/investing-in-specific-countries-with-etfs.html\"
+        onclick=\"ga('send', 'event', 'ETFProfile', 'ETF', 'Investing in Specific
+        Countries With ETFs');\">\n\t\t    <span class=\"blog-img\"><img src=\"/images/news/country-etfs-xs.jpg\"
+        alt=\"Investing in Specific Countries With ETFs\"/></span>\n\t\t    <span
+        class=\"blog-text\">Investing in Specific Countries With ETFs</span></a>   \n\t\t</li>\n\t\t\t\t<li><a
+        href=\"/en/news/passive-investing/an-introduction-to-the-main-asset-classes-for-etf-investors.html\"
+        onclick=\"ga('send', 'event', 'ETFProfile', 'Passive Investing', 'An introduction
+        to the main asset classes for ETF investors');\">\n\t\t    <span class=\"blog-img\"><img
+        src=\"/images/news/asset-class-xs.jpg\" alt=\"An introduction to the main
+        asset classes for ETF investors\"/></span>\n\t\t    <span class=\"blog-text\">An
+        introduction to the main asset classes for ETF investors</span></a>   \n\t\t</li>\n\t\t\t
+        \      </ul>\n\t    </div>\n\t    \t</div>\n    </div>\n</div>\n    <!--googleon:
+        all-->\n</div>\n\n    <div>\n</div>\n    <div>\n<div class=\"jumbo-teaser
+        jumbo-blue jumbo-dark\">\n    <div class=\"container padding-sm\">\n\t<div
+        class=\"heading margin-bottom-20\">\n\t    <h3 class=\"h1\">Track your ETF
+        strategies online</h3>\n\t</div>\n\t<div class=\"text-center\">\n\t    <a
+        class=\"btn btn-primary btn-lg\" href=\"/en/registration.html\" role=\"button\"
+        onmousedown=\"ga('send', 'event', 'ETFProfile', 'Register', 'Bottom');\">Sign
+        up free</a>\n\t    <a class=\"btn btn-info-outline btn-lg\" href=\"/en/login.html\"
+        role=\"button\" onmousedown=\"ga('send', 'event', 'ETFProfile', 'Login', 'Bottom');\">Login
+        now</a>\n\t</div>\n    </div>\n</div>\n</div>\n</div>\n\n    <div id=\"id15\">\n
+        \   \n</div>\n    <div id=\"id16\">\n    \n</div>\n    <div id=\"footer\"
+        class=\"footer\">\n    <div class=\"footer_in\">\n\t<div class=\"container\">\n\t
+        \   <div class=\"row\">\n\t\t<div class=\"footer-box\">\n\t\t    <a href=\"/\"><img
+        id=\"logo-footer\" class=\"footer-logo\" src=\"/images/logo/logo.png\" alt=\"justETF.com\"></a>\n\t\t
+        \   <p class=\"margin-bottom-20\">justETF is the independent knowledge base
+        for your ETF strategies. We provide guidance with ETF comparisons, portfolio
+        strategies, portfolio simulations and investment guides.</p>\n\t\t    <a class=\"btn
+        btn-primary\" href=\"/en/registration.html\">Sign up free</a>\t\t    \t\t</div>\n\t\t<div
+        class=\"footer-box\">\n\t\t    <div class=\"headline\"><span class=\"h4\">ETF
+        Academy</span></div>\n\t\t    <ul class=\"list-unstyled link-list\">\n\t\t\t<li><a
+        href=\"/en/news/etf/how-do-etfs-work.html\">How do ETFs work?</a><i class=\"fa
+        fa-angle-right\"></i></li>\n\t\t\t<li><a href=\"/en/news/etf/how-to-buy-an-etf-frequently-asked-questions.html\">How
+        to buy an ETF: FAQs</a><i class=\"fa fa-angle-right\"></i></li>\n\t\t\t<li><a
+        href=\"/en/news/passive-investing/the-importance-of-asset-allocation-and-diversification.html\">Importance
+        of asset allocation</a><i class=\"fa fa-angle-right\"></i></li>\n\t\t\t<li><a
+        href=\"/en/news/passive-investing/what-is-portfolio-rebalancing.html\">What
+        is portfolio rebalancing?</a><i class=\"fa fa-angle-right\"></i></li>\n\t\t\t<li><a
+        href=\"/en/news/etf/the-effect-of-currencies-on-etfs.html\">The effect of
+        currencies on ETFs</a><i class=\"fa fa-angle-right\"></i></li>\n\t\t    </ul>\n\t\t</div>\n\t\t<div
+        class=\"clearfix visible-sm-block\"></div>\n\t\t<div class=\"footer-box\">\n\t\t
+        \   <div class=\"headline\"><span class=\"h4\">ETF Investment Guides</span></div>\n\t\t
+        \   <ul class=\"list-unstyled link-list\">\n\t\t\t<li><a href=\"/en/how-to/ftse-100-etfs.html\">Top
+        FTSE 100 ETFs</a><i class=\"fa fa-angle-right\"></i></li>\t\t\t<li><a href=\"/en/how-to/msci-world-etfs.html\">Top
+        MSCI World ETFs</a><i class=\"fa fa-angle-right\"></i></li>\n\t\t\t<li><a
+        href=\"/en/how-to/gold-etfs.html\">Top Gold ETFs</a><i class=\"fa fa-angle-right\"></i></li>\n\t\t\t<li><a
+        href=\"/en/how-to/dividend-etfs-europe.html\">Best European Dividend ETFs</a><i
+        class=\"fa fa-angle-right\"></i></li>\n\t\t\t<li><a href=\"/en/how-to/dividend-etfs-world.html\">Best
+        Global Dividend ETFs</a><i class=\"fa fa-angle-right\"></i></li>\n\t\t    </ul>\n\t\t</div>\n\t\t<div
+        class=\"footer-box\">\n\t\t    <div class=\"headline\"><span class=\"h4\">ETF
+        Tools</span></div>\n\t\t    <ul class=\"list-unstyled link-list\">\n\t\t\t<li><a
+        href=\"/en/find-etf.html\">ETF Screener</a><i class=\"fa fa-angle-right\"></i></li>\n\t\t\t\t\t\t<li><a
+        href=\"/en/market-overview/\">Best/Worst ETF Performer</a><i class=\"fa fa-angle-right\"></i></li>\n\t\t
+        \   </ul>\n\t\t    <div class=\"social-icons\">\n\t\t    <ul>\n\t\t\t<li><a
+        href=\"http://www.facebook.com/justetf\" onmousedown=\"ga('send', 'event',
+        'menuBottom', 'Recomend', 'Facebook');\" target=\"_blank\" rel=\"noopener\"
+        class=\"social_facebook\"></a></li>\n\t\t\t<li><a href=\"http://twitter.com/justetf\"
+        onmousedown=\"ga('send', 'event', 'menuBottom', ' Recomend', 'Twitter');\"
+        target=\"_blank\" rel=\"noopener\" class=\"social_twitter\"></a></li>\n\t\t
+        \   </ul>\n\t\t    </div>\n\t\t</div>\n\t    </div>\n\t</div>\n    </div>\n
+        \   <div class=\"copyright\">\n\t<div class=\"container\">\n\t    <p class=\"text-center\">&copy;
+        2011-2019 justETF.com &nbsp; <a class=\"light-link\" href=\"/en/about/team.html\">About
+        us</a> | <a class=\"light-link\" href=\"/en/about/data-privacy.html\">Data
+        privacy</a> | <a class=\"light-link\" href=\"/en/about/legal-terms.html\">Legal
+        terms</a> | <a class=\"light-link\" href=\"/en/about/legal-notice.html\">Legal
+        notice</a></p>\n\t</div>\n    </div>\n</div>\n</div>\n\n    \n    <script
+        type=\"text/javascript\" src=\"/scripts/bootstrap/bootstrap-main.min.js\"></script>\n
+        \   <script type=\"text/javascript\">\n\tjQuery(document).ready(function()
+        {\n\t    App.init();\n\t});\n\n    if ('serviceWorker' in navigator) {\n        navigator.serviceWorker.register('/sw.js')\n
+        \           .then(function(reg) {\n                console.log('Service Worker
+        registration succeeded. Scope is ' + reg.scope);\n            })\n            .catch(function(error)
+        {\n                console.error('Service Worker registration failed with
+        ' + error);\n            });\n    }\n    </script>\n</body>\n</html>"
+    headers:
+      ? !!python/object/new:multidict._istr.istr
+      - Access-Control-Allow-Credentials
+      : 'true'
+      ? !!python/object/new:multidict._istr.istr
+      - Access-Control-Allow-Headers
+      : X-Requested-With, Content-Type
+      ? !!python/object/new:multidict._istr.istr
+      - Cache-Control
+      : no-cache, max-age=0,must-revalidate, no-store
+      ? !!python/object/new:multidict._istr.istr
+      - Connection
+      : keep-alive
+      ? !!python/object/new:multidict._istr.istr
+      - Content-Encoding
+      : gzip
+      ? !!python/object/new:multidict._istr.istr
+      - Content-Language
+      : en
+      ? !!python/object/new:multidict._istr.istr
+      - Content-Type
+      : text/html;charset=UTF-8
+      ? !!python/object/new:multidict._istr.istr
+      - Date
+      : Sat, 06 Jul 2019 18:14:36 GMT
+      ? !!python/object/new:multidict._istr.istr
+      - Pragma
+      : no-cache
+      ? !!python/object/new:multidict._istr.istr
+      - Server
+      : nginx/1.4.6 (Ubuntu)
+      ? !!python/object/new:multidict._istr.istr
+      - Set-Cookie
+      : AWSALB=kda4xrZ30VsmPHoX/uLfwOj5IalFZTkJWToP5KlRyv/fTxpNOdYfakN6bB/NwnA/qkPv6mhhlRuGmR1kgHPBYUdcNhhhXD1dKguF7+GHOZAdnSgZEGbnYm0ZNHcy;
+        Expires=Sat, 13 Jul 2019 18:14:36 GMT; Path=/
+      ? !!python/object/new:multidict._istr.istr
+      - Transfer-Encoding
+      : chunked
+      ? !!python/object/new:multidict._istr.istr
+      - Vary
+      : Accept-Encoding
+    status:
+      code: 200
+      message: OK
+    url: !!python/object/new:yarl.URL
+      state: !!python/tuple
+      - !!python/object/new:urllib.parse.SplitResult
+        - https
+        - www.justetf.com
+        - /en/etf-profile.html
+        - tab=listing&isin=IE00B44CND37
+        - ''
+version: 1

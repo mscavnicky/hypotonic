@@ -17,12 +17,12 @@ logger = logging.getLogger(__name__)
 
 class Html:
   @staticmethod
-  async def get(session, url):
-    async with session.get(url) as response:
+  async def get(session, url, params=None):
+    async with session.get(url, params=params) as response:
       return await response.text()
 
   @staticmethod
-  async def post(session, url, payload):
+  async def post(session, url, payload=None):
     async with session.post(url, data=payload) as response:
       return await response.text()
 
@@ -53,12 +53,12 @@ class Html:
 
 class Commands:
   @staticmethod
-  async def get(session, _, data, url):
-    response = await Html.get(session, url)
+  async def get(session, _, data, url, params=None):
+    response = await Html.get(session, url, params)
     yield Html.parse(url, response), data
 
   @staticmethod
-  async def post(session, _, data, url, payload):
+  async def post(session, _, data, url, payload=None):
     response = await Html.post(session, url, payload)
     yield Html.parse(url, response), data
 
