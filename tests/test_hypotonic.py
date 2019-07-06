@@ -136,6 +136,21 @@ class TestHypotonic(unittest.TestCase):
     self.assertIn({'title': 'Tipping the Velvet'}, data)
     self.assertNotIn({'title': 'Sharp Objects'}, data)
 
+  def test_match_case_insensitive(self):
+    import re
+
+    data, errors = (
+      Hypotonic('http://books.toscrape.com/')
+        .find('.product_pod h3 a')
+        .match('THE', flags=re.IGNORECASE)
+        .set('title')
+        .data())
+
+    self.assertFalse(errors)
+    self.assertEqual(9, len(data))
+    self.assertIn({'title': 'Tipping the Velvet'}, data)
+    self.assertNotIn({'title': 'Sharp Objects'}, data)
+
   @vcr.use_cassette()
   def test_br_tags_become_newlines(self):
     data, errors = (

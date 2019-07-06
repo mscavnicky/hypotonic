@@ -89,7 +89,7 @@ class Commands:
       yield Html.parse(result, response), data
 
   @staticmethod
-  async def paginate(session, context, data, selector, limit):
+  async def paginate(session, context, data, selector, limit=sys.maxsize):
     selector = Html.to_xpath(selector)
     while True:
       yield context, data
@@ -107,8 +107,8 @@ class Commands:
       yield context, data
 
   @staticmethod
-  async def match(_, context, data, regex):
-    if re.search(regex, context.text_content()):
+  async def match(_, context, data, regex, flags=0):
+    if re.search(regex, context.text_content(), flags=flags):
       yield context, data
 
   @staticmethod
@@ -131,7 +131,7 @@ class Hypotonic:
     self.errors = []
 
     if url:
-      self.commands.append(('get', (url,)))
+      self.commands.append(('get', (url,), {}))
 
   async def worker(self, i, session, queue):
     logger.debug(f"Worker {i} starting.")
@@ -139,19 +139,19 @@ class Hypotonic:
       commands, context, data = await queue.get()
 
       try:
-        command, args = next(commands)
-        logger.debug(("Start", i, command, args))
+        command, args, kwargs = next(commands)
+        logger.debug(("Start", i, command, args, kwargs))
 
         func = getattr(Commands, command)
-        async for result in func(session, context, data, *args):
+        async for result in func(session, context, data, *args, **kwargs):
           _, commands_copy = itertools.tee(commands)
           queue.put_nowait((commands_copy, *result))
 
-        logger.debug(("Stop", i, command, args))
+        logger.debug(("Stop", i, command, args, kwargs))
       except StopIteration:
         self.results.append(data)
       except:
-        self.errors.append(((command, args, context), sys.exc_info()))
+        self.errors.append(((command, args, kwargs, context), sys.exc_info()))
         logger.debug(f"Unexpected exception {sys.exc_info()}.")
       finally:
         queue.task_done()
@@ -179,8 +179,8 @@ class Hypotonic:
     return self.results, self.errors
 
   def __getattr__(self, attr):
-    def apply(*args):
-      self.commands.append((attr, args))
+    def apply(*args, **kwargs):
+      self.commands.append((attr, args, kwargs))
       return self
 
     return apply
