@@ -99,6 +99,20 @@ class TestHypotonic(unittest.TestCase):
                    'price': '£47.82',
                    'availability': 'In stock'}, data)
 
+  def test_set_attr(self):
+    data, errors = (
+      Hypotonic('http://books.toscrape.com/')
+        .find('.product_pod h3')
+        .set({'url': 'a::attr(href)',
+              'title': 'a::text'})
+        .data())
+
+    self.assertFalse(errors)
+    self.assertEqual(20, len(data))
+    self.assertIn({'title': 'Sharp Objects',
+                   'url': 'http://books.toscrape.com/catalogue/sharp-objects_997/index.html'},
+                  data)
+
   def test_follow(self):
     data, errors = (
       Hypotonic('http://books.toscrape.com/')

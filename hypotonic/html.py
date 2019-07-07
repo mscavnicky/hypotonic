@@ -16,7 +16,11 @@ def parse(url, html_string):
 def text_content(element):
   """Convenience method to extract text from HTML element tree. Performs
   stripping and canonicalization of UTF-8 characters (e.g. '/xa0' to ' ')."""
-  return unicodedata.normalize('NFKC', element.text_content().strip())
+  # XPath query can return both element, or lxml.etree._ElementUnicodeResult.
+  if isinstance(element, str):
+    return element
+  else:
+    return unicodedata.normalize('NFKC', element.text_content().strip())
 
 
 def to_xpath(selector):
