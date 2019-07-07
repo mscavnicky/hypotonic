@@ -54,7 +54,7 @@ async def paginate(session, context, data, selector, limit=sys.maxsize):
     results = context.xpath(selector)
     if limit <= 0 or len(results) == 0:
       break
-    url = results[0].attrib['href']
+    url = results[0]
     response = await request.get(session, url)
     context = html.parse(url, response)
 

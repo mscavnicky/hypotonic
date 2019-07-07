@@ -20,11 +20,11 @@ from hypotonic import Hypotonic
 data, errors = (
   Hypotonic()
     .get('http://books.toscrape.com/')
-    .paginate('.next a', 5)
-    .find('.product_pod h3 a')
-    .follow('@href')
-    .set({'title': 'h3 a',
-          'price': '.price_color',
+    .paginate('.next a::attr(href)', 5)
+    .find('.product_pod h3')
+    .set('title')
+    .follow('a::attr(href)')
+    .set({'price': '.price_color',
           'availability': 'p.availability'})
     .data()
 )

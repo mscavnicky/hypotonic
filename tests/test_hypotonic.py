@@ -102,8 +102,7 @@ class TestHypotonic(unittest.TestCase):
   def test_follow(self):
     data, errors = (
       Hypotonic('http://books.toscrape.com/')
-        .find('.product_pod h3 a')
-        .follow('@href')
+        .follow('.product_pod h3 a::attr(href)')
         .find('h1')
         .set('title')
         .data())
@@ -115,7 +114,7 @@ class TestHypotonic(unittest.TestCase):
   def test_paginate(self):
     data, errors = (
       Hypotonic('http://books.toscrape.com/')
-        .paginate('.next a', 3)
+        .paginate('.next a::attr(href)', 3)
         .find('li article')
         .set({'title': 'h3 a'})
         .data())
