@@ -1,7 +1,7 @@
 import unicodedata
 from lxml import html
-from cssselect import GenericTranslator, SelectorError
-
+from parsel import csstranslator
+from cssselect import SelectorError
 
 def parse(url, html_string):
   doc = html.fromstring(html_string)
@@ -22,7 +22,7 @@ def text_content(element):
 def to_xpath(selector):
   """Attempt to convert CSS selector to XPath."""
   try:
-    return GenericTranslator().css_to_xpath(selector)
+    return csstranslator.css2xpath(selector)
   except SelectorError:
     return selector
 

@@ -17,6 +17,6 @@ setup(name='hypotonic',
       author_email='martin.scavnicky@gmail.com',
       license='MIT',
       packages=find_packages(exclude=['tests']),
-      install_requires=['aiohttp', 'lxml', 'cssselect'],
+      install_requires=['aiohttp', 'parsel', 'lxml', 'cssselect'],
       include_package_data=True,
       zip_safe=False)

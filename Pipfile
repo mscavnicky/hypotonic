@@ -10,6 +10,7 @@ twine = "*"
 vcrpy = {editable = true, git = "https://github.com/kevin1024/vcrpy.git"}
 
 [packages]
+parsel = "*"
 lxml = "*"
 cssselect = "*"
 aiohttp = "*"
