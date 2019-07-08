@@ -2,6 +2,7 @@ import sys
 import logging
 import itertools
 import importlib
+import traceback
 
 import asyncio
 import aiohttp
@@ -41,7 +42,7 @@ class Hypotonic:
         self.results.append(data)
       except:
         self.errors.append(((command, args, kwargs, context), sys.exc_info()))
-        logger.debug(f"Unexpected exception {sys.exc_info()}.")
+        logger.info(traceback.format_exc())
       finally:
         queue.task_done()
 
