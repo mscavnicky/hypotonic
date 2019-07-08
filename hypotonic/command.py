@@ -4,63 +4,63 @@ import logging
 import asyncio
 import textwrap
 
-from . import html
-from . import request
+from hypotonic import request
+from hypotonic.context import HtmlContext
 
 logger = logging.getLogger(__name__)
 
 
 async def get(session, _, data, url, params=None):
   response = await request.get(session, url, params)
-  yield html.parse(url, response), data
+  yield HtmlContext(url, response), data
 
 
 async def post(session, _, data, url, payload=None):
   response = await request.post(session, url, payload)
-  yield html.parse(url, response), data
+  yield HtmlContext(url, response), data
 
 
 async def find(_, context, data, selector):
-  for result in context.xpath(html.to_xpath(selector)):
+  for result in context.select(selector):
     yield result, data
 
 
 async def set(_, context, data, descriptor):
   if isinstance(descriptor, str):
-    data = {**data, descriptor: html.text_content(context)}
+    data = {**data, descriptor: context.text_content()}
   else:
     for key, selector in descriptor.items():
       if isinstance(selector, str):
-        results = context.xpath(html.to_xpath(selector))
-        data = {**data, key: html.text_content(results[0])}
+        results = context.select(selector)
+        data = {**data, key: results[0].text_content()}
       elif isinstance(selector, list):
-        results = context.xpath(html.to_xpath(selector[0]))
-        values = [html.text_content(result) for result in results]
+        results = context.select(selector[0])
+        values = [result.text_content() for result in results]
         data = {**data, key: values}
   yield context, data
 
 
 async def follow(session, context, data, selector):
-  for result in context.xpath(html.to_xpath(selector)):
-    response = await request.get(session, result)
-    yield html.parse(result, response), data
+  for result in context.select(selector):
+    url = result.text_content()
+    response = await request.get(session, url)
+    yield HtmlContext(url, response), data
 
 
 async def paginate(session, context, data, selector, limit=sys.maxsize):
-  selector = html.to_xpath(selector)
   while True:
     yield context, data
     limit -= 1
-    results = context.xpath(selector)
+    results = context.select(selector)
     if limit <= 0 or len(results) == 0:
       break
-    url = results[0]
+    url = results[0].text_content()
     response = await request.get(session, url)
-    context = html.parse(url, response)
+    context = HtmlContext(url, response)
 
 
 async def filter(_, context, data, selector):
-  if len(context.xpath(html.to_xpath(selector))) > 0:
+  if len(context.select(selector)) > 0:
     yield context, data
 
 
@@ -76,6 +76,6 @@ async def delay(_, context, data, secs):
 
 async def log(_, context, data):
   logger.debug((
-    textwrap.shorten(html.to_string(context), width=72),
+    textwrap.shorten(context.to_str(), width=72),
     textwrap.shorten(str(data), width=72)))
   yield context, data
