@@ -21,6 +21,8 @@ class Hypotonic:
 
   async def worker(self, i, session, queue):
     logger.debug(f"Worker {i} starting.")
+
+    module = importlib.import_module('hypotonic.command')
     while True:
       commands, context, data = await queue.get()
 
@@ -28,10 +30,8 @@ class Hypotonic:
         command, args, kwargs = next(commands)
         logger.debug(("Start", i, command, args, kwargs))
 
-        # Dynamically load command function.
-        module = importlib.import_module('hypotonic.commands')
+        # Dynamically load the command function.
         func = getattr(module, command)
-
         async for result in func(session, context, data, *args, **kwargs):
           # Tee creates a shallow copy, advanced separately from original list.
           _, commands_copy = itertools.tee(commands)
