@@ -52,7 +52,8 @@ class Hypotonic:
 
     tasks = []
     for i in range(4):
-      tasks.append(asyncio.create_task(self.worker(i, session, queue)))
+      loop = asyncio.get_event_loop()
+      tasks.append(loop.create_task(self.worker(i, session, queue)))
 
     queue.put_nowait((iter(self.commands), None, {}))
     await queue.join()
@@ -65,8 +66,12 @@ class Hypotonic:
 
   def data(self):
     """Return all the scraped data as a list of dicts."""
-    asyncio.run(self.run())
-    return self.results, self.errors
+    loop = asyncio.new_event_loop()
+    try:
+      loop.run_until_complete(self.run())
+      return self.results, self.errors
+    finally:
+      loop.close()
 
   def __getattr__(self, attr):
     def apply(*args, **kwargs):
