@@ -1,4 +1,5 @@
 import unittest
+from unittest import mock
 import logging
 from vcr import VCR
 from hypotonic import Hypotonic
@@ -11,6 +12,17 @@ vcr = VCR(cassette_library_dir='./tests/cassettes')
 
 
 class TestHypotonic(unittest.TestCase):
+  @mock.patch('logging.Logger._log')
+  def test_get_invalid_url(self, _):
+    data, errors = (
+      Hypotonic()
+        .get('https://non-existing-url.com')
+        .data()
+    )
+
+    self.assertFalse(data)
+    self.assertEqual(1, len(errors))
+
   @vcr.use_cassette()
   def test_get_with_params(self):
     data, errors = (
@@ -38,6 +50,32 @@ class TestHypotonic(unittest.TestCase):
 
     self.assertFalse(errors)
     self.assertEqual([{'label': 'Logout'}], data)
+
+  @mock.patch('logging.Logger._log')
+  def test_find_missing_element(self, _):
+    data, errors = (
+      Hypotonic()
+        .get('http://books.toscrape.com/')
+        .find('h11 fake-class')
+        .set('title')
+        .data()
+    )
+
+    self.assertFalse(errors)
+    self.assertFalse(data)
+
+  @mock.patch('logging.Logger._log')
+  def test_find_with_invalid_selector(self, _):
+    data, errors = (
+      Hypotonic()
+        .get('http://books.toscrape.com/')
+        .find('.#./')
+        .set('title')
+        .data()
+    )
+
+    self.assertFalse(data)
+    self.assertEqual(1, len(errors))
 
   def test_find_with_xpath(self):
     data, errors = (
@@ -183,7 +221,8 @@ class TestHypotonic(unittest.TestCase):
   @vcr.use_cassette()
   def test_br_tags_become_newlines(self):
     data, errors = (
-      Hypotonic('https://www.justetf.com/en/etf-profile.html?tab=listing&isin=IE00B44CND37')
+      Hypotonic(
+        'https://www.justetf.com/en/etf-profile.html?tab=listing&isin=IE00B44CND37')
         .find('.tab-container .container tbody tr')
         .set({'ticker': 'td:nth-child(5)'})
         .data()
@@ -205,7 +244,8 @@ class TestHypotonic(unittest.TestCase):
 
     self.assertFalse(errors)
     self.assertEqual(1, len(data))
-    self.assertEqual(data[0]['text'], 'Ak nájdete chybu v článkoch, budeme vďační, ak nám napíšete na editori@dennikn.sk.')
+    self.assertEqual(data[0]['text'],
+                     'Ak nájdete chybu v článkoch, budeme vďační, ak nám napíšete na editori@dennikn.sk.')
 
 
 if __name__ == '__main__':
