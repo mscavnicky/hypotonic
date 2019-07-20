@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 setup(name='hypotonic',
-      version='0.0.5',
+      version='0.0.6',
       description='Fast asynchronous web scraper with minimalist API.',
       long_description='Fast asynchronous web scraper with minimalist API.',
       classifiers=[
