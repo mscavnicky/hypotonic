@@ -27,17 +27,15 @@ class TestHypotonic(unittest.TestCase):
   def test_get_with_params(self):
     data, errors = (
       Hypotonic()
-        .get('https://www.justetf.com/en/etf-profile.html',
-             {'tab': 'listing', 'isin': 'IE00B44CND37'})
-        .find('.tab-container .container tbody tr')
-        .set({'ticker': 'td:nth-child(3)'})
+        .get('http://testing-ground.scraping.pro/textlist', {'ver': '3'})
+        .find('h1')
+        .set('title')
         .data()
     )
 
     self.assertFalse(errors)
-    self.assertEqual(7, len(data))
-    self.assertNotIn({'ticker': 'SPY'}, data)
-    self.assertIn({'ticker': 'TRSY'}, data)
+    self.assertEqual(1, len(data))
+    self.assertIn({'title': 'TEXT LIST (version 3)'}, data)
 
   def test_post(self):
     data, errors = (
@@ -221,17 +219,16 @@ class TestHypotonic(unittest.TestCase):
   @vcr.use_cassette()
   def test_br_tags_become_newlines(self):
     data, errors = (
-      Hypotonic(
-        'https://www.justetf.com/en/etf-profile.html?tab=listing&isin=IE00B44CND37')
-        .find('.tab-container .container tbody tr')
-        .set({'ticker': 'td:nth-child(5)'})
+      Hypotonic('http://testing-ground.scraping.pro/blocks')
+        .find('.best')
+        .set('text')
         .data()
     )
 
     self.assertFalse(errors)
-    self.assertEqual(7, len(data))
-    self.assertNotIn({'ticker': 'TSYE.PAINSYBTE.ivOQ'}, data)
-    self.assertIn({'ticker': 'TRSY.MI\nINSYBTE.ivOQ'}, data)
+    self.assertEqual(6, len(data))
+    self.assertNotIn({'text': 'BESTPRICE!'}, data)
+    self.assertIn({'text': 'BEST\nPRICE!'}, data)
 
   @vcr.use_cassette()
   def test_utf_8_is_canonicalized(self):

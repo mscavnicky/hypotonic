@@ -7,8 +7,7 @@ verify_ssl = true
 # Used for releasing package to pypi.
 twine = "*"
 bumpversion = "*"
-# Version 2.0.1 has a bug around awaiting aiohttp in tests.
-vcrpy = {editable = true,git = "https://github.com/kevin1024/vcrpy.git"}
+vcrpy = "*"
 
 [packages]
 parsel = ">=1.2.0"
