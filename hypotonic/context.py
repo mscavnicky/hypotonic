@@ -12,7 +12,7 @@ class StringContext:
   def select(self, selector):
     raise TypeError('Cannot run selector on a StringContext.')
 
-  def text_content(self):
+  def text(self):
     return self.str
 
   def __str__(self):
@@ -37,7 +37,7 @@ class HtmlContext:
         selected.append(HtmlContext(self.url, element))
     return selected
 
-  def text_content(self):
+  def text(self):
     """Convenience method to extract text from HTML element tree. Performs
       stripping and canonicalization of UTF-8 characters (e.g. '/xa0' to ' ')."""
     return unicodedata.normalize('NFKC', self.element.text_content().strip())
