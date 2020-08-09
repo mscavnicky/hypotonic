@@ -76,6 +76,6 @@ async def delay(_, context, data, secs):
 
 async def log(_, context, data):
   logger.debug((
-    textwrap.shorten(context.to_str(), width=72),
+    textwrap.shorten(str(context), width=72),
     textwrap.shorten(str(data), width=72)))
   yield context, data

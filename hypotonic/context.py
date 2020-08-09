@@ -15,7 +15,7 @@ class StringContext:
   def text_content(self):
     return self.str
 
-  def to_str(self):
+  def __str__(self):
     return self.str
 
 
@@ -42,7 +42,7 @@ class HtmlContext:
       stripping and canonicalization of UTF-8 characters (e.g. '/xa0' to ' ')."""
     return unicodedata.normalize('NFKC', self.element.text_content().strip())
 
-  def to_str(self):
+  def __str__(self):
     """Convert HTML element to raw html string including element tags."""
     return html.tostring(self.element).decode('utf-8')
 
