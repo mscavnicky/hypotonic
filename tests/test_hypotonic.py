@@ -216,6 +216,20 @@ class TestHypotonic(unittest.TestCase):
     self.assertIn({'title': 'Tipping the Velvet'}, data)
     self.assertNotIn({'title': 'Sharp Objects'}, data)
 
+  def test_log(self):
+    with self.assertLogs(logger, level='INFO') as context:
+      data, errors = (
+        Hypotonic('http://books.toscrape.com/')
+          .find('.h1 a')
+          .set('title')
+          .log()
+          .data())
+
+    self.assertFalse(errors)
+    self.assertIn(
+      'INFO:hypotonic:1:<a href="http://books.toscrape.com/index.html">Books to Scrape</a>',
+      context.output)
+
   @vcr.use_cassette()
   def test_br_tags_become_newlines(self):
     data, errors = (

@@ -7,7 +7,7 @@ import traceback
 import asyncio
 import aiohttp
 
-logger = logging.getLogger(__name__)
+logger = logging.getLogger('hypotonic')
 
 
 class Hypotonic:

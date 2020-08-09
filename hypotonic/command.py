@@ -7,7 +7,7 @@ import textwrap
 from hypotonic import request
 from hypotonic.context import HtmlContext
 
-logger = logging.getLogger(__name__)
+logger = logging.getLogger('hypotonic')
 
 
 async def get(session, _, data, url, params=None):
@@ -74,8 +74,6 @@ async def delay(_, context, data, secs):
   yield context, data
 
 
-async def log(_, context, data):
-  logger.debug((
-    textwrap.shorten(str(context), width=72),
-    textwrap.shorten(str(data), width=72)))
+async def log(_, context, data, level=logging.INFO):
+  logger.log(level, f"{len(data)}:{textwrap.shorten(str(context), width=72)}")
   yield context, data
