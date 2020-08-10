@@ -230,6 +230,18 @@ class TestHypotonic(unittest.TestCase):
       'INFO:hypotonic:1:<a href="http://books.toscrape.com/index.html">Books to Scrape</a>',
       context.output)
 
+  def test_extracted_text_is_stripped(self):
+    data, errors = (
+      Hypotonic('http://books.toscrape.com/')
+        .find('.nav-list a')
+        .set('category')
+        .data())
+
+    self.assertFalse(errors)
+    self.assertEqual(51, len(data))
+    for item in data:
+      self.assertEqual(item['category'], item['category'].strip())
+
   @vcr.use_cassette()
   def test_br_tags_become_newlines(self):
     data, errors = (
