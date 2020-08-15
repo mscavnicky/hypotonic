@@ -1,4 +1,13 @@
-#!/bin/bash
+#!/usr/bin/env bash
+
+set -e
+
+BRANCH=$(git rev-parse --abbrev-ref HEAD)
+if [[ "$BRANCH" != "master" ]]; then
+  echo 'You must be on the master branch to release.';
+  exit 1;
+fi
+
 
 if [[ $# -eq 0 ]]; then
   echo "Please specify a version bump - major, minor, or patch."
@@ -6,6 +15,8 @@ if [[ $# -eq 0 ]]; then
 fi
 
 poetry run bumpversion $1 --verbose
+
+git push
 
 poetry build
 
