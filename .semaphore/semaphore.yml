@@ -22,9 +22,9 @@ blocks:
       jobs:
         - name: run
           commands:
-            - pip3 install pipenv
-            - pipenv install --dev
-            - pipenv run python -m unittest --verbose
+            - pip3 install poetry
+            - poetry install
+            - poetry run python -m unittest --verbose
   - name: test-3.7
     dependencies: []
     task:
@@ -41,9 +41,9 @@ blocks:
       jobs:
         - name: run
           commands:
-            - pip3 install pipenv
-            - pipenv install --dev
-            - pipenv run python -m unittest --verbose
+            - pip3 install poetry
+            - poetry install
+            - poetry run python -m unittest --verbose
   - name: test-3.8
     dependencies: []
     task:
@@ -60,6 +60,6 @@ blocks:
       jobs:
         - name: run
           commands:
-            - pip3 install pipenv
-            - pipenv install --dev
-            - pipenv run python -m unittest --verbose
+            - pip3 install poetry
+            - poetry install
+            - poetry run python -m unittest --verbose

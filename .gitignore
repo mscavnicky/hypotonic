@@ -4,4 +4,4 @@
 build
 dist
 *.egg-info
-Pipfile.lock
+poetry.lock

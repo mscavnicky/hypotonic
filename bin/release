@@ -1,3 +1,12 @@
 #!/bin/bash
 
-pipenv run twine upload dist/*
+if [[ $# -eq 0 ]]; then
+  echo "Please specify a version bump - major, minor, or patch."
+  exit 1
+fi
+
+poetry run bumpversion $1 --verbose
+
+poetry build
+
+poetry publish
