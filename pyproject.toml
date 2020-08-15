@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "hypotonic"
-version = "0.0.8"
+version = "0.0.9"
 description = "Fast asynchronous web scraper with minimalist API."
 authors = ["Martin Scavnicky <martin.scavnicky@gmail.com>"]
 license = "MIT"
