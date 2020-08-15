@@ -75,18 +75,6 @@ class TestHypotonic(unittest.TestCase):
     self.assertFalse(data)
     self.assertEqual(1, len(errors))
 
-  def test_find_with_xpath(self):
-    data, errors = (
-      Hypotonic('http://books.toscrape.com/')
-        .find(
-        '//*[contains(concat( " ", @class, " " ), concat( " ", "nav-list", " " ))]//ul//a')
-        .set('category')
-        .data())
-
-    self.assertFalse(errors)
-    self.assertEqual(50, len(data))
-    self.assertTrue({'category': 'Romance'} in data)
-
   def test_find_with_css(self):
     data, errors = (
       Hypotonic('http://books.toscrape.com/')
