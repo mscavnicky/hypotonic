@@ -6,7 +6,7 @@ verify_ssl = true
 [dev-packages]
 # Used for releasing package to pypi.
 twine = "*"
-bumpversion = "*"
+bump2version = ">=1.0.0"
 vcrpy = "*"
 
 [packages]
