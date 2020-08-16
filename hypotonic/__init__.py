@@ -27,19 +27,23 @@ class Hypotonic:
       commands, context, data = await queue.get()
 
       try:
-        command, args, kwargs = next(commands)
+        # All commands were executed succesfully.
+        if not commands:
+          self.results.append(data)
+          continue
+
+        command, args, kwargs = commands.pop()
         logger.debug(("Start", i, command, args, kwargs))
 
         # Dynamically load the command function.
         func = getattr(module, command)
         async for result in func(session, context, data, *args, **kwargs):
-          # Tee creates a shallow copy, advanced separately from original list.
-          _, commands_copy = itertools.tee(commands)
+          # TODO Passing commands by value is not efficient.
+          commands_copy = list(commands)
+          logger.debug(("Queue", i, commands_copy, []), *result)
           queue.put_nowait((commands_copy, *result))
 
         logger.debug(("Stop", i, command, args, kwargs))
-      except StopIteration:
-        self.results.append(data)
       except:
         self.errors.append(((command, args, kwargs, context), sys.exc_info()))
         logger.info(traceback.format_exc())
@@ -55,7 +59,7 @@ class Hypotonic:
       loop = asyncio.get_event_loop()
       tasks.append(loop.create_task(self.worker(i, session, queue)))
 
-    queue.put_nowait((iter(self.commands), None, {}))
+    queue.put_nowait((list(reversed(self.commands)), None, {}))
     await queue.join()
 
     for task in tasks:
