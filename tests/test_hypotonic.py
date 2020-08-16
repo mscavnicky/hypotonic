@@ -1,4 +1,5 @@
 import unittest
+import aiounittest
 from unittest import mock
 import logging
 from vcr import VCR
@@ -11,7 +12,17 @@ logger.addHandler(logging.StreamHandler())
 vcr = VCR(cassette_library_dir='./tests/cassettes')
 
 
-class TestHypotonic(unittest.TestCase):
+class TestHypotonic(aiounittest.AsyncTestCase):
+  async def test_async_run(self):
+    data, errors = await (
+      Hypotonic('http://books.toscrape.com/')
+        .find('.nav-list ul a')
+        .set('category')
+        .run())
+
+    self.assertFalse(errors)
+    self.assertEqual(50, len(data))
+
   @mock.patch('logging.Logger._log')
   def test_get_invalid_url(self, _):
     data, errors = (

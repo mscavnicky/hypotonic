@@ -61,8 +61,9 @@ class Hypotonic:
     for task in tasks:
       task.cancel()
     await asyncio.gather(*tasks, return_exceptions=True)
-
     await session.close()
+
+    return self.results, self.errors
 
   def data(self):
     """Return all the scraped data as a list of dicts."""
