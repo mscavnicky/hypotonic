@@ -3,6 +3,7 @@ import sys
 import logging
 import asyncio
 import textwrap
+from more_itertools import always_iterable
 
 from hypotonic import request
 from hypotonic.context import HtmlContext
@@ -10,14 +11,16 @@ from hypotonic.context import HtmlContext
 logger = logging.getLogger('hypotonic')
 
 
-async def get(session, _, data, url, params=None):
-  response = await request.get(session, url, params)
-  yield HtmlContext(url, response), data
+async def get(session, _, data, urls, params=None):
+  for url in always_iterable(urls):
+    response = await request.get(session, url, params)
+    yield HtmlContext(url, response), data
 
 
-async def post(session, _, data, url, payload=None):
-  response = await request.post(session, url, payload)
-  yield HtmlContext(url, response), data
+async def post(session, _, data, urls, payload=None):
+  for url in always_iterable(urls):
+    response = await request.post(session, url, payload)
+    yield HtmlContext(url, response), data
 
 
 async def find(_, context, data, selector):

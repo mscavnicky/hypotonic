@@ -48,6 +48,18 @@ class TestHypotonic(aiounittest.AsyncTestCase):
     self.assertEqual(1, len(data))
     self.assertIn({'title': 'TEXT LIST (version 3)'}, data)
 
+  def test_get_multiple_urls(self):
+    data, errors = (
+      Hypotonic()
+        .get([f"http://quotes.toscrape.com/page/{page}/" for page in range(1, 11)])
+        .find('.quote .text')
+        .set('quote')
+        .data()
+    )
+
+    self.assertFalse(errors)
+    self.assertEqual(100, len(data))
+
   def test_post(self):
     data, errors = (
       Hypotonic()
