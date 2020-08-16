@@ -8,7 +8,6 @@ if [[ "$BRANCH" != "master" ]]; then
   exit 1;
 fi
 
-
 if [[ $# -eq 0 ]]; then
   echo "Please specify a version bump - major, minor, or patch."
   exit 1
