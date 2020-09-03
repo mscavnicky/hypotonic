@@ -1,6 +1,8 @@
+import json
 import unicodedata
 import urllib.parse
 import bs4
+import jsonpath_ng as jsonpath
 
 
 class StringContext:
@@ -67,3 +69,37 @@ class HtmlContext:
     for br in doc.findAll('br'):
       br.replace_with("\n")
     return doc
+
+
+class JsonContext:
+  def __init__(self, url, json):
+    self.url = url
+    self.json = json
+
+  def select(self, selector):
+    selected = []
+    for match in jsonpath.parse(selector).find(self.json):
+      if isinstance(match.value, str):
+        selected.append(StringContext(self.url, match.value))
+      else:
+        selected.append(JsonContext(self.url, match.value))
+    return selected
+
+  def text(self):
+    return JsonContext.extract_values(self.json)
+
+  @staticmethod
+  def extract_values(json):
+    if isinstance(json, list):
+      return ' '.join(map(JsonContext.extract_values, json))
+    elif isinstance(json, dict):
+      return ' '.join(map(JsonContext.extract_values, json.values()))
+    else:
+      return json
+
+  def __str__(self):
+    return json.dumps(self.json)
+
+  @staticmethod
+  def parse(_url, json_string):
+    return json.loads(json_string)
