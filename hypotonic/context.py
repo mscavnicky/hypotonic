@@ -5,6 +5,14 @@ import bs4
 import jsonpath_ng as jsonpath
 
 
+def make_context(url, content_type, content):
+  """Choose the right context based on the content type."""
+  if content_type == 'application/json':
+    return JsonContext(url, JsonContext.parse(url, content))
+  else:
+    return HtmlContext(url, HtmlContext.parse(url, content))
+
+
 class StringContext:
   def __init__(self, url, str):
     self.url = url
@@ -21,12 +29,9 @@ class StringContext:
 
 
 class HtmlContext:
-  def __init__(self, url, str_or_element):
+  def __init__(self, url, element):
     self.url = url
-    self.element = str_or_element
-
-    if isinstance(str_or_element, str):
-      self.element = self.parse(self.url, self.element)
+    self.element = element
 
   def select(self, selector):
     # Determine whether selector is using ::attr or ::text pseudo-attribute.

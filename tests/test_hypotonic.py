@@ -281,6 +281,31 @@ class TestHypotonic(aiounittest.AsyncTestCase):
     self.assertEqual(data[0]['text'],
                      'Ak nájdete chybu v článkoch, budeme vďační, ak nám napíšete na editori@dennikn.sk.')
 
+  def test_get_json(self):
+    data, errors = (
+      Hypotonic('https://jsonplaceholder.typicode.com/users')
+        .find('$[*]')
+        .set({'id': '$.id',
+              'name': '$.name'})
+        .data()
+    )
+
+    self.assertFalse(errors)
+    self.assertEqual(10, len(data))
+    self.assertIn({'id': 2, 'name': 'Ervin Howell'}, data)
+
+  def test_set_json_value(self):
+    data, errors = (
+      Hypotonic('https://jsonplaceholder.typicode.com/users')
+        .find('$[*]')
+        .find('$.address.geo')
+        .set('coords')
+        .data()
+    )
+
+    self.assertFalse(errors)
+    self.assertEqual(10, len(data))
+    self.assertIn({'coords': '-37.3159 81.1496'}, data)
 
 if __name__ == '__main__':
   unittest.main()

@@ -6,21 +6,21 @@ import textwrap
 from more_itertools import always_iterable
 
 from hypotonic import request
-from hypotonic.context import HtmlContext
+from hypotonic.context import make_context
 
 logger = logging.getLogger('hypotonic')
 
 
 async def get(session, _, data, urls, params=None):
   for url in always_iterable(urls):
-    response = await request.get(session, url, params)
-    yield HtmlContext(url, response), data
+    content_type, response = await request.get(session, url, params)
+    yield make_context(url, content_type, response), data
 
 
 async def post(session, _, data, urls, payload=None):
   for url in always_iterable(urls):
-    response = await request.post(session, url, payload)
-    yield HtmlContext(url, response), data
+    content_type, response = await request.post(session, url, payload)
+    yield make_context(url, content_type, response), data
 
 
 async def find(_, context, data, selector):
@@ -46,8 +46,8 @@ async def set(_, context, data, descriptor):
 async def follow(session, context, data, selector):
   for result in context.select(selector):
     url = result.text()
-    response = await request.get(session, url)
-    yield HtmlContext(url, response), data
+    content_type, response = await request.get(session, url)
+    yield make_context(url, content_type, response), data
 
 
 async def paginate(session, context, data, selector, limit=sys.maxsize):
@@ -58,8 +58,8 @@ async def paginate(session, context, data, selector, limit=sys.maxsize):
     if limit <= 0 or len(results) == 0:
       break
     url = results[0].text()
-    response = await request.get(session, url)
-    context = HtmlContext(url, response)
+    content_type, response = await request.get(session, url)
+    context = make_context(url, content_type, response)
 
 
 async def filter(_, context, data, selector):
