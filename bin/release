@@ -15,8 +15,4 @@ fi
 
 poetry run bumpversion $1 --verbose
 
-git push
-
-poetry build
-
-poetry publish
+git push --tags
