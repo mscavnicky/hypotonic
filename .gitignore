@@ -1,7 +1,5 @@
 .vscode
 .idea
 
-build
 dist
-*.egg-info
 poetry.lock
