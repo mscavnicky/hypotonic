@@ -307,5 +307,23 @@ class TestHypotonic(aiounittest.AsyncTestCase):
     self.assertEqual(10, len(data))
     self.assertIn({'coords': '-37.3159 81.1496'}, data)
 
+  @vcr.use_cassette()
+  def test_non_standard_json_content_type(self):
+    data, errors = (
+      Hypotonic()
+        .get('https://www.sreality.cz/api/cs/v2/estates/count',
+             {'category_main_cb': 1,
+              'category_type_cb': 1,
+              'locality_country_id': 112,
+              'locality_district_id': 5006,
+              'locality_region_id': 10})
+        .set({'size': '$.result_size'})
+        .data()
+    )
+
+    self.assertFalse(errors)
+    self.assertEqual([{ 'size': 310 }], data)
+
+
 if __name__ == '__main__':
   unittest.main()

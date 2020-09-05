@@ -7,7 +7,9 @@ import jsonpath_ng as jsonpath
 
 def make_context(url, content_type, content):
   """Choose the right context based on the content type."""
-  if content_type == 'application/json':
+  # Heuristic to detect JSON mime-type.
+  # [1] https://www.iana.org/assignments/media-types/media-types.xhtml
+  if 'json' in content_type:
     return JsonContext(url, JsonContext.parse(url, content))
   else:
     return HtmlContext(url, HtmlContext.parse(url, content))
