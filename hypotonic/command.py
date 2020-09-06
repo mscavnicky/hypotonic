@@ -13,13 +13,13 @@ logger = logging.getLogger('hypotonic')
 
 async def get(session, _, data, urls, params=None):
   for url in always_iterable(urls):
-    content_type, response = await request.get(session, url, params)
+    url, content_type, response = await request.get(session, url, params)
     yield make_context(url, content_type, response), data
 
 
 async def post(session, _, data, urls, payload=None):
   for url in always_iterable(urls):
-    content_type, response = await request.post(session, url, payload)
+    url, content_type, response = await request.post(session, url, payload)
     yield make_context(url, content_type, response), data
 
 
@@ -46,7 +46,7 @@ async def set(_, context, data, descriptor):
 async def follow(session, context, data, selector):
   for result in context.select(selector):
     url = result.text()
-    content_type, response = await request.get(session, url)
+    url, content_type, response = await request.get(session, url)
     yield make_context(url, content_type, response), data
 
 
@@ -58,7 +58,7 @@ async def paginate(session, context, data, selector, limit=sys.maxsize):
     if limit <= 0 or len(results) == 0:
       break
     url = results[0].text()
-    content_type, response = await request.get(session, url)
+    url, content_type, response = await request.get(session, url)
     context = make_context(url, content_type, response)
 
 
