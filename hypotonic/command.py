@@ -3,6 +3,9 @@ import sys
 import logging
 import asyncio
 import textwrap
+
+import yarl
+import validators
 from more_itertools import always_iterable
 
 from hypotonic import request
@@ -50,14 +53,22 @@ async def follow(session, context, data, selector):
     yield make_context(url, content_type, response), data
 
 
-async def paginate(session, context, data, selector, limit=sys.maxsize):
+async def paginate(session, context, data, selector, limit=sys.maxsize, param=None):
+  page = 1
   while True:
     yield context, data
-    limit -= 1
+
+    page += 1
     results = context.select(selector)
-    if limit <= 0 or len(results) == 0:
+    if page > limit or len(results) == 0:
       break
-    url = results[0].text()
+
+    result = results[0].text()
+    if isinstance(result, str) and validators.url(result):
+      url = result
+    else:
+      url = str(yarl.URL(context.url) % {param: page})
+
     url, content_type, response = await request.get(session, url)
     context = make_context(url, content_type, response)
 

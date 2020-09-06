@@ -21,6 +21,7 @@ aiohttp = ">=3.0.9"
 beautifulsoup4 = ">=4.7.1"
 html5lib = ">=1.0.1"
 jsonpath-ng = ">=1.5.1"
+validators = ">=0.18.0"
 
 [tool.poetry.dev-dependencies]
 bumpversion = ">=0.5.0"
