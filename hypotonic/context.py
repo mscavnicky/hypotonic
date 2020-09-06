@@ -93,16 +93,7 @@ class JsonContext:
     return selected
 
   def text(self):
-    return JsonContext.extract_values(self.json)
-
-  @staticmethod
-  def extract_values(json):
-    if isinstance(json, list):
-      return ' '.join(map(JsonContext.extract_values, json))
-    elif isinstance(json, dict):
-      return ' '.join(map(JsonContext.extract_values, json.values()))
-    else:
-      return json
+    return self.json
 
   def __str__(self):
     return json.dumps(self.json)

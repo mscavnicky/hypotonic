@@ -305,7 +305,7 @@ class TestHypotonic(aiounittest.AsyncTestCase):
 
     self.assertFalse(errors)
     self.assertEqual(10, len(data))
-    self.assertIn({'coords': '-37.3159 81.1496'}, data)
+    self.assertIn({'coords': {'lat': '-37.3159', 'lng': '81.1496'}}, data)
 
   @vcr.use_cassette()
   def test_non_standard_json_content_type(self):
