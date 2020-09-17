@@ -2,6 +2,7 @@ import unittest
 import aiounittest
 from unittest import mock
 import logging
+from yarl import URL
 from vcr import VCR
 from hypotonic import Hypotonic
 
@@ -34,7 +35,6 @@ class TestHypotonic(aiounittest.AsyncTestCase):
     self.assertFalse(data)
     self.assertEqual(1, len(errors))
 
-  @vcr.use_cassette()
   def test_get_with_params(self):
     data, errors = (
       Hypotonic()
@@ -159,6 +159,23 @@ class TestHypotonic(aiounittest.AsyncTestCase):
     self.assertIn({'title': 'Sharp Objects',
                    'url': 'http://books.toscrape.com/catalogue/sharp-objects_997/index.html'},
                   data)
+
+  def test_then(self):
+    data, errors = (
+      Hypotonic()
+        .get('http://testing-ground.scraping.pro/textlist', {'ver': '3'})
+        .find('h1')
+        .set('title')
+        .then(lambda context, data: (
+            context,
+            {**data, 'version': URL(context.url).query['ver']}
+        ))
+        .data()
+    )
+
+    self.assertFalse(errors)
+    self.assertEqual(1, len(data))
+    self.assertIn({'title': 'TEXT LIST (version 3)', 'version': '3'}, data)
 
   def test_follow(self):
     data, errors = (

@@ -46,6 +46,11 @@ async def set(_, context, data, descriptor):
   yield context, data
 
 
+async def then(_, context, data, func):
+  context, data = func(context, data)
+  yield context, data
+
+
 async def follow(session, context, data, selector):
   for result in context.select(selector):
     url = result.text()
