@@ -8,21 +8,21 @@ import validators
 from more_itertools import always_iterable
 
 from hypotonic import request
-from hypotonic.context import make_context
+from hypotonic.context import Context
 
 logger = logging.getLogger('hypotonic')
 
 
 async def get(session, _, data, urls, params=None):
   for url in always_iterable(urls):
-    url, content_type, response = await request.get(session, url, params)
-    yield make_context(url, content_type, response), data
+    context = Context.create(*await request.get(session, url, params))
+    yield context, data
 
 
 async def post(session, _, data, urls, payload=None):
   for url in always_iterable(urls):
-    url, content_type, response = await request.post(session, url, payload)
-    yield make_context(url, content_type, response), data
+    context = Context.create(*await request.post(session, url, payload))
+    yield context, data
 
 
 async def find(_, context, data, selector):
@@ -53,8 +53,8 @@ async def then(_, context, data, func):
 async def follow(session, context, data, selector):
   for result in context.select(selector):
     url = result.text()
-    url, content_type, response = await request.get(session, url)
-    yield make_context(url, content_type, response), data
+    context = Context.create(*await request.get(session, url))
+    yield context, data
 
 
 async def paginate(session, context, data, selector, limit=sys.maxsize, param=None):
@@ -73,8 +73,7 @@ async def paginate(session, context, data, selector, limit=sys.maxsize, param=No
     else:
       url = str(context.url % {param: page})
 
-    url, content_type, response = await request.get(session, url)
-    context = make_context(url, content_type, response)
+    context = Context.create(*await request.get(session, url))
 
 
 async def filter(_, context, data, selector):
