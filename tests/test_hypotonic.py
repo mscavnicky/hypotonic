@@ -2,7 +2,6 @@ import unittest
 import aiounittest
 from unittest import mock
 import logging
-from yarl import URL
 from vcr import VCR
 from hypotonic import Hypotonic
 
@@ -168,7 +167,7 @@ class TestHypotonic(aiounittest.AsyncTestCase):
         .set('title')
         .then(lambda context, data: (
             context,
-            {**data, 'version': URL(context.url).query['ver']}
+            {**data, 'version': context.url.query['ver']}
         ))
         .data()
     )

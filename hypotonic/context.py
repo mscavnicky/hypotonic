@@ -1,6 +1,6 @@
 import json
 import unicodedata
-import urllib.parse
+import yarl
 import bs4
 import jsonpath_ng as jsonpath
 
@@ -71,7 +71,7 @@ class HtmlContext:
     doc = bs4.BeautifulSoup(html_string, features='html5lib')
     # Making links absolute is required to allow following.
     for tag in doc.findAll('a', href=True):
-      tag['href'] = urllib.parse.urljoin(url, tag['href'])
+      tag['href'] = str(url.join(yarl.URL(tag['href'])))
     # Replacing <br> tags with \n, prevents text concatenating.
     for br in doc.findAll('br'):
       br.replace_with("\n")

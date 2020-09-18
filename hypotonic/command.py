@@ -4,7 +4,6 @@ import logging
 import asyncio
 import textwrap
 
-import yarl
 import validators
 from more_itertools import always_iterable
 
@@ -72,7 +71,7 @@ async def paginate(session, context, data, selector, limit=sys.maxsize, param=No
     if isinstance(result, str) and validators.url(result):
       url = result
     else:
-      url = str(yarl.URL(context.url) % {param: page})
+      url = str(context.url % {param: page})
 
     url, content_type, response = await request.get(session, url)
     context = make_context(url, content_type, response)
