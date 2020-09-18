@@ -22,6 +22,7 @@ beautifulsoup4 = ">=4.7.1"
 html5lib = ">=1.0.1"
 jsonpath-ng = ">=1.5.1"
 validators = ">=0.18.0"
+backoff = ">=1.8.0"
 
 [tool.poetry.dev-dependencies]
 bumpversion = ">=0.5.0"
