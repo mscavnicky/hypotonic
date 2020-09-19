@@ -1,7 +1,7 @@
+import logging
 import unittest
 import aiounittest
-from unittest import mock
-import logging
+
 from vcr import VCR
 from hypotonic import Hypotonic
 
@@ -23,8 +23,7 @@ class TestHypotonic(aiounittest.AsyncTestCase):
     self.assertFalse(errors)
     self.assertEqual(50, len(data))
 
-  @mock.patch('logging.Logger._log')
-  def test_get_invalid_url(self, _):
+  def test_get_invalid_url(self):
     data, errors = (
       Hypotonic()
         .get('https://non-existing-url.com')
@@ -71,8 +70,7 @@ class TestHypotonic(aiounittest.AsyncTestCase):
     self.assertFalse(errors)
     self.assertEqual([{'label': 'Logout'}], data)
 
-  @mock.patch('logging.Logger._log')
-  def test_find_missing_element(self, _):
+  def test_find_missing_element(self):
     data, errors = (
       Hypotonic()
         .get('http://books.toscrape.com/')
@@ -84,8 +82,7 @@ class TestHypotonic(aiounittest.AsyncTestCase):
     self.assertFalse(errors)
     self.assertFalse(data)
 
-  @mock.patch('logging.Logger._log')
-  def test_find_with_invalid_selector(self, _):
+  def test_find_with_invalid_selector(self):
     data, errors = (
       Hypotonic()
         .get('http://books.toscrape.com/')
@@ -338,7 +335,7 @@ class TestHypotonic(aiounittest.AsyncTestCase):
     )
 
     self.assertFalse(errors)
-    self.assertEqual([{ 'size': 310 }], data)
+    self.assertEqual([{'size': 310}], data)
 
 
 if __name__ == '__main__':

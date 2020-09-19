@@ -1,8 +1,6 @@
 import sys
 import logging
-import itertools
 import importlib
-import traceback
 
 import asyncio
 import aiohttp
@@ -42,7 +40,6 @@ class Hypotonic:
         logger.debug(("Stop", i, command, args, kwargs))
       except:
         self.errors.append(((command, args, kwargs, context), sys.exc_info()))
-        logger.info(traceback.format_exc())
       finally:
         queue.task_done()
 
