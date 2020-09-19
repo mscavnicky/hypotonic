@@ -85,9 +85,15 @@ class JsonContext:
     self.url = url
     self.json = json
 
+  # Class level cache for parsed costly JSONPath expressions.
+  jsonpath_cache = {}
+
   def select(self, selector):
+    if not selector in JsonContext.jsonpath_cache:
+      JsonContext.jsonpath_cache[selector] = jsonpath.parse(selector)
+
     selected = []
-    for match in jsonpath.parse(selector).find(self.json):
+    for match in JsonContext.jsonpath_cache[selector].find(self.json):
       if isinstance(match.value, str):
         selected.append(StringContext(self.url, match.value))
       else:
