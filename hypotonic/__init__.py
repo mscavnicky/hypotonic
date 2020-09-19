@@ -39,6 +39,7 @@ class Hypotonic:
         logger.debug(("Stop", i, command, args, kwargs))
       except Exception as error:
         self.errors.append(((command, args, kwargs), context, error))
+        logger.debug(('Error', i, command, args, kwargs, error))
       finally:
         queue.task_done()
 
