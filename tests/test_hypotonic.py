@@ -344,6 +344,19 @@ class TestHypotonic(aiounittest.AsyncTestCase):
     self.assertEqual(10, len(data))
     self.assertIn({'id': 2, 'name': 'Ervin Howell'}, data)
 
+  async def test_find_json_with_filter(self):
+    data, errors = await (
+      Hypotonic('https://jsonplaceholder.typicode.com/users')
+        .find('$[?(@.username = "Bret")]')
+        .set({'id': '$.id',
+              'name': '$.name'})
+        .run()
+    )
+
+    self.assertFalse(errors)
+    self.assertEqual(1, len(data))
+    self.assertIn({'id': 1, 'name': 'Leanne Graham'}, data)
+
   async def test_set_json_value(self):
     data, errors = await (
       Hypotonic('https://jsonplaceholder.typicode.com/users')

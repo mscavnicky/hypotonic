@@ -2,7 +2,7 @@ import json
 import unicodedata
 import yarl
 import bs4
-import jsonpath_ng as jsonpath
+import jsonpath_ng.ext as jsonpath
 
 
 class Context:
