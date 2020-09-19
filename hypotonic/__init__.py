@@ -44,7 +44,7 @@ class Hypotonic:
         queue.task_done()
 
   async def run(self):
-    session = aiohttp.ClientSession()
+    session = aiohttp.ClientSession(raise_for_status=True)
     queue = asyncio.Queue()
 
     tasks = []

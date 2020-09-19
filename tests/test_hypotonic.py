@@ -1,4 +1,5 @@
 import logging
+import aiohttp
 import unittest
 import aiounittest
 
@@ -23,15 +24,51 @@ class TestHypotonic(aiounittest.AsyncTestCase):
     self.assertFalse(errors)
     self.assertEqual(50, len(data))
 
-  def test_get_invalid_url(self):
+  def test_get_unreachable_url(self):
     data, errors = (
       Hypotonic()
         .get('https://non-existing-url.com')
         .data()
     )
 
-    self.assertFalse(data)
+    self.assertEqual(0, len(data))
     self.assertEqual(1, len(errors))
+    self.assertIsInstance(errors[0][2], aiohttp.ClientConnectorError)
+
+  def test_get_redirect(self):
+    data, errors = (
+      Hypotonic()
+        .get('https://httpstat.us/301')
+        .find('h1')
+        .set('title')
+        .data()
+    )
+
+    self.assertEqual(0, len(errors))
+    self.assertEqual([{'title': 'httpstat.us'}], data)
+
+  def test_get_not_found(self):
+    data, errors = (
+      Hypotonic()
+        .get('https://httpstat.us/404')
+        .data()
+    )
+
+    self.assertEqual(0, len(data))
+    self.assertEqual(1, len(errors))
+    self.assertIsInstance(errors[0][2], aiohttp.ClientResponseError)
+
+  def test_get_internal_server_error(self):
+    data, errors = (
+      Hypotonic()
+        .get('https://httpstat.us/500')
+        .data()
+    )
+
+    self.assertEqual(0, len(data))
+    self.assertEqual(1, len(errors))
+    self.assertIsInstance(errors[0][2], aiohttp.ClientResponseError)
+
 
   def test_get_with_params(self):
     data, errors = (
