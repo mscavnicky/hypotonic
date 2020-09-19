@@ -1,4 +1,3 @@
-import sys
 import logging
 import importlib
 
@@ -38,8 +37,8 @@ class Hypotonic:
             queue.put_nowait((commands.copy(), context, data))
 
         logger.debug(("Stop", i, command, args, kwargs))
-      except:
-        self.errors.append(((command, args, kwargs, context), sys.exc_info()))
+      except Exception as error:
+        self.errors.append(((command, args, kwargs), context, error))
       finally:
         queue.task_done()
 
