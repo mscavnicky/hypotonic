@@ -25,23 +25,19 @@ class Hypotonic:
     module = importlib.import_module('hypotonic.command')
     while True:
       commands, context, data = await queue.get()
+      command, args, kwargs = commands.pop()
 
       try:
-        # All commands were executed succesfully.
-        if not commands:
-          self.results.append(data)
-          continue
-
-        command, args, kwargs = commands.pop()
         logger.debug(("Start", i, command, args, kwargs))
 
         # Dynamically load the command function.
         func = getattr(module, command)
-        async for result in func(session, context, data, *args, **kwargs):
-          # TODO Passing commands by value is not efficient.
-          commands_copy = list(commands)
-          logger.debug(("Queue", i, commands_copy, []), *result)
-          queue.put_nowait((commands_copy, *result))
+        async for context, data in func(session, context, data, *args, **kwargs):
+          if not commands:
+            self.results.append(data)
+          else:
+            logger.debug(("Queue", i, commands, context, data))
+            queue.put_nowait((commands.copy(), context, data))
 
         logger.debug(("Stop", i, command, args, kwargs))
       except:
