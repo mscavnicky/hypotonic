@@ -83,6 +83,18 @@ class TestHypotonic(aiounittest.AsyncTestCase):
     self.assertEqual(1, len(data))
     self.assertIn({'title': 'TEXT LIST (version 3)'}, data)
 
+  async def test_get_with_exploding_params(self):
+    data, errors = await (
+      Hypotonic()
+        .get('http://testing-ground.scraping.pro/textlist', {'ver': range(1, 6)})
+        .find('h1')
+        .set('title')
+        .run()
+    )
+
+    self.assertFalse(errors)
+    self.assertEqual(5, len(data))
+
   async def test_get_multiple_urls(self):
     data, errors = await (
       Hypotonic()

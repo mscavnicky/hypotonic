@@ -5,6 +5,7 @@ import asyncio
 import textwrap
 
 import validators
+from itertools import product
 from more_itertools import always_iterable
 
 from hypotonic import request
@@ -14,9 +15,19 @@ logger = logging.getLogger('hypotonic')
 
 
 async def get(session, _, data, urls, params=None):
+  def explode_params():
+    """Explode parameters specified in array notation similarly to curl.
+    For reference see https://curl.haxx.se/docs/manpage.html"""
+    if params:
+      for values in product(*map(always_iterable, params.values())):
+        yield dict(zip(params.keys(), values))
+    else:
+      yield None
+
   for url in always_iterable(urls):
-    context = Context.create(*await request.get(session, url, params))
-    yield context, data
+    for params in explode_params():
+      context = Context.create(*await request.get(session, url, params))
+      yield context, data
 
 
 async def post(session, _, data, urls, payload=None):
