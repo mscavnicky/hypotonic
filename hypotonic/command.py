@@ -14,8 +14,17 @@ from hypotonic.context import Context
 logger = logging.getLogger('hypotonic')
 
 
-async def get(session, _, data, urls, params=None):
-  def explode_params():
+async def get(session, context, data, urls, params=None):
+  def resolve_params(params):
+    """Resolve parameters given as callables."""
+    if params:
+      for key, param in params.items():
+        if callable(param):
+          params[key] = param(context, data)
+      return params
+    return None
+
+  def explode_params(params):
     """Explode parameters specified in array notation similarly to curl.
     For reference see https://curl.haxx.se/docs/manpage.html"""
     if params:
@@ -25,7 +34,7 @@ async def get(session, _, data, urls, params=None):
       yield None
 
   for url in always_iterable(urls):
-    for params in explode_params():
+    for params in explode_params(resolve_params(params)):
       context = Context.create(*await request.get(session, url, params))
       yield context, data
 
@@ -53,6 +62,8 @@ async def set(_, context, data, descriptor):
         results = context.select(selector[0])
         values = [result.text() for result in results]
         data = {**data, key: values}
+      elif callable(selector):
+        data = {**data, key: selector(context, data)}
   yield context, data
 
 

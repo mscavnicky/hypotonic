@@ -83,6 +83,19 @@ class TestHypotonic(aiounittest.AsyncTestCase):
     self.assertEqual(1, len(data))
     self.assertIn({'title': 'TEXT LIST (version 3)'}, data)
 
+  async def test_get_with_callable_params(self):
+    data, errors = await (
+      Hypotonic()
+        .get('http://testing-ground.scraping.pro/textlist',
+             {'ver': lambda _context, _data: range(2, 5)})
+        .find('h1')
+        .set('title')
+        .run()
+    )
+
+    self.assertFalse(errors)
+    self.assertEqual(3, len(data))
+
   async def test_get_with_exploding_params(self):
     data, errors = await (
       Hypotonic()
@@ -204,6 +217,17 @@ class TestHypotonic(aiounittest.AsyncTestCase):
     self.assertIn({'title': 'Sharp Objects',
                    'url': 'http://books.toscrape.com/catalogue/sharp-objects_997/index.html'},
                   data)
+
+  async def test_set_with_callable(self):
+    data, errors = await (
+      Hypotonic()
+        .get('http://testing-ground.scraping.pro/textlist', {'ver': 3})
+        .set({'version': (lambda context, _: context.url.query['ver'])})
+        .run()
+    )
+
+    self.assertFalse(errors)
+    self.assertEqual([{'version': '3'}], data)
 
   async def test_then(self):
     data, errors = await (
