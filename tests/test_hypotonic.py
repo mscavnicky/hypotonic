@@ -14,6 +14,12 @@ vcr = VCR(cassette_library_dir='./tests/cassettes')
 
 
 class TestHypotonic(aiounittest.AsyncTestCase):
+  def setUp(self):
+    # TODO The test suite currently has a lot of resource warning. Those should
+    # be removed. Until then, this enhances the readability of the test output.
+    import warnings
+    warnings.simplefilter("ignore", ResourceWarning)
+
   def test_synchronous_run(self):
     data, errors = (
       Hypotonic('http://books.toscrape.com/')
