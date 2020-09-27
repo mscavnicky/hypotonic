@@ -15,6 +15,10 @@ fi
 
 poetry run bumpversion $1 --verbose
 
+VERSION=$(git describe --tags HEAD)
+
 git push
 
 git push --tags
+
+gh release create $VERSION -d -t $VERSION
